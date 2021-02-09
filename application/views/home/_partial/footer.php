@@ -1,11 +1,7 @@
 <!-- Footer -->
                     <footer class="clearfix">
-                        <div class="pull-right">
-                            Crafted with <i class="fa fa-heart text-danger"></i> by <a href="https://1.envato.market/ydb" target="_blank">pixelcave</a>
-                        </div>
-                        <div class="pull-left">
-                            <span id="year-copy"></span> &copy; <a href="https://1.envato.market/x4R" target="_blank">ProUI</a>
-                        </div>
+                        <div class="pull-left">&copy; <?php echo date("Y");?> FEB Universitas Muhammadiyah Makassar</div>
+                        <div class="pull-right"><a href="https://kreasiempatpilar.com" target="_new">Kreasi Emapt Pilar</a></div>
                     </footer>
                     <!-- END Footer -->
                 </div>

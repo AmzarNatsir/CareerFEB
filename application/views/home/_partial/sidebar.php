@@ -14,13 +14,13 @@
                     <a href="<?php echo base_url();?>" class=" active"><i class="gi gi-home sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">HOME</span></a>
                 </li>
                 <li>
-                    <a href="<?php echo base_url();?>"><i class="fa fa-info sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">PROFIL</span></a>
+                    <a href="<?php echo base_url();?>profil"><i class="fa fa-sitemap sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">PROFIL</span></a>
                 </li>
                 <li>
-                    <a href="<?php echo base_url();?>" class=" active"><i class="fa fa-info-circle sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">VISI & MISI</span></a>
+                    <a href="<?php echo base_url();?>profil/visi_misi" class=" active"><i class="fa fa-sitemap sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">VISI & MISI</span></a>
                 </li>
                 <li>
-                    <a href="<?php echo base_url();?>"><i class="gi gi-building sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">STRUKTUR ORGANISASI</span></a>
+                    <a href="<?php echo base_url();?>profil/struktur"><i class="fa fa-sitemap sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">STRUKTUR ORGANISASI</span></a>
                 </li>
                 <li>
                     <a href="<?php echo base_url();?>" class=" active"><i class="fa fa-graduation-cap sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">TRACER STUDY</span></a>
