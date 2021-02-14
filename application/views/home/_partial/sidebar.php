@@ -23,7 +23,7 @@
                     <a href="<?php echo base_url();?>profil/struktur"><i class="fa fa-sitemap sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">STRUKTUR ORGANISASI</span></a>
                 </li>
                 <li>
-                    <a href="<?php echo base_url();?>" class=" active"><i class="fa fa-graduation-cap sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">TRACER STUDY</span></a>
+                    <a href="<?php echo base_url();?>tracer_study/registrasi" class=" active"><i class="fa fa-graduation-cap sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">TRACER STUDY</span></a>
                 </li>
                 <li>
                     <a href="<?php echo base_url();?>"><i class="gi gi-keys sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">LOGIN</span></a>
