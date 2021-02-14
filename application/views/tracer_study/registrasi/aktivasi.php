@@ -68,7 +68,7 @@
                     <div id="login-container">
                         <!-- Login Title -->
                         <div class="login-title text-center">
-                            <h1><strong>Register</strong></h1>
+                            <h1><strong>Aktivasi Akun</strong></h1>
                         </div>
                         <!-- END Login Title -->
 
@@ -82,19 +82,19 @@
                             </div>
                           <?php endif; ?>
                             <!-- Login Form -->
-                            <form action="<?php echo base_url();?>tracer_study/kirim_kode_aktivasi" method="post" id="form-register" class="form-horizontal">
+                            <form action="<?php echo base_url();?>tracer_study/aktivasi_kode" method="post" id="form-register" class="form-horizontal">
                                 <div class="form-group">
                                     <div class="col-xs-12">
                                         <div class="input-group">
-                                            <span class="input-group-addon"><i class="gi gi-envelope"></i></span>
-                                            <input type="email" id="alumniemail" name="alumniemail" class="form-control input-lg" placeholder="Email" required>
+                                            <span class="input-group-addon"><i class="fa fa-key"></i></span>
+                                            <input type="text" id="inp_kode" name="inp_kode" class="form-control input-lg" placeholder="Kode Aktivasi" maxlength="6" required>
                                         </div>
                                     </div>
                                 </div>
                                 
                                 <div class="form-group form-actions">
                                     <div class="col-xs-12 text-right">
-                                        <button type="submit" class="btn btn-sm btn-success"><i class="fa fa-plus"></i> Register</button>
+                                        <button type="submit" class="btn btn-sm btn-success"><i class="fa fa-plus"></i> Aktivasi Akun</button>
                                     </div>
                                 </div>
                             </form>
