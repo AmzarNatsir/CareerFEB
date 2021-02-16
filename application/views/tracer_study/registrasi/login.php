@@ -36,71 +36,45 @@
         <!-- Login Alternative Row -->
         <div class="container">
             <div class="row">
-                <div class="col-sm-6">
-                    <div id="login-alt-container">
-                        <!-- Title -->
-                        <h1 class="push-top-bottom">
-                            <strong>Tracer Study FEB Unismuh Makassar</strong><br>
-                            <small>SELAMAT DATANG</small><br>
-                            <small>Bagi Alumni Universitas Muhammadiyah Makassar <br>
-                            Fakultas Ekonomi dan Bisnis siapkan diri anda untuk <br>
-                            mengisi kuisioner tracer study</small>
-                        </h1>
-                        <!-- END Title -->
-
-                        <!-- Key Features -->
-                        <ul class="fa-ul text-muted">
-                            <li><i class="fa fa-check fa-li text-success"></i> Masukkan kode aktivasi (cek email) untuk memulai mengisi kuisioner</li>
-                        </ul>
-                        <!-- END Key Features -->
-
-                        <!-- Footer -->
-                        <footer class="text-muted push-top-bottom">
-                            <small><?php echo date("Y");?></span> &copy; <a href="https://career.feb.unismuh.ac.id" target="_new">CareerCenterFEB</a></small>
-                        </footer>
-                        <!-- END Footer -->
-                    </div>
-                </div>
-                <div class="col-sm-6">
+                <div class="col-sm-12">
                     <!-- Login Container -->
                     <div id="login-container">
                         <!-- Login Title -->
                         <div class="login-title text-center">
-                            <h1><strong>Aktivasi Akun</strong></h1>
+                            <h1><strong>Login Tracer Study</strong></h1>
                         </div>
                         <!-- END Login Title -->
 
                         <!-- Login Block -->
                         <div class="block push-bit">
-                            <?php if ($this->session->flashdata('email_sent')): ?>
+                            <?php if ($this->session->flashdata('registrasi_info')): ?>
                             <div class="alert alert-info alert-dismissible" id="success-alert">
                                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
                               <h4><i class="icon fa fa-info"></i> Konfirmasi !</h4>
-                              <?php echo $this->session->flashdata('email_sent'); ?>
+                              <?php echo $this->session->flashdata('registrasi_info'); ?>
                             </div>
                           <?php endif; ?>
                             <!-- Login Form -->
-                            <form action="<?php echo base_url();?>tracer_study/aktivasi_kode" method="post" id="form-register" class="form-horizontal">
+                            <form action="<?php echo base_url();?>tracer_study/proses_login" method="post" id="form-register" class="form-horizontal">
                                 <div class="form-group">
                                     <div class="col-xs-12">
                                         <div class="input-group">
                                             <span class="input-group-addon"><i class="gi gi-envelope"></i></span>
-                                            <input type="email" id="alumniemail" name="alumniemail" class="form-control input-lg" placeholder="Email" value="<?php echo $this->session->flashdata('cc_email_sess'); ?>" readonly>
+                                            <input type="email" id="alumniemail" name="alumniemail" class="form-control input-lg" placeholder="Email" required>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-xs-12">
                                         <div class="input-group">
-                                            <span class="input-group-addon"><i class="fa fa-key"></i></span>
-                                            <input type="text" id="inp_kode" name="inp_kode" class="form-control input-lg" placeholder="Kode Aktivasi" maxlength="6" required>
+                                            <span class="input-group-addon"><i class="gi gi-asterisk"></i></span>
+                                            <input type="password" id="inppassword" name="inppassword" class="form-control input-lg" placeholder="Password" maxlength="20" minlength="5" required>
                                         </div>
                                     </div>
                                 </div>
-                                
                                 <div class="form-group form-actions">
                                     <div class="col-xs-12 text-right">
-                                        <button type="submit" class="btn btn-sm btn-success"><i class="fa fa-plus"></i> Aktivasi Akun</button>
+                                        <button type="submit" class="btn btn-sm btn-success"><i class="fa fa-plus"></i> Login Tracer Study</button>
                                     </div>
                                 </div>
                             </form>

@@ -32,7 +32,7 @@
         <!-- Modernizr (browser feature detection library) -->
         <script src="<?php echo base_url();?>assets/js/vendor/modernizr.min.js"></script>
     </head>
-    <body>
+    <body style="background-color: #394263;">
         <!-- Login Alternative Row -->
         <div class="container">
             <div class="row">
@@ -50,9 +50,11 @@
 
                         <!-- Key Features -->
                         <ul class="fa-ul text-muted">
-                            <li><i class="fa fa-check fa-li text-success"></i> Masukkan email anda yang aKtif</li>
-                            <li><i class="fa fa-check fa-li text-success"></i> Kode Aktivasi akan dikirim ke email anda.</li>
-                            <li><i class="fa fa-check fa-li text-success"></i> Masukkan kode aktivasi untuk memulai mengisi kuisioner</li>
+                            <li><i class="fa fa-check fa-li text-success"></i> 10571xxxxxxx -> Ekonomi Pembanguan </li>
+                            <li><i class="fa fa-check fa-li text-success"></i> 10572xxxxxxx -> Menejamen</li>
+                            <li><i class="fa fa-check fa-li text-success"></i> 10573xxxxxxx -> Akuntansi</li>
+                            <li><i class="fa fa-check fa-li text-success"></i> 10574xxxxxxx -> Ekonomi Islam</li>
+                            <li><i class="fa fa-check fa-li text-success"></i> 10575xxxxxxx -> D3 Perpajakan</li>
                         </ul>
                         <!-- END Key Features -->
 
@@ -65,10 +67,10 @@
                 </div>
                 <div class="col-sm-6">
                     <!-- Login Container -->
-                    <div id="login-container">
+                    <div id="login-container" style="top : 100px">
                         <!-- Login Title -->
                         <div class="login-title text-center">
-                            <h1><strong>Register</strong></h1>
+                            <h1><strong>Form Registrasi</strong></h1>
                         </div>
                         <!-- END Login Title -->
 
@@ -82,7 +84,31 @@
                             </div>
                           <?php endif; ?>
                             <!-- Login Form -->
-                            <form action="<?php echo base_url();?>tracer_study/kirim_kode_aktivasi" method="post" id="form-register" class="form-horizontal">
+                            <form action="<?php echo base_url();?>tracer_study/simpan_registrasi" method="post" id="form-register" class="form-horizontal">
+                                <div class="form-group">
+                                    <div class="col-xs-12">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="gi gi-edit"></i></span>
+                                            <input type="text" id="inp_nim" name="inp_nim" class="form-control input-lg" placeholder="Nomor Induk Mahasiswa" maxlength="12" minlength="12" required oninput="getProdi(this)">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-xs-12">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="gi gi-edit"></i></span>
+                                            <input type="text" id="inp_prodi" name="inp_prodi" class="form-control input-lg" placeholder="Program Studi" required readonly>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-xs-12">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="gi gi-edit"></i></span>
+                                            <input type="text" id="inp_nama" name="inp_nama" class="form-control input-lg" placeholder="Nama Lengkap Anda" maxlength="100" required>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="form-group">
                                     <div class="col-xs-12">
                                         <div class="input-group">
@@ -91,7 +117,22 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+                                <div class="form-group">
+                                    <div class="col-xs-12">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="gi gi-asterisk"></i></span>
+                                            <input type="password" id="inppassword" name="inppassword" class="form-control input-lg" placeholder="Password" maxlength="20" minlength="5" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-xs-12">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="gi gi-asterisk"></i></span>
+                                            <input type="password" id="inppassword_verify" name="inppassword_verify" class="form-control input-lg" placeholder="Verify Password" required>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="form-group form-actions">
                                     <div class="col-xs-12 text-right">
                                         <button type="submit" class="btn btn-sm btn-success"><i class="fa fa-plus"></i> Register</button>
@@ -120,4 +161,23 @@
     {
         window.setTimeout(function () { $("#success-alert").alert('close'); }, 2000);
     });
+    var getProdi = function(el)
+    {
+        var kode = $(el).val();
+        var res = kode.substring(0, 5);
+        if(res=="10571"){
+            var ketprodi = "Ekonomi Pembangunan";
+        } else if(res=="10572") {
+            var ketprodi = "Manajemen";
+        } else if(res=="10573"){
+            var ketprodi = "Akuntansi";
+        } else if(res=="10574") {
+            var ketprodi = "Ekonomi Islam";
+        } else if(res=="10575") {
+            var ketprodi = "D3 Perpajakan";
+        } else {
+            var ketprodi = "";
+        }
+        $("#inp_prodi").val(ketprodi);
+    }
 </script>

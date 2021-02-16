@@ -1,5 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <title>Career Center FEB Unismuh Makassar</title>
@@ -17,7 +16,7 @@
             }
         </style>
     </head>
-    <body bgcolor="#352738" style="margin: 0; padding: 0;" yahoo="fix">
+    <body bgcolor="#394263" style="margin: 0; padding: 0;" yahoo="fix">
         <!--[if (gte mso 9)|(IE)]>
         <table width="600" align="center" cellpadding="0" cellspacing="0" border="0">
           <tr>
