@@ -47,11 +47,11 @@
 
                         <!-- Login Block -->
                         <div class="block push-bit">
-                            <?php if ($this->session->flashdata('registrasi_info')): ?>
+                            <?php if ($this->session->flashdata('konfirm_login')): ?>
                             <div class="alert alert-info alert-dismissible" id="success-alert">
                                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
                               <h4><i class="icon fa fa-info"></i> Konfirmasi !</h4>
-                              <?php echo $this->session->flashdata('registrasi_info'); ?>
+                              <?php echo $this->session->flashdata('konfirm_login'); ?>
                             </div>
                           <?php endif; ?>
                             <!-- Login Form -->

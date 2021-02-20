@@ -22,28 +22,30 @@ class Tracer_study extends CI_Controller {
     {
         $this->load->view("tracer_study/registrasi/index");
     }
+	public function periksa_akun()
+	{
+		$nim = $this->input->post("kode");
+		$res = $this->model_tracer->cek_akun($nim);
+		if(empty($res->id)) {
+			$err = 1; //Akun Baru
+			$data = "";
+		} else {
+			$err = 2; //Akun Sudah Ada
+			$nama = $res->nama_lengkap;
+			$email = $res->email;
+			$data = $res->nama_lengkap."#".$res->email."#".$res->tracer;
+		}
+		echo $err."-".$data;
+	}
 	public function simpan_registrasi()
 	{
-		$kode_prodi = substr($this->input->post("inp_prodi"), 0, 5);
-		if($kode_prodi=="10571"){
-			$id_prodi=1;
-		} elseif($kode_prodi=="10572") {
-			$id_prodi=2;
-		} elseif($kode_prodi=="10573") {
-			$id_prodi=3;
-		} elseif($kode_prodi=="10574") {
-			$id_prodi=4;
-		} elseif($kode_prodi=="10575") {
-			$id_prodi=5;
-		} else {
-			$id_prodi=NULL;
-		}
 		$insert['nama_lengkap'] = $this->input->post("inp_nama");
 		$insert['nim'] = $this->input->post("inp_nim");
-		$insert['id_prodi'] = $id_prodi;
+		$insert['id_prodi'] = $this->input->post("id_prodi");
 		$insert['email'] = $this->input->post("alumniemail");
 		$insert['passwd'] = MD5(trim($this->input->post("inppassword")));
 		$insert['tgl_registrasi'] = date("Y-m-d");
+		$insert['status_akun'] = 1; //status akun aktif
 		$this->model_tracer->insert_otp($insert);
 		$this->session->set_flashdata("registrasi_info","Data anda berhasil disimpan. Silahkan login untuk mengisi kuisioner tracer study");
 		redirect("tracer_study/login");
@@ -52,6 +54,41 @@ class Tracer_study extends CI_Controller {
 	{
 		//$this->model_security->get_security_reg_cc();
 		$this->load->view("tracer_study/registrasi/login");
+	}
+	public function proses_login()
+	{
+		$usr = $this->input->post("alumniemail");
+		$psw = MD5(trim($this->input->post("inppassword")));
+		$this->db->where("email", $usr);
+		$this->db->where("passwd", $psw);
+		$this->db->where("status_akun", 1);
+		$result = $this->db->get('cc_alumni')->row();
+        if(!empty($result->id))
+        {
+            $sess = array(
+                "idalumnicc"=>$result->ID,
+                "nmalumnicc"=>$result->nama_lengkap,
+                "nimalumnicc"=>$result->nim,
+				"emailalumnicc"=>$result->email,
+				"prodialumnicc"=>$result->id_prodi
+            );
+            $this->session->set_userdata($sess);
+            redirect("tracer_study/quisioner");
+        }
+        else{
+            $this->session->set_flashdata("konfirm_login", "Maaf, Nama Email atau Password yang anda masukkan salah.");
+            redirect("tracer_study/login");
+        }
+	}
+	public function quisioner()
+	{
+		//$this->model_security->get_security_tracer_cc();
+		$this->load->view("tracer_study/quisioner/index");
+	}
+	public function keluar_log()
+	{
+		$this->session->sess_destroy();
+		redirect("tracer_study/login");
 	}
 	/*
 	public function kirim_kode_aktivasi()

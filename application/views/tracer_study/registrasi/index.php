@@ -98,6 +98,7 @@
                                         <div class="input-group">
                                             <span class="input-group-addon"><i class="gi gi-edit"></i></span>
                                             <input type="text" id="inp_prodi" name="inp_prodi" class="form-control input-lg" placeholder="Program Studi" required readonly>
+                                            <input type="hidden" name="id_prodi" id="id_prodi">
                                         </div>
                                     </div>
                                 </div>
@@ -119,7 +120,7 @@
                                 </div>
                                 <div class="form-group">
                                     <div class="col-xs-12">
-                                        <div class="input-group">
+                                        <div class="input-group" id="frm_passwd">
                                             <span class="input-group-addon"><i class="gi gi-asterisk"></i></span>
                                             <input type="password" id="inppassword" name="inppassword" class="form-control input-lg" placeholder="Password" maxlength="20" minlength="5" required>
                                         </div>
@@ -127,7 +128,7 @@
                                 </div>
                                 <div class="form-group">
                                     <div class="col-xs-12">
-                                        <div class="input-group">
+                                        <div class="input-group" id="frm_passwdverify">
                                             <span class="input-group-addon"><i class="gi gi-asterisk"></i></span>
                                             <input type="password" id="inppassword_verify" name="inppassword_verify" class="form-control input-lg" placeholder="Verify Password" required>
                                         </div>
@@ -135,7 +136,15 @@
                                 </div>
                                 <div class="form-group form-actions">
                                     <div class="col-xs-12 text-right">
-                                        <button type="submit" class="btn btn-sm btn-success"><i class="fa fa-plus"></i> Register</button>
+                                        <button type="submit" class="btn btn-sm btn-success" id="tbl_reg" disabled><i class="fa fa-plus"></i> Register</button>
+                                        <button type="button" class="btn btn-sm btn-danger" id="tbl_login" style="display: none;" onclick="gotoTracer()"><i class="fa fa-question"></i> Form Tracer Study</button>
+                                    </div>
+                                    <div class="col-xs-12" id="pesan_1" style="display: none;">
+                                        <div class="alert alert-info alert-dismissible" id="success-alert">
+                                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                            <h4><i class="icon fa fa-info"></i> Konfirmasi !</h4>
+                                            Akun anda sudah aktif dan telah mengisi kuisioner tracer study.
+                                        </div>
                                     </div>
                                 </div>
                             </form>
@@ -167,17 +176,77 @@
         var res = kode.substring(0, 5);
         if(res=="10571"){
             var ketprodi = "Ekonomi Pembangunan";
+            var idprodi=1;
         } else if(res=="10572") {
             var ketprodi = "Manajemen";
+            var idprodi=2;
         } else if(res=="10573"){
             var ketprodi = "Akuntansi";
+            var idprodi=3;
         } else if(res=="10574") {
             var ketprodi = "Ekonomi Islam";
+            var idprodi=4;
         } else if(res=="10575") {
             var ketprodi = "D3 Perpajakan";
+            var idprodi=5;
         } else {
             var ketprodi = "";
+            var idprodi="";
         }
         $("#inp_prodi").val(ketprodi);
+        $("#id_prodi").val(idprodi);
+        if(kode.length==12){
+            $.ajax (
+            {
+                url : "<?php echo site_url();?>tracer_study/periksa_akun",
+                type : "post",
+                data : {kode:kode},
+                success : function(d)
+                {
+                    var dt = d.split("-");
+                    if(dt[0]==1){
+                        $("#tbl_reg").show();
+                        $("#tbl_reg").attr("disabled", false);
+                        $("#inp_nama").attr("disabled", false);
+                        $("#alumniemail").attr("disabled", false);
+                        $("#inppassword").attr("disabled", false);
+                        $("#inppassword_verify").attr("disabled", false);
+                        $("#inp_nama").val("");
+                        $("#alumniemail").val("");
+                        $("#inppassword").val("");
+                        $("#inppassword_verify").val("");
+                        $("#frm_passwd").show();
+                        $("#frm_passwdverify").show();
+                        $("#tbl_login").hide();
+                        $("pesan_1").hide();
+                    } else {
+                        $("#tbl_reg").hide();
+                        $("#tbl_reg").attr("disabled", true);
+                        $("#inp_nama").attr("disabled", true);
+                        $("#alumniemail").attr("disabled", true);
+                        $("#inppassword").attr("disabled", true);
+                        $("#inppassword_verify").attr("disabled", true);
+                        var dt2 = dt[1].split("#");
+                        $("#inp_nama").val(dt2[0]);
+                        $("#alumniemail").val(dt2[1]);
+                        $("#inppassword").val("");
+                        $("#inppassword_verify").val("");
+                        $("#frm_passwd").hide();
+                        $("#frm_passwdverify").hide();
+                        if(dt2[2]==1) {
+                            $("pesan_1").show();
+                            $("#tbl_login").hide();
+                        } else {
+                            $("#tbl_login").show();
+                            $("pesan_1").hide();
+                        }
+                    }
+                }
+            });
+        }
+    }
+    var gotoTracer = function()
+    {
+        window.location.assign("<?php echo base_url();?>tracer_study/login");
     }
 </script>
