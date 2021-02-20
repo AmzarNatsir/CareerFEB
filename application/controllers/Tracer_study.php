@@ -66,7 +66,7 @@ class Tracer_study extends CI_Controller {
         if(!empty($result->id))
         {
             $sess = array(
-                "idalumnicc"=>$result->ID,
+                "idalumnicc"=>$result->id,
                 "nmalumnicc"=>$result->nama_lengkap,
                 "nimalumnicc"=>$result->nim,
 				"emailalumnicc"=>$result->email,
