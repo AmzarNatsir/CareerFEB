@@ -102,6 +102,7 @@
                                 </div>
                                 <!-- END Account Status Block -->
                             </div>
+                            <form action="<?php echo base_url();?>tracer_study/simpan_tracer" method="post">
                             <div class="col-sm-8 col-lg-4">
                                 <div class="block">
                                     <div class="block-title">
@@ -1290,44 +1291,73 @@
                                         </div>
                                         <h4 class="sub-header"><strong>III. SARAN</strong></h4>
                                         <div id="faq4" class="panel-group">
-                                        <div class="panel panel-default">
-                                            <div class="panel-heading">
-                                                <h4 class="panel-title"><i class="fa fa-angle-right"></i> <a class="accordion-toggle" data-toggle="collapse" data-parent="#faq4" href="#faq4_q1">Berdasarkan pengalaman pada pekerjaan Anda saat ini, apa saran yang anda berikan untuk peningkatan kualitas pembelajaran di Fakultas Ekonomi dan Bisnis (FEB) Universitas Muhammadiyah Makassar ?</a></h4>
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading">
+                                                    <h4 class="panel-title"><i class="fa fa-angle-right"></i> <a class="accordion-toggle" data-toggle="collapse" data-parent="#faq4" href="#faq4_q1">Berdasarkan pengalaman pada pekerjaan Anda saat ini, apa saran yang anda berikan untuk peningkatan kualitas pembelajaran di Fakultas Ekonomi dan Bisnis (FEB) Universitas Muhammadiyah Makassar ?</a></h4>
+                                                </div>
+                                                <div id="faq4_q1" class="panel-collapse collapse">
+                                                    <div class="panel-body">
+                                                        <div class="checkbox">
+                                                            <label for="pil_27_1">
+                                                                <input type="checkbox" id="pil_27_1" name="pil_27_1" value="1"> Penambahan bahan Pustaka
+                                                            </label><br>
+                                                            <label for="pil_27_2">
+                                                                <input type="checkbox" id="pil_27_2" name="pil_27_2" value="2"> Pengembangan softskill
+                                                            </label><br>
+                                                            <label for="pil_27_3">
+                                                                <input type="checkbox" id="pil_27_3" name="pil_27_3" value="3"> Menjaga rasio dosen: mahasiswa yang ideal
+                                                            </label><br>
+                                                            <label for="pil_27_4">
+                                                                <input type="checkbox" id="pil_27_4" name="pil_27_4" value="4"> Bimbingan karir
+                                                            </label><br>
+                                                            <label for="pil_27_5">
+                                                                <input type="checkbox" id="pil_27_5" name="pil_27_5" value="5"> Bahan kuliah yang lebih kini
+                                                            </label><br>
+                                                            <label for="pil_27_6">
+                                                                <input type="checkbox" id="pil_27_6" name="pil_27_6" value="6"> Peningkatan kualitas SDM
+                                                            </label><br>
+                                                            <label for="pil_27_7">
+                                                                <input type="checkbox" id="pil_27_7" name="pil_27_7" value="7"> Peningkatan sarana / prasarana
+                                                            </label><br>
+                                                            <label for="pil_27_8">
+                                                                <input type="checkbox" id="pil_27_8" name="pil_27_8" value="8"> Membangun jejaring dengan industri
+                                                            </label>    
+                                                        </div>  
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div id="faq4_q1" class="panel-collapse collapse">
-                                                <div class="panel-body">
-                                                    <div class="checkbox">
-                                                        <label for="pil_27_1">
-                                                            <input type="checkbox" id="pil_27_1" name="pil_27_1" value="1"> Penambahan bahan Pustaka
-                                                        </label><br>
-                                                        <label for="pil_27_2">
-                                                            <input type="checkbox" id="pil_27_2" name="pil_27_2" value="2"> Pengembangan softskill
-                                                        </label><br>
-                                                        <label for="pil_27_3">
-                                                            <input type="checkbox" id="pil_27_3" name="pil_27_3" value="3"> Menjaga rasio dosen: mahasiswa yang ideal
-                                                        </label><br>
-                                                        <label for="pil_27_4">
-                                                            <input type="checkbox" id="pil_27_4" name="pil_27_4" value="4"> Bimbingan karir
-                                                        </label><br>
-                                                        <label for="pil_27_5">
-                                                            <input type="checkbox" id="pil_27_5" name="pil_27_5" value="5"> Bahan kuliah yang lebih kini
-                                                        </label><br>
-                                                        <label for="pil_27_6">
-                                                            <input type="checkbox" id="pil_27_6" name="pil_27_6" value="6"> Peningkatan kualitas SDM
-                                                        </label><br>
-                                                        <label for="pil_27_7">
-                                                            <input type="checkbox" id="pil_27_7" name="pil_27_7" value="7"> Peningkatan sarana / prasarana
-                                                        </label><br>
-                                                        <label for="pil_27_8">
-                                                            <input type="checkbox" id="pil_27_8" name="pil_27_8" value="8"> Membangun jejaring dengan industri
-                                                        </label>    
-                                                    </div>  
+                                        </div>
+                                        <h4 class="sub-header"><strong>IV. PENUTUP</strong></h4>
+                                        <div id="faq5" class="panel-group">
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading">
+                                                    <h4 class="panel-title"><a class="accordion-toggle" data-toggle="collapse" data-parent="#faq5" href="#faq5_q1">Data dan penilaian saudara akan tetap dirahasiakan dan semata-mata akan digunakan untuk kepentingan evaluasi.</a></h4>
+                                                </div>
+                                                <div id="faq5_q1" class="panel-collapse collapse">
+                                                    <div class="panel-body">
+                                                    <table class="table" style="width: 100%;">
+                                                    <tr>
+                                                        <td>Setelah menyimpan hasil tracer study anda, kami memberikan anda akses login ke panel career center. Gunakan email dan password yang telah anda daftarkan sebelumnya.<br>
+                                                        Modul yang disiapkan : <br>
+                                                        1. Modul Kegiatan/Event Pelatihan<br>
+                                                        2. Modul Lowongan Kerja<br>
+                                                        3. Modul Informasi/Berita<br>
+                                                        <hr>
+                                                        Terima kasih atas waktu anda. Tetap sehat dan sukses selalu.
+                                                    </td>
+                                                    </tr>
+                                                    <tr>
+                                                    <td><button type="submit" class="btn btn-primary" name="simpan_ts" id="simpan_ts">SIMPAN HASIL TRACER STUDY ANDA</button></td>
+                                                    </tr>
+                                                    </table>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            </form>
                         </div>
                         <!-- END Tasks Row -->
                     </div>
