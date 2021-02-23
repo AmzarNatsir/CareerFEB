@@ -12,39 +12,16 @@
         <!-- Icons -->
         <!-- The following icons can be replaced with your own, they are used by desktop and mobile browsers -->
         <link rel="shortcut icon" href="<?php echo base_url();?>assets/img/logo-mini.ico"> 
-        <!-- END Icons -->
-
-        <!-- Stylesheets -->
-        <!-- Bootstrap is included in its original form, unaltered -->
         <link rel="stylesheet" href="<?php echo base_url();?>assets/css/bootstrap.min.css">
-
         <!-- Related styles of various icon packs and plugins -->
         <link rel="stylesheet" href="<?php echo base_url();?>assets/css/plugins.css">
-
         <!-- The main stylesheet of this template. All Bootstrap overwrites are defined in here -->
         <link rel="stylesheet" href="<?php echo base_url();?>assets/css/main.css">
-
-        <!-- Include a specific file here from css/themes/ folder to alter the default theme of the template -->
-
-        <!-- The themes stylesheet of this template (for using specific theme color in individual elements - must included last) -->
         <link rel="stylesheet" href="<?php echo base_url();?>assets/css/themes.css">
-        <!-- END Stylesheets -->
-
-        <!-- Modernizr (browser feature detection library) -->
         <script src="<?php echo base_url();?>assets/js/vendor/modernizr.min.js"></script>
     </head>
     <body>
-        <!-- Page Wrapper -->
-        <!-- In the PHP version you can set the following options from inc/config file -->
-        <!--
-            Available classes:
-
-            'page-loading'      enables page preloader
-        -->
         <div id="page-wrapper">
-            <!-- Preloader -->
-            <!-- Preloader functionality (initialized in js/app.js) - pageLoading() -->
-            <!-- Used only if page preloader is enabled from inc/config (PHP version) or the class 'page-loading' is added in #page-wrapper element (HTML version) -->
             <div class="preloader themed-background">
                 <h1 class="push-top-bottom text-light text-center"><strong>CC</strong>FEB</h1>
                 <div class="inner">
@@ -184,8 +161,41 @@
                                                         </div>
                                                     </div>
                                                     <div class="form-group">
-                                                        <label for="inp_alamat">Alamat Sekarang</label>
+                                                        <label for="inp_alamat">Domisili/Alamat Sekarang</label>
                                                         <input type="text" class="form-control" name="inp_alamat" id="inp_alamat" maxlength="100" required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="pil_provinsi">Provinsi</label>
+                                                        <select class="form-control select-select2" name="pil_provinsi" id="pil_provinsi" data-placeholder="Pilihan Provinsi" required>
+                                                        <option></option>
+                                                        <?php 
+                                                        foreach($provinsi as $prov){ 
+                                                            echo "<option value=".$prov['id'].">".strtoupper($prov['nama_provinsi'])."</option>";
+                                                        }
+                                                        ?>
+                                                        </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="pil_kabupaten">Kabupaten/Kota</label>
+                                                        <select class="form-control select-select2" name="pil_kabupaten" id="pil_kabupaten" data-placeholder="Pilihan Kabupaten" required>
+                                                        <option></option>
+                                                        </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="pil_kecamatan">Kecamatan</label>
+                                                        <select class="form-control select-select2" name="pil_kecamatan" id="pil_kecamatan" data-placeholder="Pilihan Kecamatan" required>
+                                                        <option></option>
+                                                        </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="pil_kelurahan">Kelurahan</label>
+                                                        <select class="form-control select-select2" name="pil_kelurahan" id="pil_kelurahan" data-placeholder="Pilihan Kelurahan" required>
+                                                        <option></option>
+                                                        </select>
                                                         </div>
                                                     </div>
                                                     <div class="form-group">
@@ -195,7 +205,15 @@
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="inp_tahun_lulus">Tahun Lulus</label>
-                                                        <input type="text" class="form-control" name="inp_tahun_lulus" id="inp_tahun_lulus" maxlength="4" required>
+                                                        <select class="select-chosen" name="pil_tahun_lulus" id="pil_tahun_lulus" style="width: 30%;">
+                                                        <?php
+                                                        $thn_awal = 1980;
+                                                        $thn_skr = date("Y");
+                                                        for($thn_lulus=$thn_awal; $thn_lulus <= $thn_skr; $thn_lulus++) {
+                                                            echo "<option value=".$thn_lulus.">".$thn_lulus."</option>";
+                                                        }
+                                                        ?>
+                                                        </select>
                                                         </div>
                                                     </div>
                                                 </td>
@@ -1352,7 +1370,25 @@
                         $("#faq1").hide(1000);
                     }
                 });
-            });
+                $("#pil_provinsi").on("change", function()
+                {
+                    var id_prov = $("#pil_provinsi").val();
+                    $("#pil_kabupaten").load("<?php echo base_url();?>tracer_study/tampilkan_kabupaten/"+id_prov);
+                    $("#pil_kecamatan").empty();
+                    $("#pil_kelurahan").empty();
+                });
+                $("#pil_kabupaten").on("change", function()
+                {
+                    var id_kab = $("#pil_kabupaten").val();
+                    $("#pil_kecamatan").load("<?php echo base_url();?>tracer_study/tampilkan_kecamatan/"+id_kab);
+                    $("#pil_kelurahan").empty();
+                });
+                $("#pil_kecamatan").on("change", function()
+                {
+                    var id_kec = $("#pil_kecamatan").val();
+                    $("#pil_kelurahan").load("<?php echo base_url();?>tracer_study/tampilkan_kelurahan/"+id_kec);
+                });
+            }); 
         </script>
     </body>
 </html>

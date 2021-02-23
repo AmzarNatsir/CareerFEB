@@ -83,7 +83,41 @@ class Tracer_study extends CI_Controller {
 	public function quisioner()
 	{
 		//$this->model_security->get_security_tracer_cc();
-		$this->load->view("tracer_study/quisioner/index");
+		$data['provinsi'] = $this->model_tracer->get_provinsi();
+		$this->load->view("tracer_study/quisioner/index", $data);
+	}
+	public function tampilkan_kabupaten()
+	{
+		$id_provinsi = $this->uri->segment(3);
+		$result = $this->model_tracer->get_kabupaten($id_provinsi);
+
+		$html_view = "<option></option>";
+		foreach($result as $kab) {
+			$html_view .= "<option value=".$kab['id'].">".$kab['nama_kabupaten']."</option>";
+		}
+		echo $html_view;
+	}
+	public function tampilkan_kecamatan()
+	{
+		$id_kabupaten = $this->uri->segment(3);
+		$result = $this->model_tracer->get_kecamatan($id_kabupaten);
+
+		$html_view = "<option></option>";
+		foreach($result as $kec) {
+			$html_view .= "<option value=".$kec['id'].">".$kec['nama_kecamatan']."</option>";
+		}
+		echo $html_view;
+	}
+	public function tampilkan_kelurahan()
+	{
+		$id_kecamatan = $this->uri->segment(3);
+		$result = $this->model_tracer->get_kelurahan($id_kecamatan);
+
+		$html_view = "<option></option>";
+		foreach($result as $kel) {
+			$html_view .= "<option value=".$kel['id'].">".$kel['nama_kelurahan']."</option>";
+		}
+		echo $html_view;
 	}
 	public function keluar_log()
 	{
