@@ -248,13 +248,16 @@ class Tracer_study extends CI_Controller {
 		$quis['q_no_4'] = $pilihan_4;
 		$this->model_tracer->insert_tracer_study($quis);
 		redirect("tracer_study/quisioner");
-		
-		
 	}
 	public function keluar_log()
 	{
 		$this->session->sess_destroy();
 		redirect("tracer_study/login");
+	}
+	public function hasil()
+	{
+		$this->_init();
+		$this->load->view('home/hasil_tracer/index');
 	}
 	/*
 	public function kirim_kode_aktivasi()

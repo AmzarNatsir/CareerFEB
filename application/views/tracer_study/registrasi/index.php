@@ -40,7 +40,7 @@
                     <div id="login-alt-container">
                         <!-- Title -->
                         <h1 class="push-top-bottom">
-                            <strong>Tracer Study FEB Unismuh Makassar</strong><br>
+                            <strong><a href="https://career.feb.unismuh.ac.id">Tracer Study FEB Unismuh Makassar</a></strong><br>
                             <small>SELAMAT DATANG</small><br>
                             <small>Bagi Alumni Universitas Muhammadiyah Makassar <br>
                             Fakultas Ekonomi dan Bisnis siapkan diri anda untuk <br>
@@ -60,7 +60,7 @@
 
                         <!-- Footer -->
                         <footer class="text-muted push-top-bottom">
-                            <small><?php echo date("Y");?></span> &copy; <a href="https://career.feb.unismuh.ac.id" target="_new">CareerCenterFEB</a></small>
+                            <small><?php echo date("Y");?></span> &copy; <a href="https://career.feb.unismuh.ac.id" >CareerCenterFEB</a></small>
                         </footer>
                         <!-- END Footer -->
                     </div>
