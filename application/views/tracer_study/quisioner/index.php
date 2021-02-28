@@ -102,7 +102,7 @@
                                 </div>
                                 <!-- END Account Status Block -->
                             </div>
-                            <form action="<?php echo base_url();?>tracer_study/simpan_tracer" method="post">
+                            <form action="<?php echo base_url();?>tracer_study/simpan_tracer" method="post" onsubmit="return confirmSimpan()">
                             <div class="col-sm-8 col-lg-4">
                                 <div class="block">
                                     <div class="block-title">
@@ -249,41 +249,41 @@
                                                 <div class="panel-body">
                                                     <div class="checkbox">
                                                         <label for="pil_1_1">
-                                                            <input type="checkbox" id="pil_1_1" name="pil_1_1" value="1"> Pengumuman lowongan pekerjaan pada surat kabar
+                                                            <input type="checkbox" id="pil_1_1" name="pil_1_1[]" value="1"> Pengumuman lowongan pekerjaan pada surat kabar
                                                         </label><br>
                                                         <label for="pil_1_2">
-                                                            <input type="checkbox" id="pil_1_2" name="pil_1_2" value="2"> Pengumuman di internet
+                                                            <input type="checkbox" id="pil_1_2" name="pil_1_1[]" value="2"> Pengumuman di internet
                                                         </label><br>
 
                                                         <label for="pil_1_3">
-                                                            <input type="checkbox" id="pil_1_3" name="pil_1_3" value="3"> Informasi internal perusahaan
+                                                            <input type="checkbox" id="pil_1_3" name="pil_1_1[]" value="3"> Informasi internal perusahaan
                                                         </label><br>
                                                         <label for="pil_1_4">
-                                                            <input type="checkbox" id="pil_1_4" name="pil_1_4" value="4"> Lamaran langsung ke prusahaan
+                                                            <input type="checkbox" id="pil_1_4" name="pil_1_1[]" value="4"> Lamaran langsung ke prusahaan
                                                         </label><br>
                                                         <label for="pil_1_5">
-                                                            <input type="checkbox" id="pil_1_5" name="pil_1_5" value="5"> Career center FEB Unismuh Makassar
+                                                            <input type="checkbox" id="pil_1_5" name="pil_1_1[]" value="5"> Career center FEB Unismuh Makassar
                                                         </label><br>
                                                         <label for="pil_1_6">
-                                                            <input type="checkbox" id="pil_1_6" name="pil_1_6" value="6"> Alumni
+                                                            <input type="checkbox" id="pil_1_6" name="pil_1_1[]" value="6"> Alumni
                                                         </label><br>
                                                         <label for="pil_1_7">
-                                                            <input type="checkbox" id="pil_1_7" name="pil_1_7" value="7"> Perusahaan / agen perekrut tenaga kerja
+                                                            <input type="checkbox" id="pil_1_7" name="pil_1_1[]" value="7"> Perusahaan / agen perekrut tenaga kerja
                                                         </label><br>
                                                         <label for="pil_1_8">
-                                                            <input type="checkbox" id="pil_1_8" name="pil_1_8" value="8"> Kontak personal/pribadi
+                                                            <input type="checkbox" id="pil_1_8" name="pil_1_1[]" value="8"> Kontak personal/pribadi
                                                         </label><br>
                                                         <label for="pil_1_9">
-                                                            <input type="checkbox" id="pil_1_9" name="pil_1_9" value="9"> Dinas tenaga kerja
+                                                            <input type="checkbox" id="pil_1_9" name="pil_1_1[]" value="9"> Dinas tenaga kerja
                                                         </label><br>
                                                         <label for="pil_1_10">
-                                                            <input type="checkbox" id="pil_1_10" name="pil_1_10" value="10"> Bursa kerja
+                                                            <input type="checkbox" id="pil_1_10" name="pil_1_1[]" value="10"> Bursa kerja
                                                         </label><br>
                                                         <label for="pil_1_11">
-                                                            <input type="checkbox" id="pil_1_11" name="pil_1_11" value="11"> Informasi teman
+                                                            <input type="checkbox" id="pil_1_11" name="pil_1_1[]" value="11"> Informasi teman
                                                         </label><br>
                                                         <label for="pil_1_12">
-                                                            <input type="checkbox" id="pil_1_12" name="pil_1_12" value="12"> Kerabat/keluarga
+                                                            <input type="checkbox" id="pil_1_12" name="pil_1_1[]" value="12"> Kerabat/keluarga
                                                         </label>
                                                     </div>
                                                 </div>
@@ -297,28 +297,28 @@
                                                 <div class="panel-body">
                                                     <div class="radio">
                                                         <label for="pil_2_1">
-                                                            <input type="radio" id="pil_2_1" name="pil_2" value="1"> Bekerja sebelum lulus
+                                                            <input type="radio" id="pil_2_1" name="pil_1_2" value="1"> Bekerja sebelum lulus
                                                         </label><br>
                                                         <label for="pil_2_2">
-                                                            <input type="radio" id="pil_2_2" name="pil_2" value="2"> Antara 3 sampai 6 bulan
+                                                            <input type="radio" id="pil_2_2" name="pil_1_2" value="2"> Antara 3 sampai 6 bulan
                                                         </label><br>
                                                         <label for="pil_2_3">
-                                                            <input type="radio" id="pil_2_3" name="pil_2" value="3"> 10 sampai 12 bulan
+                                                            <input type="radio" id="pil_2_3" name="pil_1_2" value="3"> 10 sampai 12 bulan
                                                         </label><br>
                                                         <label for="pil_2_4">
-                                                            <input type="radio" id="pil_2_4" name="pil_2" value="4"> 19 sampai 24 bulan
+                                                            <input type="radio" id="pil_2_4" name="pil_1_2" value="4"> 19 sampai 24 bulan
                                                         </label><br>
                                                         <label for="pil_2_5">
-                                                            <input type="radio" id="pil_2_5" name="pil_2" value="5"> Kurang 3 bulan
+                                                            <input type="radio" id="pil_2_5" name="pil_1_2" value="5"> Kurang 3 bulan
                                                         </label><br>
                                                         <label for="pil_2_6">
-                                                            <input type="radio" id="pil_2_6" name="pil_2" value="6"> Antara 7 sampai 9 bulan
+                                                            <input type="radio" id="pil_2_6" name="pil_1_2" value="6"> Antara 7 sampai 9 bulan
                                                         </label><br>
                                                         <label for="pil_2_7">
-                                                            <input type="radio" id="pil_2_7" name="pil_2" value="7"> 13 sampai 18 bulan
+                                                            <input type="radio" id="pil_2_7" name="pil_1_2" value="7"> 13 sampai 18 bulan
                                                         </label><br>
                                                         <label for="pil_2_8">
-                                                            <input type="radio" id="pil_2_8" name="pil_2" value="8"> Lebih dari 24 bulan
+                                                            <input type="radio" id="pil_2_8" name="pil_1_2" value="8"> Lebih dari 24 bulan
                                                         </label>
                                                     </div> 
                                                 </div>
@@ -332,22 +332,22 @@
                                                 <div class="panel-body">
                                                     <div class="radio">
                                                         <label for="pil_3_1">
-                                                            <input type="radio" id="pil_3_1" name="pil_3" value="1"> Staff
+                                                            <input type="radio" id="pil_3_1" name="pil_1_3" value="1"> Staff
                                                         </label><br>
                                                         <label for="pil_3_2">
-                                                            <input type="radio" id="pil_3_2" name="pil_3" value="2"> Supervisor
+                                                            <input type="radio" id="pil_3_2" name="pil_1_3" value="2"> Supervisor
                                                         </label><br>
                                                         <label for="pil_3_3">
-                                                            <input type="radio" id="pil_3_3" name="pil_3" value="3"> Wirausaha
+                                                            <input type="radio" id="pil_3_3" name="pil_1_3" value="3"> Wirausaha
                                                         </label><br>
                                                         <label for="pil_3_4">
-                                                            <input type="radio" id="pil_3_4" name="pil_3" value="4"> Management trainee
+                                                            <input type="radio" id="pil_3_4" name="pil_1_3" value="4"> Management trainee
                                                         </label><br>
                                                         <label for="pil_3_5">
-                                                            <input type="radio" id="pil_3_5" name="pil_3" value="5"> Manajerial
+                                                            <input type="radio" id="pil_3_5" name="pil_1_3" value="5"> Manajerial
                                                         </label><br>
                                                         <label for="pil_3_6">
-                                                            <input type="radio" id="pil_3_6" name="pil_3" value="6"> Lain-lain
+                                                            <input type="radio" id="pil_3_6" name="pil_1_3" value="6"> Lain-lain
                                                         </label>
                                                     </div>
                                                 </div>
@@ -361,19 +361,19 @@
                                                 <div class="panel-body">
                                                     <div class="radio">
                                                         <label for="pil_4_1">
-                                                            <input type="radio" id="pil_4_1" name="pil_4" value="1"> Bekerja penuh waktu
+                                                            <input type="radio" id="pil_4_1" name="pil_1_4" value="1"> Bekerja penuh waktu
                                                         </label><br>
                                                         <label for="pil_4_2">
-                                                            <input type="radio" id="pil_4_2" name="pil_4" value="2"> Bekerja kontrak semenstara
+                                                            <input type="radio" id="pil_4_2" name="pil_1_4" value="2"> Bekerja kontrak semenstara
                                                         </label><br>
                                                         <label for="pil_4_3">
-                                                            <input type="radio" id="pil_4_3" name="pil_4" value="3"> Wirausaha
+                                                            <input type="radio" id="pil_4_3" name="pil_1_4" value="3"> Wirausaha
                                                         </label><br>
                                                         <label for="pil_4_4">
-                                                            <input type="radio" id="pil_4_4" name="pil_4" value="4"> Bekerja paruh waktu trainee
+                                                            <input type="radio" id="pil_4_4" name="pil_1_4" value="4"> Bekerja paruh waktu trainee
                                                         </label><br>
                                                         <label for="pil_4_5">
-                                                            <input type="radio" id="pil_4_5" name="pil_4" value="5"> Tidak bekerja sedang mencari pekerjaan
+                                                            <input type="radio" id="pil_4_5" name="pil_1_4" value="5"> Tidak bekerja sedang mencari pekerjaan
                                                         </label>
                                                     </div>
                                                 </div>
@@ -387,22 +387,22 @@
                                                 <div class="panel-body">
                                                     <div class="radio">
                                                         <label for="pil_5_1">
-                                                            <input type="radio" id="pil_5_1" name="pil_5" value="1"> x < 1 juta
+                                                            <input type="radio" id="pil_5_1" name="pil_1_5" value="1"> x < 1 juta
                                                         </label><br>
                                                         <label for="pil_5_2">
-                                                            <input type="radio" id="pil_5_2" name="pil_5" value="2"> 2 < x ≤ 3 juta
+                                                            <input type="radio" id="pil_5_2" name="pil_1_5" value="2"> 2 < x ≤ 3 juta
                                                         </label><br>
                                                         <label for="pil_5_3">
-                                                            <input type="radio" id="pil_5_3" name="pil_5" value="3"> 4 < x ≤ 5 juta
+                                                            <input type="radio" id="pil_5_3" name="pil_1_5" value="3"> 4 < x ≤ 5 juta
                                                         </label><br>
                                                         <label for="pil_5_4">
-                                                            <input type="radio" id="pil_5_4" name="pil_5" value="4"> 1 < x ≤ 2 juta
+                                                            <input type="radio" id="pil_5_4" name="pil_1_5" value="4"> 1 < x ≤ 2 juta
                                                         </label><br>
                                                         <label for="pil_5_5">
-                                                            <input type="radio" id="pil_5_5" name="pil_5" value="5"> 3 < x ≤ 4 juta
+                                                            <input type="radio" id="pil_5_5" name="pil_1_5" value="5"> 3 < x ≤ 4 juta
                                                         </label><br>
                                                         <label for="pil_5_6">
-                                                            <input type="radio" id="pil_5_6" name="pil_5" value="6"> x > 5 juta
+                                                            <input type="radio" id="pil_5_6" name="pil_1_5" value="6"> x > 5 juta
                                                         </label>
                                                     </div>
                                                 </div>
@@ -416,10 +416,10 @@
                                                 <div class="panel-body">
                                                     <div class="radio">
                                                         <label for="pil_6_1">
-                                                            <input type="radio" id="pil_6_1" name="pil_6" value="1"> Ya
+                                                            <input type="radio" id="pil_6_1" name="pil_1_6" value="1"> Ya
                                                         </label><br>
                                                         <label for="pil_6_2">
-                                                            <input type="radio" id="pil_6_2" name="pil_6" value="2"> Tidak
+                                                            <input type="radio" id="pil_6_2" name="pil_1_6" value="2"> Tidak
                                                         </label>
                                                     </div>
                                                 </div>
@@ -433,48 +433,48 @@
                                                 <div class="panel-body">
                                                     <div class="checkbox">
                                                         <label for="pil_7_1">
-                                                            <input type="checkbox" id="pil_7_1" name="pil_7_1" value="1"> Arsitek
+                                                            <input type="checkbox" id="pil_7_1" name="pil_1_7[]" value="1"> Arsitek
                                                         </label><br>
                                                         <label for="pil_7_2">
-                                                            <input type="checkbox" id="pil_7_2" name="pil_7_2" value="2"> Teknik Komputer
+                                                            <input type="checkbox" id="pil_7_2" name="pil_1_7[]" value="2"> Teknik Komputer
                                                         </label><br>
 
                                                         <label for="pil_7_3">
-                                                            <input type="checkbox" id="pil_7_3" name="pil_7_3" value="3"> Akuntansi
+                                                            <input type="checkbox" id="pil_7_3" name="pil_1_7[]" value="3"> Akuntansi
                                                         </label><br>
                                                         <label for="pil_7_4">
-                                                            <input type="checkbox" id="pil_7_4" name="pil_7_4" value="4"> Manajemen Keuangan
+                                                            <input type="checkbox" id="pil_7_4" name="pil_1_7[]" value="4"> Manajemen Keuangan
                                                         </label><br>
                                                         <label for="pil_7_5">
-                                                            <input type="checkbox" id="pil_7_5" name="pil_7_5" value="5"> Manajemen Pemasaran
+                                                            <input type="checkbox" id="pil_7_5" name="pil_1_7[]" value="5"> Manajemen Pemasaran
                                                         </label><br>
                                                         <label for="pil_7_6">
-                                                            <input type="checkbox" id="pil_7_6" name="pil_7_6" value="6"> Manajemen Produksi
+                                                            <input type="checkbox" id="pil_7_6" name="pil_1_7[]" value="6"> Manajemen Produksi
                                                         </label><br>
                                                         <label for="pil_7_7">
-                                                            <input type="checkbox" id="pil_7_7" name="pil_7_7" value="7"> Keuangan / Perbankan
+                                                            <input type="checkbox" id="pil_7_7" name="pil_1_7[]" value="7"> Keuangan / Perbankan
                                                         </label><br>
                                                         <label for="pil_7_8">
-                                                            <input type="checkbox" id="pil_7_8" name="pil_7_8" value="8"> Manajemen SDN
+                                                            <input type="checkbox" id="pil_7_8" name="pil_1_7[]" value="8"> Manajemen SDN
                                                         </label><br>
 
                                                         <label for="pil_7_9">
-                                                            <input type="checkbox" id="pil_7_9" name="pil_7_9" value="9"> Database Administrator
+                                                            <input type="checkbox" id="pil_7_9" name="pil_1_7[]" value="9"> Database Administrator
                                                         </label><br>
                                                         <label for="pil_7_10">
-                                                            <input type="checkbox" id="pil_7_10" name="pil_7_10" value="11"> Database Designer
+                                                            <input type="checkbox" id="pil_7_10" name="pil_1_7[]" value="11"> Database Designer
                                                         </label><br>
                                                         <label for="pil_7_11">
-                                                            <input type="checkbox" id="pil_7_11" name="pil_7_11" value="12"> Penulis
+                                                            <input type="checkbox" id="pil_7_11" name="pil_1_7[]" value="12"> Penulis
                                                         </label><br>
                                                         <label for="pil_7_12">
-                                                            <input type="checkbox" id="pil_7_12" name="pil_7_12" value="13"> Sistem Administrator
+                                                            <input type="checkbox" id="pil_7_12" name="pil_1_7[]" value="13"> Sistem Administrator
                                                         </label><br>
                                                         <label for="pil_7_13">
-                                                            <input type="checkbox" id="pil_7_13" name="pil_7_13" value="14"> Sistem Informasi
+                                                            <input type="checkbox" id="pil_7_13" name="pil_1_7[]" value="14"> Sistem Informasi
                                                         </label><br>
                                                         <label for="pil_7_14">
-                                                            <input type="checkbox" id="pil_7_14" name="pil_7_14" value="15"> Lain-lain
+                                                            <input type="checkbox" id="pil_7_14" name="pil_1_7[]" value="15"> Lain-lain
                                                         </label>
                                                     </div>
                                                 </div>
@@ -488,28 +488,28 @@
                                                 <div class="panel-body">
                                                     <div class="radio">
                                                         <label for="pil_8_1">
-                                                            <input type="radio" id="pil_8_1" name="pil_8" value="1"> Industri manufaktur
+                                                            <input type="radio" id="pil_8_1" name="pil_1_8" value="1"> Industri manufaktur
                                                         </label><br>
                                                         <label for="pil_8_2">
-                                                            <input type="radio" id="pil_8_2" name="pil_8" value="2"> Pendidikan
+                                                            <input type="radio" id="pil_8_2" name="pil_1_8" value="2"> Pendidikan
                                                         </label><br>
                                                         <label for="pil_8_3">
-                                                            <input type="radio" id="pil_8_3" name="pil_8" value="3"> Wirausaha
+                                                            <input type="radio" id="pil_8_3" name="pil_1_8" value="3"> Wirausaha
                                                         </label><br>
                                                         <label for="pil_8_4">
-                                                            <input type="radio" id="pil_8_4" name="pil_8" value="4"> Industri Broadcasting
+                                                            <input type="radio" id="pil_8_4" name="pil_1_8" value="4"> Industri Broadcasting
                                                         </label><br>
                                                         <label for="pil_8_5">
-                                                            <input type="radio" id="pil_8_5" name="pil_8" value="5"> Industri keuangan / Perbankan
+                                                            <input type="radio" id="pil_8_5" name="pil_1_8" value="5"> Industri keuangan / Perbankan
                                                         </label><br>
                                                         <label for="pil_8_6">
-                                                            <input type="radio" id="pil_8_6" name="pil_8" value="6"> Lembaga Pemerintah/ PNS
+                                                            <input type="radio" id="pil_8_6" name="pil_1_8" value="6"> Lembaga Pemerintah/ PNS
                                                         </label><br>
                                                         <label for="pil_8_7">
-                                                            <input type="radio" id="pil_8_7" name="pil_8" value="7"> BUMN
+                                                            <input type="radio" id="pil_8_7" name="pil_1_8" value="7"> BUMN
                                                         </label><br>
                                                         <label for="pil_8_8">
-                                                            <input type="radio" id="pil_8_8" name="pil_8" value="8"> Rumah Sakit
+                                                            <input type="radio" id="pil_8_8" name="pil_1_8" value="8"> Rumah Sakit
                                                         </label>
                                                     </div>
                                                 </div>
@@ -523,22 +523,22 @@
                                                 <div class="panel-body">
                                                     <div class="radio">
                                                         <label for="pil_9_1">
-                                                            <input type="radio" id="pil_9_1" name="pil_9" value="1"> x < 1 tahun
+                                                            <input type="radio" id="pil_9_1" name="pil_1_9" value="1"> x < 1 tahun
                                                         </label><br>
                                                         <label for="pil_9_2">
-                                                            <input type="radio" id="pil_9_2" name="pil_9" value="2"> 2 < x ≤ 3 tahun
+                                                            <input type="radio" id="pil_9_2" name="pil_1_9" value="2"> 2 < x ≤ 3 tahun
                                                         </label><br>
                                                         <label for="pil_9_3">
-                                                            <input type="radio" id="pil_9_3" name="pil_9" value="3"> 4 < x ≤ 5 tahun
+                                                            <input type="radio" id="pil_9_3" name="pil_1_9" value="3"> 4 < x ≤ 5 tahun
                                                         </label><br>
                                                         <label for="pil_9_4">
-                                                            <input type="radio" id="pil_9_4" name="pil_9" value="4"> 1 < x ≤ 2 tahun
+                                                            <input type="radio" id="pil_9_4" name="pil_1_9" value="4"> 1 < x ≤ 2 tahun
                                                         </label><br>
                                                         <label for="pil_9_5">
-                                                            <input type="radio" id="pil_9_5" name="pil_9" value="5"> 3 < x ≤ 4 tahun
+                                                            <input type="radio" id="pil_9_5" name="pil_1_9" value="5"> 3 < x ≤ 4 tahun
                                                         </label><br>
                                                         <label for="pil_9_6">
-                                                            <input type="radio" id="pil_9_6" name="pil_9" value="6"> x > 5 tahun
+                                                            <input type="radio" id="pil_9_6" name="pil_1_9" value="6"> x > 5 tahun
                                                         </label>
                                                     </div>
                                                 </div>
@@ -552,34 +552,34 @@
                                                 <div class="panel-body">
                                                     <div class="radio">
                                                         <label for="pil_10_1">
-                                                            <input type="radio" id="pil_10_1" name="pil_10" value="1"> x < 1 juta
+                                                            <input type="radio" id="pil_10_1" name="pil_1_10" value="1"> x < 1 juta
                                                         </label><br>
                                                         <label for="pil_10_2">
-                                                            <input type="radio" id="pil_10_2" name="pil_10" value="2"> 2 < x ≤ 3 juta
+                                                            <input type="radio" id="pil_10_2" name="pil_1_10" value="2"> 2 < x ≤ 3 juta
                                                         </label><br>
                                                         <label for="pil_10_3">
-                                                            <input type="radio" id="pil_10_3" name="pil_10" value="3"> 4 < x ≤ 5 juta
+                                                            <input type="radio" id="pil_10_3" name="pil_1_10" value="3"> 4 < x ≤ 5 juta
                                                         </label><br>
                                                         <label for="pil_10_4">
-                                                            <input type="radio" id="pil_10_4" name="pil_10" value="4"> 6 < x ≤ 7 juta
+                                                            <input type="radio" id="pil_10_4" name="pil_1_10" value="4"> 6 < x ≤ 7 juta
                                                         </label><br>
                                                         <label for="pil_10_5">
-                                                            <input type="radio" id="pil_10_5" name="pil_10" value="5"> 8 < x ≤ 9 juta
+                                                            <input type="radio" id="pil_10_5" name="pil_1_10" value="5"> 8 < x ≤ 9 juta
                                                         </label><br>
                                                         <label for="pil_10_6">
-                                                            <input type="radio" id="pil_10_6" name="pil_10" value="6"> 1 < x ≤ 2 juta
+                                                            <input type="radio" id="pil_10_6" name="pil_1_10" value="6"> 1 < x ≤ 2 juta
                                                         </label><br>
                                                         <label for="pil_10_7">
-                                                            <input type="radio" id="pil_10_7" name="pil_10" value="7"> 3 < x ≤ 4 juta
+                                                            <input type="radio" id="pil_10_7" name="pil_1_10" value="7"> 3 < x ≤ 4 juta
                                                         </label><br>
                                                         <label for="pil_10_8">
-                                                            <input type="radio" id="pil_10_8" name="pil_10" value="8"> 5 < x ≤ 6 juta
+                                                            <input type="radio" id="pil_10_8" name="pil_1_10" value="8"> 5 < x ≤ 6 juta
                                                         </label><br>
                                                         <label for="pil_10_9">
-                                                            <input type="radio" id="pil_10_9" name="pil_10" value="9"> 7 < x ≤ 8 juta
+                                                            <input type="radio" id="pil_10_9" name="pil_1_10" value="9"> 7 < x ≤ 8 juta
                                                         </label><br>
                                                         <label for="pil_10_10">
-                                                            <input type="radio" id="pil_10_10" name="pil_10" value="10"> x > 9 juta
+                                                            <input type="radio" id="pil_10_10" name="pil_1_10" value="10"> x > 9 juta
                                                         </label>
                                                     </div>
                                                 </div>
@@ -593,22 +593,22 @@
                                                 <div class="panel-body">
                                                     <div class="radio">
                                                         <label for="pil_11_1">
-                                                            <input type="radio" id="pil_11_1" name="pil_11" value="1"> x < 20 orang
+                                                            <input type="radio" id="pil_11_1" name="pil_1_11" value="1"> x < 20 orang
                                                         </label><br>
                                                         <label for="pil_11_2">
-                                                            <input type="radio" id="pil_11_2" name="pil_11" value="2"> 100 < x ≤ 300
+                                                            <input type="radio" id="pil_11_2" name="pil_1_11" value="2"> 100 < x ≤ 300
                                                         </label><br>
                                                         <label for="pil_11_3">
-                                                            <input type="radio" id="pil_11_3" name="pil_11" value="3"> 500 < x ≤ 1000
+                                                            <input type="radio" id="pil_11_3" name="pil_1_11" value="3"> 500 < x ≤ 1000
                                                         </label><br>
                                                         <label for="pil_11_4">
-                                                            <input type="radio" id="pil_11_4" name="pil_11" value="4"> 20 < x ≤ 100
+                                                            <input type="radio" id="pil_11_4" name="pil_1_11" value="4"> 20 < x ≤ 100
                                                         </label><br>
                                                         <label for="pil_11_5">
-                                                            <input type="radio" id="pil_11_5" name="pil_11" value="5"> 300 < x ≤ 500
+                                                            <input type="radio" id="pil_11_5" name="pil_1_11" value="5"> 300 < x ≤ 500
                                                         </label><br>
                                                         <label for="pil_11_6">
-                                                            <input type="radio" id="pil_11_6" name="pil_11" value="6"> x > 1000
+                                                            <input type="radio" id="pil_11_6" name="pil_1_11" value="6"> x > 1000
                                                         </label>
                                                     </div>
                                                 </div>
@@ -636,128 +636,128 @@
                                                 <tr>
                                                     <td>1</td>
                                                     <td>Integritas (etika dan moral)</td>
-                                                    <td><input type="radio" id="pil_12_1_1" name="pil_12_1_1" value="1"></td>
-                                                    <td><input type="radio" id="pil_12_1_2" name="pil_12_1_1" value="2"></td>
-                                                    <td><input type="radio" id="pil_12_1_3" name="pil_12_1_1" value="3"></td>
-                                                    <td><input type="radio" id="pil_12_1_4" name="pil_12_1_1" value="4"></td>
-                                                    <td><input type="radio" id="pil_12_1_5" name="pil_12_1_1" value="5"></td>
+                                                    <td><input type="radio" id="pil_12_1_1" name="pil_1_12_1" value="1"></td>
+                                                    <td><input type="radio" id="pil_12_1_2" name="pil_1_12_1" value="2"></td>
+                                                    <td><input type="radio" id="pil_12_1_3" name="pil_1_12_1" value="3"></td>
+                                                    <td><input type="radio" id="pil_12_1_4" name="pil_1_12_1" value="4"></td>
+                                                    <td><input type="radio" id="pil_12_1_5" name="pil_1_12_1" value="5"></td>
                                                 </tr>
                                                 <tr>
                                                     <td>2</td>
                                                     <td>Keahlian berdasarkan bidang ilmu (profesionalisme)</td>
-                                                    <td><input type="radio" id="pil_12_2_1" name="pil_12_2_1" value="1"></td>
-                                                    <td><input type="radio" id="pil_12_2_2" name="pil_12_2_1" value="2"></td>
-                                                    <td><input type="radio" id="pil_12_2_3" name="pil_12_2_1" value="3"></td>
-                                                    <td><input type="radio" id="pil_12_2_4" name="pil_12_2_1" value="4"></td>
-                                                    <td><input type="radio" id="pil_12_2_5" name="pil_12_2_1" value="5"></td>
+                                                    <td><input type="radio" id="pil_12_2_1" name="pil_1_12_2" value="1"></td>
+                                                    <td><input type="radio" id="pil_12_2_2" name="pil_1_12_2" value="2"></td>
+                                                    <td><input type="radio" id="pil_12_2_3" name="pil_1_12_2" value="3"></td>
+                                                    <td><input type="radio" id="pil_12_2_4" name="pil_1_12_2" value="4"></td>
+                                                    <td><input type="radio" id="pil_12_2_5" name="pil_1_12_2" value="5"></td>
                                                 </tr>
                                                 <tr>
                                                     <td>3</td>
                                                     <td>Bahasa Inggris</td>
-                                                    <td><input type="radio" id="pil_12_3_1" name="pil_12_3_1" value="1"></td>
-                                                    <td><input type="radio" id="pil_12_3_2" name="pil_12_3_1" value="2"></td>
-                                                    <td><input type="radio" id="pil_12_3_3" name="pil_12_3_1" value="3"></td>
-                                                    <td><input type="radio" id="pil_12_3_4" name="pil_12_3_1" value="4"></td>
-                                                    <td><input type="radio" id="pil_12_3_5" name="pil_12_3_1" value="5"></td>
+                                                    <td><input type="radio" id="pil_12_3_1" name="pil_1_12_3" value="1"></td>
+                                                    <td><input type="radio" id="pil_12_3_2" name="pil_1_12_3" value="2"></td>
+                                                    <td><input type="radio" id="pil_12_3_3" name="pil_1_12_3" value="3"></td>
+                                                    <td><input type="radio" id="pil_12_3_4" name="pil_1_12_3" value="4"></td>
+                                                    <td><input type="radio" id="pil_12_3_5" name="pil_1_12_3" value="5"></td>
                                                 </tr>
                                                 <tr>
                                                     <td>4</td>
                                                     <td>Penggunaan Teknologi Informasi</td>
-                                                    <td><input type="radio" id="pil_12_4_1" name="pil_12_4_1" value="1"></td>
-                                                    <td><input type="radio" id="pil_12_4_2" name="pil_12_4_1" value="2"></td>
-                                                    <td><input type="radio" id="pil_12_4_3" name="pil_12_4_1" value="3"></td>
-                                                    <td><input type="radio" id="pil_12_4_4" name="pil_12_4_1" value="4"></td>
-                                                    <td><input type="radio" id="pil_12_4_5" name="pil_12_4_1" value="5"></td>
+                                                    <td><input type="radio" id="pil_12_4_1" name="pil_1_12_4" value="1"></td>
+                                                    <td><input type="radio" id="pil_12_4_2" name="pil_1_12_4" value="2"></td>
+                                                    <td><input type="radio" id="pil_12_4_3" name="pil_1_12_4" value="3"></td>
+                                                    <td><input type="radio" id="pil_12_4_4" name="pil_1_12_4" value="4"></td>
+                                                    <td><input type="radio" id="pil_12_4_5" name="pil_1_12_4" value="5"></td>
                                                 </tr>
                                                 <tr>
                                                     <td>5</td>
                                                     <td>Kemampuan komunikasi</td>
-                                                    <td><input type="radio" id="pil_12_5_1" name="pil_12_5_1" value="1"></td>
-                                                    <td><input type="radio" id="pil_12_5_2" name="pil_12_5_1" value="2"></td>
-                                                    <td><input type="radio" id="pil_12_5_3" name="pil_12_5_1" value="3"></td>
-                                                    <td><input type="radio" id="pil_12_5_4" name="pil_12_5_1" value="4"></td>
-                                                    <td><input type="radio" id="pil_12_5_5" name="pil_12_5_1" value="5"></td>
+                                                    <td><input type="radio" id="pil_12_5_1" name="pil_1_12_5" value="1"></td>
+                                                    <td><input type="radio" id="pil_12_5_2" name="pil_1_12_5" value="2"></td>
+                                                    <td><input type="radio" id="pil_12_5_3" name="pil_1_12_5" value="3"></td>
+                                                    <td><input type="radio" id="pil_12_5_4" name="pil_1_12_5" value="4"></td>
+                                                    <td><input type="radio" id="pil_12_5_5" name="pil_1_12_5" value="5"></td>
                                                 </tr>
                                                 <tr>
                                                     <td>6</td>
                                                     <td>Kerjasama tim</td>
-                                                    <td><input type="radio" id="pil_12_6_1" name="pil_12_6_1" value="1"></td>
-                                                    <td><input type="radio" id="pil_12_6_2" name="pil_12_6_1" value="2"></td>
-                                                    <td><input type="radio" id="pil_12_6_3" name="pil_12_6_1" value="3"></td>
-                                                    <td><input type="radio" id="pil_12_6_4" name="pil_12_6_1" value="4"></td>
-                                                    <td><input type="radio" id="pil_12_6_5" name="pil_12_6_1" value="5"></td>
+                                                    <td><input type="radio" id="pil_12_6_1" name="pil_1_12_6" value="1"></td>
+                                                    <td><input type="radio" id="pil_12_6_2" name="pil_1_12_6" value="2"></td>
+                                                    <td><input type="radio" id="pil_12_6_3" name="pil_1_12_6" value="3"></td>
+                                                    <td><input type="radio" id="pil_12_6_4" name="pil_1_12_6" value="4"></td>
+                                                    <td><input type="radio" id="pil_12_6_5" name="pil_1_12_6" value="5"></td>
                                                 </tr>
                                                 <tr>
                                                     <td>7</td>
                                                     <td>Kewirausahaan</td>
-                                                    <td><input type="radio" id="pil_12_7_1" name="pil_12_7_1" value="1"></td>
-                                                    <td><input type="radio" id="pil_12_7_2" name="pil_12_7_1" value="2"></td>
-                                                    <td><input type="radio" id="pil_12_7_3" name="pil_12_7_1" value="3"></td>
-                                                    <td><input type="radio" id="pil_12_7_4" name="pil_12_7_1" value="4"></td>
-                                                    <td><input type="radio" id="pil_12_7_5" name="pil_12_7_1" value="5"></td>
+                                                    <td><input type="radio" id="pil_12_7_1" name="pil_1_12_7" value="1"></td>
+                                                    <td><input type="radio" id="pil_12_7_2" name="pil_1_12_7" value="2"></td>
+                                                    <td><input type="radio" id="pil_12_7_3" name="pil_1_12_7" value="3"></td>
+                                                    <td><input type="radio" id="pil_12_7_4" name="pil_1_12_7" value="4"></td>
+                                                    <td><input type="radio" id="pil_12_7_5" name="pil_1_12_7" value="5"></td>
                                                 </tr>
                                                 <tr>
                                                     <td>8</td>
                                                     <td>Pemecahan masalah</td>
-                                                    <td><input type="radio" id="pil_12_8_1" name="pil_12_8_1" value="1"></td>
-                                                    <td><input type="radio" id="pil_12_8_2" name="pil_12_8_1" value="2"></td>
-                                                    <td><input type="radio" id="pil_12_8_3" name="pil_12_8_1" value="3"></td>
-                                                    <td><input type="radio" id="pil_12_8_4" name="pil_12_8_1" value="4"></td>
-                                                    <td><input type="radio" id="pil_12_8_5" name="pil_12_8_1" value="5"></td>
+                                                    <td><input type="radio" id="pil_12_8_1" name="pil_1_12_8" value="1"></td>
+                                                    <td><input type="radio" id="pil_12_8_2" name="pil_1_12_8" value="2"></td>
+                                                    <td><input type="radio" id="pil_12_8_3" name="pil_1_12_8" value="3"></td>
+                                                    <td><input type="radio" id="pil_12_8_4" name="pil_1_12_8" value="4"></td>
+                                                    <td><input type="radio" id="pil_12_8_5" name="pil_1_12_8" value="5"></td>
                                                 </tr>
                                                 <tr>
                                                     <td>9</td>
                                                     <td>Hubungan antar manusia (human relation)</td>
-                                                    <td><input type="radio" id="pil_12_9_1" name="pil_12_9_1" value="1"></td>
-                                                    <td><input type="radio" id="pil_12_9_2" name="pil_12_9_1" value="2"></td>
-                                                    <td><input type="radio" id="pil_12_9_3" name="pil_12_9_1" value="3"></td>
-                                                    <td><input type="radio" id="pil_12_9_4" name="pil_12_9_1" value="4"></td>
-                                                    <td><input type="radio" id="pil_12_9_5" name="pil_12_9_1" value="5"></td>
+                                                    <td><input type="radio" id="pil_12_9_1" name="pil_1_12_9" value="1"></td>
+                                                    <td><input type="radio" id="pil_12_9_2" name="pil_1_12_9" value="2"></td>
+                                                    <td><input type="radio" id="pil_12_9_3" name="pil_1_12_9" value="3"></td>
+                                                    <td><input type="radio" id="pil_12_9_4" name="pil_1_12_9" value="4"></td>
+                                                    <td><input type="radio" id="pil_12_9_5" name="pil_1_12_9" value="5"></td>
                                                 </tr>
                                                 <tr>
                                                     <td>10</td>
                                                     <td>Pengembangan diri</td>
-                                                    <td><input type="radio" id="pil_12_10_1" name="pil_12_10_1" value="1"></td>
-                                                    <td><input type="radio" id="pil_12_10_2" name="pil_12_10_1" value="2"></td>
-                                                    <td><input type="radio" id="pil_12_10_3" name="pil_12_10_1" value="3"></td>
-                                                    <td><input type="radio" id="pil_12_10_4" name="pil_12_10_1" value="4"></td>
-                                                    <td><input type="radio" id="pil_12_10_5" name="pil_12_10_1" value="5"></td>
+                                                    <td><input type="radio" id="pil_12_10_1" name="pil_1_12_10" value="1"></td>
+                                                    <td><input type="radio" id="pil_12_10_2" name="pil_1_12_10" value="2"></td>
+                                                    <td><input type="radio" id="pil_12_10_3" name="pil_1_12_10" value="3"></td>
+                                                    <td><input type="radio" id="pil_12_10_4" name="pil_1_12_10" value="4"></td>
+                                                    <td><input type="radio" id="pil_12_10_5" name="pil_1_12_10" value="5"></td>
                                                 </tr>
                                                 <tr>
                                                     <td>11</td>
                                                     <td>Kemampuan bekerja mandiri</td>
-                                                    <td><input type="radio" id="pil_12_11_1" name="pil_12_11_1" value="1"></td>
-                                                    <td><input type="radio" id="pil_12_11_2" name="pil_12_11_1" value="2"></td>
-                                                    <td><input type="radio" id="pil_12_11_3" name="pil_12_11_1" value="3"></td>
-                                                    <td><input type="radio" id="pil_12_11_4" name="pil_12_11_1" value="4"></td>
-                                                    <td><input type="radio" id="pil_12_11_5" name="pil_12_11_1" value="5"></td>
+                                                    <td><input type="radio" id="pil_12_11_1" name="pil_1_12_11" value="1"></td>
+                                                    <td><input type="radio" id="pil_12_11_2" name="pil_1_12_11" value="2"></td>
+                                                    <td><input type="radio" id="pil_12_11_3" name="pil_1_12_11" value="3"></td>
+                                                    <td><input type="radio" id="pil_12_11_4" name="pil_1_12_11" value="4"></td>
+                                                    <td><input type="radio" id="pil_12_11_5" name="pil_1_12_11" value="5"></td>
                                                 </tr>
                                                 <tr>
                                                     <td>12</td>
                                                     <td>Kepemimpinan / Kemampuan Berorganisasi</td>
-                                                    <td><input type="radio" id="pil_12_12_1" name="pil_12_12_1" value="1"></td>
-                                                    <td><input type="radio" id="pil_12_12_2" name="pil_12_12_1" value="2"></td>
-                                                    <td><input type="radio" id="pil_12_12_3" name="pil_12_12_1" value="3"></td>
-                                                    <td><input type="radio" id="pil_12_12_4" name="pil_12_12_1" value="4"></td>
-                                                    <td><input type="radio" id="pil_12_12_5" name="pil_12_12_1" value="5"></td>
+                                                    <td><input type="radio" id="pil_12_12_1" name="pil_1_12_12" value="1"></td>
+                                                    <td><input type="radio" id="pil_12_12_2" name="pil_1_12_12" value="2"></td>
+                                                    <td><input type="radio" id="pil_12_12_3" name="pil_1_12_12" value="3"></td>
+                                                    <td><input type="radio" id="pil_12_12_4" name="pil_1_12_12" value="4"></td>
+                                                    <td><input type="radio" id="pil_12_12_5" name="pil_1_12_12" value="5"></td>
                                                 </tr>
                                                 <tr>
                                                     <td>13</td>
                                                     <td>Kemampuan menulis</td>
-                                                    <td><input type="radio" id="pil_12_13_1" name="pil_12_13_1" value="1"></td>
-                                                    <td><input type="radio" id="pil_12_13_2" name="pil_12_13_1" value="2"></td>
-                                                    <td><input type="radio" id="pil_12_13_3" name="pil_12_13_1" value="3"></td>
-                                                    <td><input type="radio" id="pil_12_13_4" name="pil_12_13_1" value="4"></td>
-                                                    <td><input type="radio" id="pil_12_13_5" name="pil_12_13_1" value="5"></td>
+                                                    <td><input type="radio" id="pil_12_13_1" name="pil_1_12_13" value="1"></td>
+                                                    <td><input type="radio" id="pil_12_13_2" name="pil_1_12_13" value="2"></td>
+                                                    <td><input type="radio" id="pil_12_13_3" name="pil_1_12_13" value="3"></td>
+                                                    <td><input type="radio" id="pil_12_13_4" name="pil_1_12_13" value="4"></td>
+                                                    <td><input type="radio" id="pil_12_13_5" name="pil_1_12_13" value="5"></td>
                                                 </tr>
                                                 <tr>
                                                     <td>14</td>
                                                     <td>Bekerja di bawah tekanan</td>
-                                                    <td><input type="radio" id="pil_12_14_1" name="pil_12_14_1" value="1"></td>
-                                                    <td><input type="radio" id="pil_12_14_2" name="pil_12_14_1" value="2"></td>
-                                                    <td><input type="radio" id="pil_12_14_3" name="pil_12_14_1" value="3"></td>
-                                                    <td><input type="radio" id="pil_12_14_4" name="pil_12_14_1" value="4"></td>
-                                                    <td><input type="radio" id="pil_12_14_5" name="pil_12_14_1" value="5"></td>
+                                                    <td><input type="radio" id="pil_12_14_1" name="pil_1_12_14" value="1"></td>
+                                                    <td><input type="radio" id="pil_12_14_2" name="pil_1_12_14" value="2"></td>
+                                                    <td><input type="radio" id="pil_12_14_3" name="pil_1_12_14" value="3"></td>
+                                                    <td><input type="radio" id="pil_12_14_4" name="pil_1_12_14" value="4"></td>
+                                                    <td><input type="radio" id="pil_12_14_5" name="pil_1_12_14" value="5"></td>
                                                 </tr>
                                                 </table>
                                                 </div>
@@ -775,17 +775,17 @@
                                                     <td>Kualifikasi dalam pekerjaan</td>
                                                     <td style="width: 20%;">
                                                         <label for="pil_13_1_1">
-                                                            <input type="radio" id="pil_13_1_1" name="pil_13_1" value="1"> Over Qualified
+                                                            <input type="radio" id="pil_13_1_1" name="pil_1_13_1" value="1"> Over Qualified
                                                         </label>
                                                     </td>
                                                     <td style="width: 20%;">
                                                         <label for="pil_13_1_2">
-                                                            <input type="radio" id="pil_13_1_2" name="pil_13_1" value="2"> Qualified
+                                                            <input type="radio" id="pil_13_1_2" name="pil_1_13_1" value="2"> Qualified
                                                         </label>
                                                     </td>
                                                     <td style="width: 20%;">
                                                         <label for="pil_13_1_3">
-                                                            <input type="radio" id="pil_13_1_3" name="pil_13_1" value="3"> Under Qualified
+                                                            <input type="radio" id="pil_13_1_3" name="pil_1_13_1" value="3"> Under Qualified
                                                         </label>
                                                     </td>
                                                 </tr>
@@ -794,17 +794,17 @@
                                                     <td>Kesesuaian bidang ilmu dengan pekerjaan saat ini</td>
                                                     <td style="width: 20%;">
                                                         <label for="pil_13_2_1">
-                                                            <input type="radio" id="pil_13_2_1" name="pil_13_2" value="1"> Over Qualified
+                                                            <input type="radio" id="pil_13_2_1" name="pil_1_13_2" value="1"> Over Qualified
                                                         </label>
                                                     </td>
                                                     <td style="width: 20%;">
                                                         <label for="pil_13_2_2">
-                                                            <input type="radio" id="pil_13_2_2" name="pil_13_2" value="2"> Qualified
+                                                            <input type="radio" id="pil_13_2_2" name="pil_1_13_2" value="2"> Qualified
                                                         </label>
                                                     </td>
                                                     <td style="width: 20%;">
                                                         <label for="pil_13_2_3">
-                                                            <input type="radio" id="pil_13_2_3" name="pil_13_2" value="3"> Under Qualified
+                                                            <input type="radio" id="pil_13_2_3" name="pil_1_13_2" value="3"> Under Qualified
                                                         </label>
                                                     </td>
                                                 </tr>
@@ -834,128 +834,128 @@
                                                 <tr>
                                                     <td>1</td>
                                                     <td>Integritas (etika dan moral)</td>
-                                                    <td><input type="radio" id="pil_14_1_1" name="pil_14_1_1" value="1"></td>
-                                                    <td><input type="radio" id="pil_14_1_2" name="pil_14_1_1" value="2"></td>
-                                                    <td><input type="radio" id="pil_14_1_3" name="pil_14_1_1" value="3"></td>
-                                                    <td><input type="radio" id="pil_14_1_4" name="pil_14_1_1" value="4"></td>
-                                                    <td><input type="radio" id="pil_14_1_5" name="pil_14_1_1" value="5"></td>
+                                                    <td><input type="radio" id="pil_14_1_1" name="pil_1_14_1" value="1"></td>
+                                                    <td><input type="radio" id="pil_14_1_2" name="pil_1_14_1" value="2"></td>
+                                                    <td><input type="radio" id="pil_14_1_3" name="pil_1_14_1" value="3"></td>
+                                                    <td><input type="radio" id="pil_14_1_4" name="pil_1_14_1" value="4"></td>
+                                                    <td><input type="radio" id="pil_14_1_5" name="pil_1_14_1" value="5"></td>
                                                 </tr>
                                                 <tr>
                                                     <td>2</td>
                                                     <td>Keahlian berdasarkan bidang ilmu (profesionalisme)</td>
-                                                    <td><input type="radio" id="pil_14_2_1" name="pil_14_2_1" value="1"></td>
-                                                    <td><input type="radio" id="pil_14_2_2" name="pil_14_2_1" value="2"></td>
-                                                    <td><input type="radio" id="pil_14_2_3" name="pil_14_2_1" value="3"></td>
-                                                    <td><input type="radio" id="pil_14_2_4" name="pil_14_2_1" value="4"></td>
-                                                    <td><input type="radio" id="pil_14_2_5" name="pil_14_2_1" value="5"></td>
+                                                    <td><input type="radio" id="pil_14_2_1" name="pil_1_14_2" value="1"></td>
+                                                    <td><input type="radio" id="pil_14_2_2" name="pil_1_14_2" value="2"></td>
+                                                    <td><input type="radio" id="pil_14_2_3" name="pil_1_14_2" value="3"></td>
+                                                    <td><input type="radio" id="pil_14_2_4" name="pil_1_14_2" value="4"></td>
+                                                    <td><input type="radio" id="pil_14_2_5" name="pil_1_14_2" value="5"></td>
                                                 </tr>
                                                 <tr>
                                                     <td>3</td>
                                                     <td>Bahasa Inggris</td>
-                                                    <td><input type="radio" id="pil_14_3_1" name="pil_14_3_1" value="1"></td>
-                                                    <td><input type="radio" id="pil_14_3_2" name="pil_14_3_1" value="2"></td>
-                                                    <td><input type="radio" id="pil_14_3_3" name="pil_14_3_1" value="3"></td>
-                                                    <td><input type="radio" id="pil_14_3_4" name="pil_14_3_1" value="4"></td>
-                                                    <td><input type="radio" id="pil_14_3_5" name="pil_14_3_1" value="5"></td>
+                                                    <td><input type="radio" id="pil_14_3_1" name="pil_1_14_3" value="1"></td>
+                                                    <td><input type="radio" id="pil_14_3_2" name="pil_1_14_3" value="2"></td>
+                                                    <td><input type="radio" id="pil_14_3_3" name="pil_1_14_3" value="3"></td>
+                                                    <td><input type="radio" id="pil_14_3_4" name="pil_1_14_3" value="4"></td>
+                                                    <td><input type="radio" id="pil_14_3_5" name="pil_1_14_3" value="5"></td>
                                                 </tr>
                                                 <tr>
                                                     <td>4</td>
                                                     <td>Penggunaan Teknologi Informasi</td>
-                                                    <td><input type="radio" id="pil_14_4_1" name="pil_14_4_1" value="1"></td>
-                                                    <td><input type="radio" id="pil_14_4_2" name="pil_14_4_1" value="2"></td>
-                                                    <td><input type="radio" id="pil_14_4_3" name="pil_14_4_1" value="3"></td>
-                                                    <td><input type="radio" id="pil_14_4_4" name="pil_14_4_1" value="4"></td>
-                                                    <td><input type="radio" id="pil_14_4_5" name="pil_14_4_1" value="5"></td>
+                                                    <td><input type="radio" id="pil_14_4_1" name="pil_1_14_4" value="1"></td>
+                                                    <td><input type="radio" id="pil_14_4_2" name="pil_1_14_4" value="2"></td>
+                                                    <td><input type="radio" id="pil_14_4_3" name="pil_1_14_4" value="3"></td>
+                                                    <td><input type="radio" id="pil_14_4_4" name="pil_1_14_4" value="4"></td>
+                                                    <td><input type="radio" id="pil_14_4_5" name="pil_1_14_4" value="5"></td>
                                                 </tr>
                                                 <tr>
                                                     <td>5</td>
                                                     <td>Kemampuan komunikasi</td>
-                                                    <td><input type="radio" id="pil_14_5_1" name="pil_14_5_1" value="1"></td>
-                                                    <td><input type="radio" id="pil_14_5_2" name="pil_14_5_1" value="2"></td>
-                                                    <td><input type="radio" id="pil_14_5_3" name="pil_14_5_1" value="3"></td>
-                                                    <td><input type="radio" id="pil_14_5_4" name="pil_14_5_1" value="4"></td>
-                                                    <td><input type="radio" id="pil_14_5_5" name="pil_14_5_1" value="5"></td>
+                                                    <td><input type="radio" id="pil_14_5_1" name="pil_1_14_5" value="1"></td>
+                                                    <td><input type="radio" id="pil_14_5_2" name="pil_1_14_5" value="2"></td>
+                                                    <td><input type="radio" id="pil_14_5_3" name="pil_1_14_5" value="3"></td>
+                                                    <td><input type="radio" id="pil_14_5_4" name="pil_1_14_5" value="4"></td>
+                                                    <td><input type="radio" id="pil_14_5_5" name="pil_1_14_5" value="5"></td>
                                                 </tr>
                                                 <tr>
                                                     <td>6</td>
                                                     <td>Kerjasama tim</td>
-                                                    <td><input type="radio" id="pil_14_6_1" name="pil_14_6_1" value="1"></td>
-                                                    <td><input type="radio" id="pil_14_6_2" name="pil_14_6_1" value="2"></td>
-                                                    <td><input type="radio" id="pil_14_6_3" name="pil_14_6_1" value="3"></td>
-                                                    <td><input type="radio" id="pil_14_6_4" name="pil_14_6_1" value="4"></td>
-                                                    <td><input type="radio" id="pil_14_6_5" name="pil_14_6_1" value="5"></td>
+                                                    <td><input type="radio" id="pil_14_6_1" name="pil_1_14_6" value="1"></td>
+                                                    <td><input type="radio" id="pil_14_6_2" name="pil_1_14_6" value="2"></td>
+                                                    <td><input type="radio" id="pil_14_6_3" name="pil_1_14_6" value="3"></td>
+                                                    <td><input type="radio" id="pil_14_6_4" name="pil_1_14_6" value="4"></td>
+                                                    <td><input type="radio" id="pil_14_6_5" name="pil_1_14_6" value="5"></td>
                                                 </tr>
                                                 <tr>
                                                     <td>7</td>
                                                     <td>Kewirausahaan</td>
-                                                    <td><input type="radio" id="pil_14_7_1" name="pil_14_7_1" value="1"></td>
-                                                    <td><input type="radio" id="pil_14_7_2" name="pil_14_7_1" value="2"></td>
-                                                    <td><input type="radio" id="pil_14_7_3" name="pil_14_7_1" value="3"></td>
-                                                    <td><input type="radio" id="pil_14_7_4" name="pil_14_7_1" value="4"></td>
-                                                    <td><input type="radio" id="pil_14_7_5" name="pil_14_7_1" value="5"></td>
+                                                    <td><input type="radio" id="pil_14_7_1" name="pil_1_14_7" value="1"></td>
+                                                    <td><input type="radio" id="pil_14_7_2" name="pil_1_14_7" value="2"></td>
+                                                    <td><input type="radio" id="pil_14_7_3" name="pil_1_14_7" value="3"></td>
+                                                    <td><input type="radio" id="pil_14_7_4" name="pil_1_14_7" value="4"></td>
+                                                    <td><input type="radio" id="pil_14_7_5" name="pil_1_14_7" value="5"></td>
                                                 </tr>
                                                 <tr>
                                                     <td>8</td>
                                                     <td>Pemecahan masalah</td>
-                                                    <td><input type="radio" id="pil_14_8_1" name="pil_14_8_1" value="1"></td>
-                                                    <td><input type="radio" id="pil_14_8_2" name="pil_14_8_1" value="2"></td>
-                                                    <td><input type="radio" id="pil_14_8_3" name="pil_14_8_1" value="3"></td>
-                                                    <td><input type="radio" id="pil_14_8_4" name="pil_14_8_1" value="4"></td>
-                                                    <td><input type="radio" id="pil_14_8_5" name="pil_14_8_1" value="5"></td>
+                                                    <td><input type="radio" id="pil_14_8_1" name="pil_1_14_8" value="1"></td>
+                                                    <td><input type="radio" id="pil_14_8_2" name="pil_1_14_8" value="2"></td>
+                                                    <td><input type="radio" id="pil_14_8_3" name="pil_1_14_8" value="3"></td>
+                                                    <td><input type="radio" id="pil_14_8_4" name="pil_1_14_8" value="4"></td>
+                                                    <td><input type="radio" id="pil_14_8_5" name="pil_1_14_8" value="5"></td>
                                                 </tr>
                                                 <tr>
                                                     <td>9</td>
                                                     <td>Hubungan antar manusia (human relation)</td>
-                                                    <td><input type="radio" id="pil_14_9_1" name="pil_14_9_1" value="1"></td>
-                                                    <td><input type="radio" id="pil_14_9_2" name="pil_14_9_1" value="2"></td>
-                                                    <td><input type="radio" id="pil_14_9_3" name="pil_14_9_1" value="3"></td>
-                                                    <td><input type="radio" id="pil_14_9_4" name="pil_14_9_1" value="4"></td>
-                                                    <td><input type="radio" id="pil_14_9_5" name="pil_14_9_1" value="5"></td>
+                                                    <td><input type="radio" id="pil_14_9_1" name="pil_1_14_9" value="1"></td>
+                                                    <td><input type="radio" id="pil_14_9_2" name="pil_1_14_9" value="2"></td>
+                                                    <td><input type="radio" id="pil_14_9_3" name="pil_1_14_9" value="3"></td>
+                                                    <td><input type="radio" id="pil_14_9_4" name="pil_1_14_9" value="4"></td>
+                                                    <td><input type="radio" id="pil_14_9_5" name="pil_1_14_9" value="5"></td>
                                                 </tr>
                                                 <tr>
                                                     <td>10</td>
                                                     <td>Pengembangan diri</td>
-                                                    <td><input type="radio" id="pil_14_10_1" name="pil_14_10_1" value="1"></td>
-                                                    <td><input type="radio" id="pil_14_10_2" name="pil_14_10_1" value="2"></td>
-                                                    <td><input type="radio" id="pil_14_10_3" name="pil_14_10_1" value="3"></td>
-                                                    <td><input type="radio" id="pil_14_10_4" name="pil_14_10_1" value="4"></td>
-                                                    <td><input type="radio" id="pil_14_10_5" name="pil_14_10_1" value="5"></td>
+                                                    <td><input type="radio" id="pil_14_10_1" name="pil_1_14_10" value="1"></td>
+                                                    <td><input type="radio" id="pil_14_10_2" name="pil_1_14_10" value="2"></td>
+                                                    <td><input type="radio" id="pil_14_10_3" name="pil_1_14_10" value="3"></td>
+                                                    <td><input type="radio" id="pil_14_10_4" name="pil_1_14_10" value="4"></td>
+                                                    <td><input type="radio" id="pil_14_10_5" name="pil_1_14_10" value="5"></td>
                                                 </tr>
                                                 <tr>
                                                     <td>11</td>
                                                     <td>Kemampuan bekerja mandiri</td>
-                                                    <td><input type="radio" id="pil_14_11_1" name="pil_14_11_1" value="1"></td>
-                                                    <td><input type="radio" id="pil_14_11_2" name="pil_14_11_1" value="2"></td>
-                                                    <td><input type="radio" id="pil_14_11_3" name="pil_14_11_1" value="3"></td>
-                                                    <td><input type="radio" id="pil_14_11_4" name="pil_14_11_1" value="4"></td>
-                                                    <td><input type="radio" id="pil_14_11_5" name="pil_14_11_1" value="5"></td>
+                                                    <td><input type="radio" id="pil_14_11_1" name="pil_1_14_11" value="1"></td>
+                                                    <td><input type="radio" id="pil_14_11_2" name="pil_1_14_11" value="2"></td>
+                                                    <td><input type="radio" id="pil_14_11_3" name="pil_1_14_11" value="3"></td>
+                                                    <td><input type="radio" id="pil_14_11_4" name="pil_1_14_11" value="4"></td>
+                                                    <td><input type="radio" id="pil_14_11_5" name="pil_1_14_11" value="5"></td>
                                                 </tr>
                                                 <tr>
                                                     <td>12</td>
                                                     <td>Kepemimpinan / Kemampuan Berorganisasi</td>
-                                                    <td><input type="radio" id="pil_14_12_1" name="pil_14_12_1" value="1"></td>
-                                                    <td><input type="radio" id="pil_14_12_2" name="pil_14_12_1" value="2"></td>
-                                                    <td><input type="radio" id="pil_14_12_3" name="pil_14_12_1" value="3"></td>
-                                                    <td><input type="radio" id="pil_14_12_4" name="pil_14_12_1" value="4"></td>
-                                                    <td><input type="radio" id="pil_14_12_5" name="pil_14_12_1" value="5"></td>
+                                                    <td><input type="radio" id="pil_14_12_1" name="pil_1_14_12" value="1"></td>
+                                                    <td><input type="radio" id="pil_14_12_2" name="pil_1_14_12" value="2"></td>
+                                                    <td><input type="radio" id="pil_14_12_3" name="pil_1_14_12" value="3"></td>
+                                                    <td><input type="radio" id="pil_14_12_4" name="pil_1_14_12" value="4"></td>
+                                                    <td><input type="radio" id="pil_14_12_5" name="pil_1_14_12" value="5"></td>
                                                 </tr>
                                                 <tr>
                                                     <td>13</td>
                                                     <td>Kemampuan menulis</td>
-                                                    <td><input type="radio" id="pil_14_13_1" name="pil_14_13_1" value="1"></td>
-                                                    <td><input type="radio" id="pil_14_13_2" name="pil_14_13_1" value="2"></td>
-                                                    <td><input type="radio" id="pil_14_13_3" name="pil_14_13_1" value="3"></td>
-                                                    <td><input type="radio" id="pil_14_13_4" name="pil_14_13_1" value="4"></td>
-                                                    <td><input type="radio" id="pil_14_13_5" name="pil_14_13_1" value="5"></td>
+                                                    <td><input type="radio" id="pil_14_13_1" name="pil_1_14_13" value="1"></td>
+                                                    <td><input type="radio" id="pil_14_13_2" name="pil_1_14_13" value="2"></td>
+                                                    <td><input type="radio" id="pil_14_13_3" name="pil_1_14_13" value="3"></td>
+                                                    <td><input type="radio" id="pil_14_13_4" name="pil_1_14_13" value="4"></td>
+                                                    <td><input type="radio" id="pil_14_13_5" name="pil_1_14_13" value="5"></td>
                                                 </tr>
                                                 <tr>
                                                     <td>14</td>
                                                     <td>Bekerja di bawah tekanan</td>
-                                                    <td><input type="radio" id="pil_14_14_1" name="pil_14_14_1" value="1"></td>
-                                                    <td><input type="radio" id="pil_14_14_2" name="pil_14_14_1" value="2"></td>
-                                                    <td><input type="radio" id="pil_14_14_3" name="pil_14_14_1" value="3"></td>
-                                                    <td><input type="radio" id="pil_14_14_4" name="pil_14_14_1" value="4"></td>
-                                                    <td><input type="radio" id="pil_14_14_5" name="pil_14_14_1" value="5"></td>
+                                                    <td><input type="radio" id="pil_14_14_1" name="pil_1_14_14" value="1"></td>
+                                                    <td><input type="radio" id="pil_14_14_2" name="pil_1_14_14" value="2"></td>
+                                                    <td><input type="radio" id="pil_14_14_3" name="pil_1_14_14" value="3"></td>
+                                                    <td><input type="radio" id="pil_14_14_4" name="pil_1_14_14" value="4"></td>
+                                                    <td><input type="radio" id="pil_14_14_5" name="pil_1_14_14" value="5"></td>
                                                 </tr>
                                                 </table>
                                                 </div>
@@ -972,17 +972,17 @@
                                                 <div class="panel-body">
                                                     <div class="checkbox">
                                                         <label for="pil_15_1">
-                                                            <input type="checkbox" id="pil_15_1" name="pil_15_1" value="1"> Tidak bekerja dan tidak mencari pekerjaan
+                                                            <input type="checkbox" id="pil_15_1" name="pil_2_1[]" value="1"> Tidak bekerja dan tidak mencari pekerjaan
                                                         </label><br>
                                                         <label for="pil_15_2">
-                                                            <input type="checkbox" id="pil_15_2" name="pil_15_2" value="2"> Mengurus rumah tangga
+                                                            <input type="checkbox" id="pil_15_2" name="pil_2_1[]" value="2"> Mengurus rumah tangga
                                                         </label><br>
 
                                                         <label for="pil_15_3">
-                                                            <input type="checkbox" id="pil_15_3" name="pil_15_3" value="3"> Sedang mencari pekerjaan
+                                                            <input type="checkbox" id="pil_15_3" name="pil_2_1[]" value="3"> Sedang mencari pekerjaan
                                                         </label><br>
                                                         <label for="pil_15_4">
-                                                            <input type="checkbox" id="pil_15_4" name="pil_15_4" value="4"> Melanjutkan studi
+                                                            <input type="checkbox" id="pil_15_4" name="pil_2_1[]" value="4"> Melanjutkan studi
                                                         </label>
                                                     </div>  
                                                 </div>
@@ -996,43 +996,41 @@
                                                 <div class="panel-body">
                                                     <div class="checkbox">
                                                         <label for="pil_16_1">
-                                                            <input type="checkbox" id="pil_16_1" name="pil_16_1" value="1"> Pengumuman lowongan pekerjaan pada surat kabar
+                                                            <input type="checkbox" id="pil_16_1" name="pil_2_2[]" value="1"> Pengumuman lowongan pekerjaan pada surat kabar
                                                         </label><br>
                                                         <label for="pil_16_2">
-                                                            <input type="checkbox" id="pil_16_2" name="pil_16_2" value="2"> Informasi internal perusahaan
+                                                            <input type="checkbox" id="pil_16_2" name="pil_2_2[]" value="2"> Informasi internal perusahaan
                                                         </label><br>
                                                         <label for="pil_16_3">
-                                                            <input type="checkbox" id="pil_16_3" name="pil_16_3" value="3"> Career center FEB Unismuh Makassar
+                                                            <input type="checkbox" id="pil_16_3" name="pil_2_2[]" value="3"> Career center FEB Unismuh Makassar
                                                         </label><br>
                                                         <label for="pil_16_4">
-                                                            <input type="checkbox" id="pil_16_4" name="pil_16_4" value="4"> Perusahaan / agen perekrut tenaga kerja
+                                                            <input type="checkbox" id="pil_16_4" name="pil_2_2[]" value="4"> Perusahaan / agen perekrut tenaga kerja
                                                         </label><br>
 
                                                         <label for="pil_16_5">
-                                                            <input type="checkbox" id="pil_16_5" name="pil_16_5" value="5"> Dinas tenaga kerja
+                                                            <input type="checkbox" id="pil_16_5" name="pil_2_2[]" value="5"> Dinas tenaga kerja
                                                         </label><br>
                                                         <label for="pil_16_6">
-                                                            <input type="checkbox" id="pil_16_6" name="pil_16_6" value="6"> Informasi teman
+                                                            <input type="checkbox" id="pil_16_6" name="pil_2_2[]" value="6"> Informasi teman
                                                         </label><br>
                                                         <label for="pil_16_7">
-                                                            <input type="checkbox" id="pil_16_7" name="pil_16_7" value="7"> Pengumuman di internet
+                                                            <input type="checkbox" id="pil_16_7" name="pil_2_2[]" value="7"> Pengumuman di internet
                                                         </label><br>
                                                         <label for="pil_16_8">
-                                                            <input type="checkbox" id="pil_16_8" name="pil_16_8" value="8"> Lamaran langsung ke prusahaan
+                                                            <input type="checkbox" id="pil_16_8" name="pil_2_2[]" value="8"> Lamaran langsung ke prusahaan
                                                         </label><br>
                                                         <label for="pil_16_9">
-                                                            <input type="checkbox" id="pil_16_9" name="pil_16_9" value="9"> Alumni
+                                                            <input type="checkbox" id="pil_16_9" name="pil_2_2[]" value="9"> Alumni
                                                         </label><br>
                                                         <label for="pil_16_10">
-                                                            <input type="checkbox" id="pil_16_10" name="pil_16_10" value="10"> Kontak personal/pribadi 
+                                                            <input type="checkbox" id="pil_16_10" name="pil_2_2[]" value="10"> Kontak personal/pribadi 
                                                         </label><br>
                                                         <label for="pil_16_11">
-                                                            <input type="checkbox" id="pil_16_11" name="pil_16_11" value="11"> Bursa kerja
+                                                            <input type="checkbox" id="pil_16_11" name="pil_2_2[]" value="11"> Bursa kerja
                                                         </label><br>
-
-
                                                         <label for="pil_16_12">
-                                                            <input type="checkbox" id="pil_16_12" name="pil_16_12" value="12"> Kerabat / Keluarga
+                                                            <input type="checkbox" id="pil_16_12" name="pil_2_2[]" value="12"> Kerabat / Keluarga
                                                         </label>
                                                     </div>  
                                                 </div>
@@ -1046,22 +1044,22 @@
                                                 <div class="panel-body">
                                                     <div class="radio">
                                                         <label for="pil_17_1">
-                                                            <input type="radio" id="pil_17_1" name="pil_17" value="1"> ≤ 5
+                                                            <input type="radio" id="pil_17_1" name="pil_2_3" value="1"> ≤ 5
                                                         </label><br>
                                                         <label for="pil_17_2">
-                                                            <input type="radio" id="pil_17_2" name="pil_17" value="2"> 6-10
+                                                            <input type="radio" id="pil_17_2" name="pil_2_3" value="2"> 6-10
                                                         </label><br>
                                                         <label for="pil_17_3">
-                                                            <input type="radio" id="pil_17_3" name="pil_17" value="3"> 21- 25
+                                                            <input type="radio" id="pil_17_3" name="pil_2_3" value="3"> 21- 25
                                                         </label><br>
                                                         <label for="pil_17_4">
-                                                            <input type="radio" id="pil_17_4" name="pil_17" value="4"> 11-15
+                                                            <input type="radio" id="pil_17_4" name="pil_2_3" value="4"> 11-15
                                                         </label><br>
                                                         <label for="pil_17_5">
-                                                            <input type="radio" id="pil_17_5" name="pil_17" value="5"> 16-20
+                                                            <input type="radio" id="pil_17_5" name="pil_2_3" value="5"> 16-20
                                                         </label><br>
                                                         <label for="pil_17_6">
-                                                            <input type="radio" id="pil_17_6" name="pil_17" value="6"> >25
+                                                            <input type="radio" id="pil_17_6" name="pil_2_3" value="6"> >25
                                                         </label>
                                                     </div>
                                                 </div>
@@ -1075,22 +1073,22 @@
                                                 <div class="panel-body">
                                                     <div class="radio">
                                                         <label for="pil_18_1">
-                                                            <input type="radio" id="pil_18_1" name="pil_18" value="1"> ≤ 5
+                                                            <input type="radio" id="pil_18_1" name="pil_2_4" value="1"> ≤ 5
                                                         </label><br>
                                                         <label for="pil_18_2">
-                                                            <input type="radio" id="pil_18_2" name="pil_18" value="2"> 6-10
+                                                            <input type="radio" id="pil_18_2" name="pil_2_4" value="2"> 6-10
                                                         </label><br>
                                                         <label for="pil_18_3">
-                                                            <input type="radio" id="pil_18_3" name="pil_18" value="3"> 21- 25
+                                                            <input type="radio" id="pil_18_3" name="pil_2_4" value="3"> 21- 25
                                                         </label><br>
                                                         <label for="pil_18_4">
-                                                            <input type="radio" id="pil_18_4" name="pil_18" value="4"> 11-15
+                                                            <input type="radio" id="pil_18_4" name="pil_2_4" value="4"> 11-15
                                                         </label><br>
                                                         <label for="pil_18_5">
-                                                            <input type="radio" id="pil_18_5" name="pil_18" value="5"> 16-20
+                                                            <input type="radio" id="pil_18_5" name="pil_2_4" value="5"> 16-20
                                                         </label><br>
                                                         <label for="pil_18_6">
-                                                            <input type="radio" id="pil_18_6" name="pil_18" value="6"> >25
+                                                            <input type="radio" id="pil_18_6" name="pil_2_4" value="6"> >25
                                                         </label>
                                                     </div>
                                                 </div>
@@ -1104,17 +1102,17 @@
                                                 <div class="panel-body">
                                                     <div class="checkbox">
                                                         <label for="pil_19_1">
-                                                            <input type="checkbox" id="pil_19_1" name="pil_19_1" value="1"> Tabungan
+                                                            <input type="checkbox" id="pil_19_1" name="pil_2_5[]" value="1"> Tabungan
                                                         </label><br>
                                                         <label for="pil_19_2">
-                                                            <input type="checkbox" id="pil_19_2" name="pil_19_2" value="2"> Keluarga
+                                                            <input type="checkbox" id="pil_19_2" name="pil_2_5[]" value="2"> Keluarga
                                                         </label><br>
 
                                                         <label for="pil_19_3">
-                                                            <input type="checkbox" id="pil_19_3" name="pil_19_3" value="3"> Pinjaman
+                                                            <input type="checkbox" id="pil_19_3" name="pil_2_5[]" value="3"> Pinjaman
                                                         </label><br>
                                                         <label for="pil_19_4">
-                                                            <input type="checkbox" id="pil_19_4" name="pil_19_4" value="4"> Sumber Lainnya
+                                                            <input type="checkbox" id="pil_19_4" name="pil_2_5[]" value="4"> Sumber Lainnya
                                                         </label>
                                                     </div>  
                                                 </div>
@@ -1142,74 +1140,74 @@
                                                 <tr>
                                                     <td>1</td>
                                                     <td>Membuat lamaran pekerjaan</td>
-                                                    <td><input type="radio" id="pil_20_1_1" name="pil_20_1_1" value="1"></td>
-                                                    <td><input type="radio" id="pil_20_1_2" name="pil_20_1_1" value="2"></td>
-                                                    <td><input type="radio" id="pil_20_1_3" name="pil_20_1_1" value="3"></td>
-                                                    <td><input type="radio" id="pil_20_1_4" name="pil_20_1_1" value="4"></td>
-                                                    <td><input type="radio" id="pil_20_1_5" name="pil_20_1_1" value="5"></td>
+                                                    <td><input type="radio" id="pil_20_1_1" name="pil_2_6_1" value="1"></td>
+                                                    <td><input type="radio" id="pil_20_1_2" name="pil_2_6_1" value="2"></td>
+                                                    <td><input type="radio" id="pil_20_1_3" name="pil_2_6_1" value="3"></td>
+                                                    <td><input type="radio" id="pil_20_1_4" name="pil_2_6_1" value="4"></td>
+                                                    <td><input type="radio" id="pil_20_1_5" name="pil_2_6_1" value="5"></td>
                                                 </tr>
                                                 <tr>
                                                     <td>2</td>
                                                     <td>Mengunjungi Bursa Kerja</td>
-                                                    <td><input type="radio" id="pil_20_2_1" name="pil_20_2_1" value="1"></td>
-                                                    <td><input type="radio" id="pil_20_2_2" name="pil_20_2_1" value="2"></td>
-                                                    <td><input type="radio" id="pil_20_2_3" name="pil_20_2_1" value="3"></td>
-                                                    <td><input type="radio" id="pil_20_2_4" name="pil_20_2_1" value="4"></td>
-                                                    <td><input type="radio" id="pil_20_2_5" name="pil_20_2_1" value="5"></td>
+                                                    <td><input type="radio" id="pil_20_2_1" name="pil_2_6_2" value="1"></td>
+                                                    <td><input type="radio" id="pil_20_2_2" name="pil_2_6_2" value="2"></td>
+                                                    <td><input type="radio" id="pil_20_2_3" name="pil_2_6_2" value="3"></td>
+                                                    <td><input type="radio" id="pil_20_2_4" name="pil_2_6_2" value="4"></td>
+                                                    <td><input type="radio" id="pil_20_2_5" name="pil_2_6_2" value="5"></td>
                                                 </tr>
                                                 <tr>
                                                     <td>3</td>
                                                     <td>Kursus Bahasa Inggris</td>
-                                                    <td><input type="radio" id="pil_20_3_1" name="pil_20_3_1" value="1"></td>
-                                                    <td><input type="radio" id="pil_20_3_2" name="pil_20_3_1" value="2"></td>
-                                                    <td><input type="radio" id="pil_20_3_3" name="pil_20_3_1" value="3"></td>
-                                                    <td><input type="radio" id="pil_20_3_4" name="pil_20_3_1" value="4"></td>
-                                                    <td><input type="radio" id="pil_20_3_5" name="pil_20_3_1" value="5"></td>
+                                                    <td><input type="radio" id="pil_20_3_1" name="pil_2_6_3" value="1"></td>
+                                                    <td><input type="radio" id="pil_20_3_2" name="pil_2_6_3" value="2"></td>
+                                                    <td><input type="radio" id="pil_20_3_3" name="pil_2_6_3" value="3"></td>
+                                                    <td><input type="radio" id="pil_20_3_4" name="pil_2_6_3" value="4"></td>
+                                                    <td><input type="radio" id="pil_20_3_5" name="pil_2_6_3" value="5"></td>
                                                 </tr>
                                                 <tr>
                                                     <td>4</td>
                                                     <td>Mengikuti Bimbingan Karir</td>
-                                                    <td><input type="radio" id="pil_20_4_1" name="pil_20_4_1" value="1"></td>
-                                                    <td><input type="radio" id="pil_20_4_2" name="pil_20_4_1" value="2"></td>
-                                                    <td><input type="radio" id="pil_20_4_3" name="pil_20_4_1" value="3"></td>
-                                                    <td><input type="radio" id="pil_20_4_4" name="pil_20_4_1" value="4"></td>
-                                                    <td><input type="radio" id="pil_20_4_5" name="pil_20_4_1" value="5"></td>
+                                                    <td><input type="radio" id="pil_20_4_1" name="pil_2_6_4" value="1"></td>
+                                                    <td><input type="radio" id="pil_20_4_2" name="pil_2_6_4" value="2"></td>
+                                                    <td><input type="radio" id="pil_20_4_3" name="pil_2_6_4" value="3"></td>
+                                                    <td><input type="radio" id="pil_20_4_4" name="pil_2_6_4" value="4"></td>
+                                                    <td><input type="radio" id="pil_20_4_5" name="pil_2_6_4" value="5"></td>
                                                 </tr>
                                                 <tr>
                                                     <td>5</td>
                                                     <td>Belajar membuat riwayat hidup</td>
-                                                    <td><input type="radio" id="pil_20_5_1" name="pil_20_5_1" value="1"></td>
-                                                    <td><input type="radio" id="pil_20_5_2" name="pil_20_5_1" value="2"></td>
-                                                    <td><input type="radio" id="pil_20_5_3" name="pil_20_5_1" value="3"></td>
-                                                    <td><input type="radio" id="pil_20_5_4" name="pil_20_5_1" value="4"></td>
-                                                    <td><input type="radio" id="pil_20_5_5" name="pil_20_5_1" value="5"></td>
+                                                    <td><input type="radio" id="pil_20_5_1" name="pil_2_6_5" value="1"></td>
+                                                    <td><input type="radio" id="pil_20_5_2" name="pil_2_6_5" value="2"></td>
+                                                    <td><input type="radio" id="pil_20_5_3" name="pil_2_6_5" value="3"></td>
+                                                    <td><input type="radio" id="pil_20_5_4" name="pil_2_6_5" value="4"></td>
+                                                    <td><input type="radio" id="pil_20_5_5" name="pil_2_6_5" value="5"></td>
                                                 </tr>
                                                 <tr>
                                                     <td>6</td>
                                                     <td>Belajar teknik wawancara kerja</td>
-                                                    <td><input type="radio" id="pil_20_6_1" name="pil_20_6_1" value="1"></td>
-                                                    <td><input type="radio" id="pil_20_6_2" name="pil_20_6_1" value="2"></td>
-                                                    <td><input type="radio" id="pil_20_6_3" name="pil_20_6_1" value="3"></td>
-                                                    <td><input type="radio" id="pil_20_6_4" name="pil_20_6_1" value="4"></td>
-                                                    <td><input type="radio" id="pil_20_6_5" name="pil_20_6_1" value="5"></td>
+                                                    <td><input type="radio" id="pil_20_6_1" name="pil_2_6_6" value="1"></td>
+                                                    <td><input type="radio" id="pil_20_6_2" name="pil_2_6_6" value="2"></td>
+                                                    <td><input type="radio" id="pil_20_6_3" name="pil_2_6_6" value="3"></td>
+                                                    <td><input type="radio" id="pil_20_6_4" name="pil_2_6_6" value="4"></td>
+                                                    <td><input type="radio" id="pil_20_6_5" name="pil_2_6_6" value="5"></td>
                                                 </tr>
                                                 <tr>
                                                     <td>7</td>
                                                     <td>Kursus keterampilan</td>
-                                                    <td><input type="radio" id="pil_20_7_1" name="pil_20_7_1" value="1"></td>
-                                                    <td><input type="radio" id="pil_20_7_2" name="pil_20_7_1" value="2"></td>
-                                                    <td><input type="radio" id="pil_20_7_3" name="pil_20_7_1" value="3"></td>
-                                                    <td><input type="radio" id="pil_20_7_4" name="pil_20_7_1" value="4"></td>
-                                                    <td><input type="radio" id="pil_20_7_5" name="pil_20_7_1" value="5"></td>
+                                                    <td><input type="radio" id="pil_20_7_1" name="pil_2_6_7" value="1"></td>
+                                                    <td><input type="radio" id="pil_20_7_2" name="pil_2_6_7" value="2"></td>
+                                                    <td><input type="radio" id="pil_20_7_3" name="pil_2_6_7" value="3"></td>
+                                                    <td><input type="radio" id="pil_20_7_4" name="pil_2_6_7" value="4"></td>
+                                                    <td><input type="radio" id="pil_20_7_5" name="pil_2_6_7" value="5"></td>
                                                 </tr>
                                                 <tr>
                                                     <td>8</td>
                                                     <td>Menghubungi career center</td>
-                                                    <td><input type="radio" id="pil_20_8_1" name="pil_20_8_1" value="1"></td>
-                                                    <td><input type="radio" id="pil_20_8_2" name="pil_20_8_1" value="2"></td>
-                                                    <td><input type="radio" id="pil_20_8_3" name="pil_20_8_1" value="3"></td>
-                                                    <td><input type="radio" id="pil_20_8_4" name="pil_20_8_1" value="4"></td>
-                                                    <td><input type="radio" id="pil_20_8_5" name="pil_20_8_1" value="5"></td>
+                                                    <td><input type="radio" id="pil_20_8_1" name="pil_2_6_8" value="1"></td>
+                                                    <td><input type="radio" id="pil_20_8_2" name="pil_2_6_8" value="2"></td>
+                                                    <td><input type="radio" id="pil_20_8_3" name="pil_2_6_8" value="3"></td>
+                                                    <td><input type="radio" id="pil_20_8_4" name="pil_2_6_8" value="4"></td>
+                                                    <td><input type="radio" id="pil_20_8_5" name="pil_2_6_8" value="5"></td>
                                                 </tr>
                                                 </table>
                                                 </div>
@@ -1226,10 +1224,10 @@
                                                 <div class="panel-body">
                                                     <div class="radio">
                                                         <label for="pil_21_1">
-                                                            <input type="radio" id="pil_21_1" name="pil_21" value="1"> Ya
+                                                            <input type="radio" id="pil_21_1" name="pil_3_1" value="1"> Ya
                                                         </label><br>
                                                         <label for="pil_21_2">
-                                                            <input type="radio" id="pil_21_2" name="pil_21" value="2"> Tidak
+                                                            <input type="radio" id="pil_21_2" name="pil_3_1" value="2"> Tidak
                                                         </label>
                                                     </div>
                                                 </div>
@@ -1244,46 +1242,46 @@
                                                     1. Sumbangan Dana
                                                     <div class="radio">
                                                         <label for="pil_22_1">
-                                                            <input type="radio" id="pil_22_1" name="pil_22" value="1"> Ya
+                                                            <input type="radio" id="pil_22_1" name="pil_3_2_1" value="1"> Ya
                                                         </label><br>
                                                         <label for="pil_22_2">
-                                                            <input type="radio" id="pil_22_2" name="pil_22" value="2"> Tidak
+                                                            <input type="radio" id="pil_22_2" name="pil_3_2_1" value="2"> Tidak
                                                         </label>
                                                     </div>
                                                     2. Fasilitas (alat - buku)
                                                     <div class="radio">
                                                         <label for="pil_23_1">
-                                                            <input type="radio" id="pil_23_1" name="pil_23" value="1"> Ya
+                                                            <input type="radio" id="pil_23_1" name="pil_3_2_2" value="1"> Ya
                                                         </label><br>
                                                         <label for="pil_23_2">
-                                                            <input type="radio" id="pil_23_2" name="pil_23" value="2"> Tidak
+                                                            <input type="radio" id="pil_23_2" name="pil_3_2_2" value="2"> Tidak
                                                         </label>
                                                     </div>
                                                     3. Terlibat dalam kegiatan akademik
                                                     <div class="radio">
                                                         <label for="pil_24_1">
-                                                            <input type="radio" id="pil_24_1" name="pil_24" value="1"> Ya
+                                                            <input type="radio" id="pil_24_1" name="pil_3_2_3" value="1"> Ya
                                                         </label><br>
                                                         <label for="pil_24_2">
-                                                            <input type="radio" id="pil_24_2" name="pil_24" value="2"> Tidak
+                                                            <input type="radio" id="pil_24_2" name="pil_3_2_3" value="2"> Tidak
                                                         </label>
                                                     </div>
                                                     4. Terlibat dalam kegiatan non akademik
                                                     <div class="radio">
                                                         <label for="pil_25_1">
-                                                            <input type="radio" id="pil_25_1" name="pil_25" value="1"> Ya
+                                                            <input type="radio" id="pil_25_1" name="pil_3_2_4" value="1"> Ya
                                                         </label><br>
                                                         <label for="pil_25_2">
-                                                            <input type="radio" id="pil_25_2" name="pil_25" value="2"> Tidak
+                                                            <input type="radio" id="pil_25_2" name="pil_3_2_4" value="2"> Tidak
                                                         </label>
                                                     </div>
                                                     5. Membangun jejaring dengan universitas
                                                     <div class="radio">
                                                         <label for="pil_26_1">
-                                                            <input type="radio" id="pil_26_1" name="pil_26" value="1"> Ya
+                                                            <input type="radio" id="pil_26_1" name="pil_3_2_5" value="1"> Ya
                                                         </label><br>
                                                         <label for="pil_26_2">
-                                                            <input type="radio" id="pil_26_2" name="pil_26" value="2"> Tidak
+                                                            <input type="radio" id="pil_26_2" name="pil_3_2_5" value="2"> Tidak
                                                         </label>
                                                     </div>
                                                 </div>
@@ -1299,28 +1297,28 @@
                                                     <div class="panel-body">
                                                         <div class="checkbox">
                                                             <label for="pil_27_1">
-                                                                <input type="checkbox" id="pil_27_1" name="pil_27_1" value="1"> Penambahan bahan Pustaka
+                                                                <input type="checkbox" id="pil_27_1" name="pil_4[]" value="1"> Penambahan bahan Pustaka
                                                             </label><br>
                                                             <label for="pil_27_2">
-                                                                <input type="checkbox" id="pil_27_2" name="pil_27_2" value="2"> Pengembangan softskill
+                                                                <input type="checkbox" id="pil_27_2" name="pil_4[]" value="2"> Pengembangan softskill
                                                             </label><br>
                                                             <label for="pil_27_3">
-                                                                <input type="checkbox" id="pil_27_3" name="pil_27_3" value="3"> Menjaga rasio dosen: mahasiswa yang ideal
+                                                                <input type="checkbox" id="pil_27_3" name="pil_4[]" value="3"> Menjaga rasio dosen: mahasiswa yang ideal
                                                             </label><br>
                                                             <label for="pil_27_4">
-                                                                <input type="checkbox" id="pil_27_4" name="pil_27_4" value="4"> Bimbingan karir
+                                                                <input type="checkbox" id="pil_27_4" name="pil_4[]" value="4"> Bimbingan karir
                                                             </label><br>
                                                             <label for="pil_27_5">
-                                                                <input type="checkbox" id="pil_27_5" name="pil_27_5" value="5"> Bahan kuliah yang lebih kini
+                                                                <input type="checkbox" id="pil_27_5" name="pil_4[]" value="5"> Bahan kuliah yang lebih kini
                                                             </label><br>
                                                             <label for="pil_27_6">
-                                                                <input type="checkbox" id="pil_27_6" name="pil_27_6" value="6"> Peningkatan kualitas SDM
+                                                                <input type="checkbox" id="pil_27_6" name="pil_4[]" value="6"> Peningkatan kualitas SDM
                                                             </label><br>
                                                             <label for="pil_27_7">
-                                                                <input type="checkbox" id="pil_27_7" name="pil_27_7" value="7"> Peningkatan sarana / prasarana
+                                                                <input type="checkbox" id="pil_27_7" name="pil_4[]" value="7"> Peningkatan sarana / prasarana
                                                             </label><br>
                                                             <label for="pil_27_8">
-                                                                <input type="checkbox" id="pil_27_8" name="pil_27_8" value="8"> Membangun jejaring dengan industri
+                                                                <input type="checkbox" id="pil_27_8" name="pil_4[]" value="8"> Membangun jejaring dengan industri
                                                             </label>    
                                                         </div>  
                                                     </div>
@@ -1419,6 +1417,15 @@
                     $("#pil_kelurahan").load("<?php echo base_url();?>tracer_study/tampilkan_kelurahan/"+id_kec);
                 });
             }); 
+            var confirmSimpan = function()
+            {
+                var psn = confirm("Yakin akan menyimpan quisioner anda ?");
+                if(psn==true) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
         </script>
     </body>
 </html>

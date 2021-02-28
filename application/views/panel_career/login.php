@@ -3,8 +3,8 @@
 <!--[if gt IE 9]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
     <head>
         <meta charset="utf-8">
-        <title>Tracer Study - Fakultas Ekonomi dan Bisnis Universitas Muhammadiyah Makassar</title>
-        <meta name="description" content="Tracer Study FEB Unismuh Makassar">
+        <title>Login Career Center - Fakultas Ekonomi dan Bisnis Universitas Muhammadiyah Makassar</title>
+        <meta name="description" content="Career Center FEB Unismuh Makassar">
         <meta name="author" content="pixelcave">
         <meta name="robots" content="noindex, nofollow">
         <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0">
@@ -41,7 +41,7 @@
                     <div id="login-container">
                         <!-- Login Title -->
                         <div class="login-title text-center">
-                            <h1><strong>Login Tracer Study</strong></h1>
+                            <h1><strong>Login Panel Alumni</strong></h1>
                         </div>
                         <!-- END Login Title -->
 
@@ -55,7 +55,7 @@
                             </div>
                           <?php endif; ?>
                             <!-- Login Form -->
-                            <form action="<?php echo base_url();?>tracer_study/proses_login" method="post" id="form-register" class="form-horizontal">
+                            <form action="<?php echo base_url();?>panel_career/proses_login" method="post" id="form-login" class="form-horizontal">
                                 <div class="form-group">
                                     <div class="col-xs-12">
                                         <div class="input-group">
@@ -74,7 +74,7 @@
                                 </div>
                                 <div class="form-group form-actions">
                                     <div class="col-xs-12 text-right">
-                                        <button type="submit" class="btn btn-sm btn-success"><i class="fa fa-plus"></i> Login Tracer Study</button>
+                                        <button type="submit" class="btn btn-sm btn-success"><i class="fa fa-plus"></i> Login</button>
                                     </div>
                                 </div>
                             </form>

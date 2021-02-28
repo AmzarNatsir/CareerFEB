@@ -12,4 +12,13 @@ class Model_security extends CI_Model
             redirect("tracer_study/login");
         }
     }	
+    function get_security_panel_cc()
+    {
+        $key_alumni = $this->session->userdata("idalumni");
+        if(empty($key_alumni))
+        {
+            $this->session->sess_destroy();
+            redirect("panel_career");
+        }
+    }	
 }

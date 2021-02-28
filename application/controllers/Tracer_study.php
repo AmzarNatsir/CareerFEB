@@ -62,6 +62,7 @@ class Tracer_study extends CI_Controller {
 		$this->db->where("email", $usr);
 		$this->db->where("passwd", $psw);
 		$this->db->where("status_akun", 1);
+		$this->db->where('tracer IS NULL');
 		$result = $this->db->get('cc_alumni')->row();
         if(!empty($result->id))
         {
@@ -76,13 +77,13 @@ class Tracer_study extends CI_Controller {
             redirect("tracer_study/quisioner");
         }
         else{
-            $this->session->set_flashdata("konfirm_login", "Maaf, Nama Email atau Password yang anda masukkan salah.");
+            $this->session->set_flashdata("konfirm_login", "Maaf, Nama Email atau Password yang anda masukkan salah. Atau anda telah mengisi quisioner");
             redirect("tracer_study/login");
         }
 	}
 	public function quisioner()
 	{
-		//$this->model_security->get_security_tracer_cc();
+		$this->model_security->get_security_tracer_cc();
 		$data['provinsi'] = $this->model_tracer->get_provinsi();
 		$this->load->view("tracer_study/quisioner/index", $data);
 	}
@@ -118,6 +119,137 @@ class Tracer_study extends CI_Controller {
 			$html_view .= "<option value=".$kel['id'].">".$kel['nama_kelurahan']."</option>";
 		}
 		echo $html_view;
+	}
+	public function simpan_tracer()
+	{
+		$this->model_security->get_security_tracer_cc();
+		//update profil
+		$id_alumni = $this->session->userdata("idalumnicc");
+		$profil['tempat_lahir'] = $this->input->post("inp_tempat_lahir");
+		$profil['tgl_lahir'] = $this->input->post("inp_tanggal_lahir");
+		$profil['jenkel'] = $this->input->post("pil_jenkel");
+		$profil['domisili'] = $this->input->post("inp_alamat");
+		$profil['id_prov_domisili'] = $this->input->post("pil_provinsi");
+		$profil['id_kab_domisi'] = $this->input->post("pil_kabupaten");
+		$profil['id_kec_domisili'] = $this->input->post("pil_kecamatan");
+		$profil['id_kel_domisili'] = $this->input->post("pil_kelurahan");
+		$profil['no_telepon'] = $this->input->post("inp_kontak");
+		$profil['tahun_lulus'] = $this->input->post("pil_tahun_lulus");
+		$profil['tracer'] = 1; //update tabel tracer = telah mengisi quisioner ts
+		$this->model_tracer->update_data_alumni($id_alumni, $profil);
+		//simpan quisioner
+		$quis['id_alumni_cc'] = $id_alumni;
+		$quis['q_no_1'] = $this->input->post("pil_kerja");
+		//checkbox
+		if(empty($this->input->post("pil_1_1[]")))
+		{
+			$pilihan_1_1=NULL;
+		} else {
+			$pilihan_1_1=implode(",", $this->input->post("pil_1_1[]"));
+		}
+		$quis['q_no_1_1'] = $pilihan_1_1;
+		//radio
+		$quis['q_no_1_2'] = $this->input->post("pil_1_2");
+		$quis['q_no_1_3'] = $this->input->post("pil_1_3");
+		$quis['q_no_1_4'] = $this->input->post("pil_1_4");
+		$quis['q_no_1_5'] = $this->input->post("pil_1_5");
+		$quis['q_no_1_6'] = $this->input->post("pil_1_6");
+		//checkbox
+		if(empty($this->input->post("pil_1_7[]")))
+		{
+			$pilihan_1_7=NULL;
+		} else {
+			$pilihan_1_7=implode(",", $this->input->post("pil_1_7[]"));
+		}
+		$quis['q_no_1_7'] = $pilihan_1_7;
+		//radio
+		$quis['q_no_1_8'] = $this->input->post("pil_1_8");
+		$quis['q_no_1_9'] = $this->input->post("pil_1_9");
+		$quis['q_no_1_10'] = $this->input->post("pil_1_10");
+		$quis['q_no_1_11'] = $this->input->post("pil_1_11");
+		$quis['q_no_1_12_1'] = $this->input->post("pil_1_12_1");
+		$quis['q_no_1_12_2'] = $this->input->post("pil_1_12_2");
+		$quis['q_no_1_12_3'] = $this->input->post("pil_1_12_3");
+		$quis['q_no_1_12_4'] = $this->input->post("pil_1_12_4");
+		$quis['q_no_1_12_5'] = $this->input->post("pil_1_12_5");
+		$quis['q_no_1_12_6'] = $this->input->post("pil_1_12_6");
+		$quis['q_no_1_12_7'] = $this->input->post("pil_1_12_7");
+		$quis['q_no_1_12_8'] = $this->input->post("pil_1_12_8");
+		$quis['q_no_1_12_9'] = $this->input->post("pil_1_12_9");
+		$quis['q_no_1_12_10'] = $this->input->post("pil_1_12_10");
+		$quis['q_no_1_12_11'] = $this->input->post("pil_1_12_11");
+		$quis['q_no_1_12_12'] = $this->input->post("pil_1_12_12");
+		$quis['q_no_1_12_13'] = $this->input->post("pil_1_12_13");
+		$quis['q_no_1_12_14'] = $this->input->post("pil_1_12_14");
+		$quis['q_no_1_13_1'] = $this->input->post("pil_1_13_1");
+		$quis['q_no_1_13_2'] = $this->input->post("pil_1_13_2");
+		$quis['q_no_1_14_1'] = $this->input->post("pil_1_14_1");
+		$quis['q_no_1_14_2'] = $this->input->post("pil_1_14_2");
+		$quis['q_no_1_14_3'] = $this->input->post("pil_1_14_3");
+		$quis['q_no_1_14_4'] = $this->input->post("pil_1_14_4");
+		$quis['q_no_1_14_5'] = $this->input->post("pil_1_14_5");
+		$quis['q_no_1_14_6'] = $this->input->post("pil_1_14_6");
+		$quis['q_no_1_14_7'] = $this->input->post("pil_1_14_7");
+		$quis['q_no_1_14_8'] = $this->input->post("pil_1_14_8");
+		$quis['q_no_1_14_9'] = $this->input->post("pil_1_14_9");
+		$quis['q_no_1_14_10'] = $this->input->post("pil_1_14_10");
+		$quis['q_no_1_14_11'] = $this->input->post("pil_1_14_11");
+		$quis['q_no_1_14_12'] = $this->input->post("pil_1_14_12");
+		$quis['q_no_1_14_13'] = $this->input->post("pil_1_14_13");
+		$quis['q_no_1_14_14'] = $this->input->post("pil_1_14_14");
+		//checkbox
+		if(empty($this->input->post("pil_2_1[]")))
+		{
+			$pilihan_2_1=NULL;
+		} else {
+			$pilihan_2_1=implode(",", $this->input->post("pil_2_1[]"));
+		}
+		$quis['q_no_2_1'] = $pilihan_2_1;
+		if(empty($this->input->post("pil_2_2[]")))
+		{
+			$pilihan_2_2=NULL;
+		} else {
+			$pilihan_2_2=implode(",", $this->input->post("pil_2_2[]"));
+		}
+		$quis['q_no_2_2'] = $pilihan_2_2;
+		//radio
+		$quis['q_no_2_3'] = $this->input->post("pil_2_3");
+		$quis['q_no_2_4'] = $this->input->post("pil_2_4");
+		//checkbox
+		if(empty($this->input->post("pil_2_5[]")))
+		{
+			$pilihan_2_5=NULL;
+		} else {
+			$pilihan_2_5=implode(",", $this->input->post("pil_2_5[]"));
+		}
+		$quis['q_no_2_5'] = $pilihan_2_5;
+		//radio
+		$quis['q_no_2_6_1'] = $this->input->post("pil_2_6_1");
+		$quis['q_no_2_6_2'] = $this->input->post("pil_2_6_2");
+		$quis['q_no_2_6_3'] = $this->input->post("pil_2_6_3");
+		$quis['q_no_2_6_4'] = $this->input->post("pil_2_6_4");
+		$quis['q_no_2_6_5'] = $this->input->post("pil_2_6_5");
+		$quis['q_no_2_6_6'] = $this->input->post("pil_2_6_6");
+		$quis['q_no_2_6_7'] = $this->input->post("pil_2_6_7");
+		$quis['q_no_2_6_8'] = $this->input->post("pil_2_6_8");
+		$quis['q_no_3_1'] = $this->input->post("pil_3_1");
+		$quis['q_no_3_2_1'] = $this->input->post("pil_3_2_1");
+		$quis['q_no_3_2_2'] = $this->input->post("pil_3_2_2");
+		$quis['q_no_3_2_3'] = $this->input->post("pil_3_2_3");
+		$quis['q_no_3_2_4'] = $this->input->post("pil_3_2_4");
+		$quis['q_no_3_2_5'] = $this->input->post("pil_3_2_5");
+		//checkbos
+		if(empty($this->input->post("pil_4[]")))
+		{
+			$pilihan_4=NULL;
+		} else {
+			$pilihan_4=implode(",", $this->input->post("pil_4[]"));
+		}
+		$quis['q_no_4'] = $pilihan_4;
+		$this->model_tracer->insert_tracer_study($quis);
+		redirect("tracer_study/quisioner");
+		
+		
 	}
 	public function keluar_log()
 	{

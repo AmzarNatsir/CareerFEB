@@ -22,7 +22,7 @@ class MY_Output extends CI_Output {
 	const OUTPUT_MODE_NORMAL = 10;
 	const OUTPUT_MODE_TEMPLATE = 11;
 	const TEMPLATE_ROOT = "home/_partial/";
-	//const ALUMNI_TEMPLATE_ROOT = "alumni/_partial/";
+	const PANEL_TEMPLATE_ROOT = "panel_career/_partial/";
 
 	private $_title = "";
 	private $_charset = "utf-8";
@@ -47,13 +47,12 @@ class MY_Output extends CI_Output {
 		$template_view = str_replace(".php", "", $template_view);
 		$this->_template = self::TEMPLATE_ROOT . $template_view;
 	}
-	/*
-	function set_template_dosen($template_view){
+
+	function set_template_panel($template_view){
 		$this->set_mode(self::OUTPUT_MODE_TEMPLATE);
 		$template_view = str_replace(".php", "", $template_view);
-		$this->_template = self::DOSEN_TEMPLATE_ROOT . $template_view;
+		$this->_template = self::PANEL_TEMPLATE_ROOT . $template_view;
 	}
-	*/
 	/**set_mode alias
 	 *
 	 * Enter description here ...
