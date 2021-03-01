@@ -25,6 +25,8 @@
         <link rel="stylesheet" href="<?php echo base_url();?>assets/css/themes.css">
         <!-- END Stylesheets -->
         <!-- Modernizr (browser feature detection library) -->
+        <script src="<?php echo base_url();?>assets/js/vendor/jquery.min.js"></script>
+        <script src="<?php echo base_url();?>assets/js/vendor/bootstrap.min.js"></script>
         <script src="<?php echo base_url();?>assets/js/vendor/modernizr.min.js"></script>
     </head>
     <body>

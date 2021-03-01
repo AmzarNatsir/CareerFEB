@@ -6,7 +6,7 @@ class Home extends CI_Controller {
     function __construct()
 	{
 		parent::__construct();
-		//$this->load->model(array('model_dosen', 'model_main'));
+		$this->load->model(array('model_panel'));
 		date_default_timezone_set("Asia/Makassar");
 	}
 	function _init()
@@ -17,6 +17,7 @@ class Home extends CI_Controller {
 	public function index()
 	{
         $this->_init();
-		$this->load->view('home/index');
+		$data['all_kegiatan'] =$this->model_panel->get_kegiatan_home();
+		$this->load->view('home/index', $data);
 	}
 }
