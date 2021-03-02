@@ -5,13 +5,13 @@
         <!-- Sidebar Content -->
         <div class="sidebar-content">
             <!-- Brand -->
-            <a href="<?php echo base_url();?>panel_career" class="sidebar-brand">
+            <a href="<?php echo base_url();?>panel_career/home" class="sidebar-brand">
                 <span class="sidebar-nav-mini-hide"><strong>PANEL</strong>-CC</span>
             </a>
             <!-- Sidebar Navigation -->
             <ul class="sidebar-nav">
                 <li>
-                    <a href="<?php echo base_url();?>panel_career" class=" active"><i class="gi gi-home sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">HOME</span></a>
+                    <a href="<?php echo base_url();?>panel_career/home" class=" active"><i class="gi gi-home sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">HOME</span></a>
                 </li>
                 <li>
                     <a href="<?php echo base_url();?>panel_career/manaj_kegiatan"><i class="fa fa-cog sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide"> KEGIATAN</span></a>

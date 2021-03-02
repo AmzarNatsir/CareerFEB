@@ -10,7 +10,7 @@
     </div>
     <!-- END Page Header -->
     <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-6">
             <div class="block">
                 <!-- Your Account Title -->
                 <div class="block-title">
@@ -18,15 +18,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="block">
-                <!-- Your Account Title -->
-                <div class="block-title">
-                    <h2><strong>INFORMASI / </strong> BERITA</h2>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
+        <div class="col-md-6">
             <div class="block">
                 <!-- Your Account Title -->
                 <div class="block-title">
