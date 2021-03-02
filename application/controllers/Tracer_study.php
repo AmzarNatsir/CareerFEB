@@ -247,12 +247,22 @@ class Tracer_study extends CI_Controller {
 		}
 		$quis['q_no_4'] = $pilihan_4;
 		$this->model_tracer->insert_tracer_study($quis);
-		redirect("tracer_study/quisioner");
+
+		redirect("tracer_study/terima_kasih");
+	}
+	public function terima_kasih()
+	{
+		$this->load->view('tracer_study/quisioner/terima_kasih');
 	}
 	public function keluar_log()
 	{
 		$this->session->sess_destroy();
 		redirect("tracer_study/login");
+	}
+	public function keluar_ke_home()
+	{
+		$this->session->sess_destroy();
+		redirect("");
 	}
 	public function hasil()
 	{

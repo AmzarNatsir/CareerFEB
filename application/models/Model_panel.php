@@ -23,17 +23,20 @@ class Model_panel extends CI_Model {
     {
         $this->db->insert("cc_kegiatan", $data);
     }
-
-    function get_kegiatan_bulan_ini($id_user)
+    function update_data_kegiatan($id, $data)
     {
-        $bln_ini = date("m");
-        $thn_ini = date("Y");
+        $this->db->where("id", $id)->update("cc_kegiatan", $data);
+    }
+    function delete_data_kegiatan($id)
+    {
+        $this->db->where("id", $id)->delete("cc_kegiatan");
+    }
+    function get_kegiatan_all($id_user)
+    {
         return $this->db->select("a.*, b.nama_kategori")
                 ->from("cc_kegiatan a")
                 ->from("cc_mst_kategori_kegiatan b")
                 ->where("a.id_kategori=b.id")
-                ->where("MONTH(a.tgl_posting)", $bln_ini)
-                ->where("YEAR(a.tgl_posting)", $thn_ini)
                 ->where("a.id_user", $id_user)
                 ->order_by("a.tgl_posting", "desc")->get()->result_array();
         
@@ -49,5 +52,21 @@ class Model_panel extends CI_Model {
             ->where("a.id_user=c.id")
             ->where("a.tampilkan", 1)
             ->order_by("a.tgl_posting", "desc")->get()->result_array();
+    }
+    function get_profil_kegiatan($id)
+    {
+        return $this->db->where("id", $id)->get("cc_kegiatan")->row();
+    }
+    function remove_gambar_kegiatan($id)
+    {
+        $this->db->select("file_gambar");
+        $this->db->from("cc_kegiatan");
+        $this->db->where('id', $id);
+        $res = $this->db->get();
+        $img = $res->row();
+        if(!empty($img->file_gambar))
+        {
+            unlink(FCPATH.'assets/upload/kegiatan/'.$img->file_gambar);
+        }
     }
 }

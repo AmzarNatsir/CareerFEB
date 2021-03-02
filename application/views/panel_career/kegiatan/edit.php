@@ -10,7 +10,8 @@
     </div>
     <!-- END Page Header -->
     <div class="row">
-        <form role="form" enctype="multipart/form-data" class="form-horizontal" method="post" action="<?php echo base_url();?>panel_career/manaj_kegiatan_simpan" onsubmit="return konfirm()">
+        <form role="form" enctype="multipart/form-data" class="form-horizontal" method="post" action="<?php echo base_url();?>panel_career/manaj_kegiatan_rubah" onsubmit="return konfirm()">
+        <input type="hidden" name="id_tabel" value="<?php echo $res->id;?>">
         <div class="col-md-8">
             <?php if ($this->session->flashdata('konfirm')): ?>
             <div class="alert alert-info alert-dismissible" id="success-alert">
@@ -24,14 +25,19 @@
                     <div class="block-options pull-right">
                         <a href="<?php echo base_url();?>panel_career/manaj_kegiatan" class="btn btn-sm btn-default" data-toggle="tooltip" title="Kembali"><i class="fa fa-home"></i></a>
                     </div>
-                    <h2 style="color: white;"><strong><i class="fa fa-edit"></i> input data baru</strong></h3>
+                    <h2 style="color: white;"><strong><i class="fa fa-edit"></i> Edit data Kegiatan</strong></h3>
                 </div>
                 <div class="form-group">
                     <label class="col-md-3 control-label" for="pil_kategori">Kategori Kegiatan</label>
                     <div class="col-md-9">
                         <select id="pil_kategori" name="pil_kategori" class="select-chosen" data-placeholder="Pilihan Katgeori Informasi" style="width: 100%;">
                         <?php foreach($kategori_kegiatan as $kat) {
-                            echo "<option value=".$kat['id'].">".$kat['nama_kategori']."</option>";
+                            if($kat['id']==$res->id_kategori)
+                            {
+                                echo "<option value=".$kat['id']." selected>".$kat['nama_kategori']."</option>";
+                            } else {
+                                echo "<option value=".$kat['id'].">".$kat['nama_kategori']."</option>";
+                            }
                         } ?>
                         </select>
                     </div>
@@ -39,41 +45,53 @@
                 <div class="form-group">
                     <label class="col-md-3 control-label" for="inp_nama">Nama Kegiatan</label>
                     <div class="col-md-9">
-                        <input type="text" class="form-control" name="inp_nama" id="inp_nama" maxlength="200" required>
+                        <input type="text" class="form-control" name="inp_nama" id="inp_nama" maxlength="200" value="<?php echo $res->judul_kegiatan;?>" required>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-md-3 control-label" for="inp_deskripsi">Deskripsi Kegiatan</label>
                     <div class="col-md-9">
-                        <textarea class="form-control" name="inp_deskripsi" id="inp_deskripsi" ></textarea>
+                        <textarea class="form-control" name="inp_deskripsi" id="inp_deskripsi"><?php echo $res->deskripsi;?></textarea>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-md-3 control-label" for="inp_pelaksana">Pelaksana Kegiatan</label>
                     <div class="col-md-9">
-                        <input type="text" class="form-control" name="inp_pelaksana" id="inp_pelaksana" maxlength="200" required>
+                        <input type="text" class="form-control" name="inp_pelaksana" id="inp_pelaksana" maxlength="200" value="<?php echo $res->pelaksana;?>" required>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-md-3 control-label" for="inp_pelaksana">Tanggal Pelaksanaan</label>
                     <div class="col-md-9">
                         <div class="input-group input-daterange" data-date-format="dd-mm-yyyy">
-                            <input type="text" id="tgl_star" name="tgl_star" class="form-control text-center" placeholder="Mulai" value="<?php echo date("d-m-Y");?>" required>
+                            <input type="text" id="tgl_star" name="tgl_star" class="form-control text-center" placeholder="Mulai" value="<?php echo date_format(date_create($res->tgl_awal), 'd-m-Y');?>" required>
                             <span class="input-group-addon"><i class="fa fa-angle-right"></i></span>
-                            <input type="text" id="tgl_end" name="tgl_end" class="form-control text-center" placeholder="Sampai" value="<?php echo date("d-m-Y");?>" required>
+                            <input type="text" id="tgl_end" name="tgl_end" class="form-control text-center" placeholder="Sampai" value="<?php echo date_format(date_create($res->tgl_akhir), 'd-m-Y');?>" required>
                         </div>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-md-3 control-label" for="inp_tempat">Tempat Pelaksanaan</label>
                     <div class="col-md-9">
-                        <input type="text" class="form-control" name="inp_tempat" id="inp_tempat" maxlength="200" required>
+                        <input type="text" class="form-control" name="inp_tempat" id="inp_tempat" maxlength="200" value="<?php echo $res->tempat;?>" required>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-md-3 control-label" for="inp_sumber">Sumber/Link</label>
                     <div class="col-md-9">
-                        <input type="text" class="form-control" name="inp_sumber" id="inp_sumber" maxlength="200">
+                        <input type="text" class="form-control" name="inp_sumber" id="inp_sumber" maxlength="200" value="<?php echo $res->sumber_link;?>">
+                    </div>
+                </div>
+                <hr>
+                <div class="form-group">
+                    <label class="col-md-3 control-label" for="pil_tampil">Tampilkan di Site <br>(Career Center)</label>
+                    <div class="col-md-9">
+                        <label class="radio-inline" for="pil_tampil">
+                                <input type="radio" id="pil_tampil" name="tampilkan_info" value="1" <?php echo ($res->tampilkan==1)? "checked" : "" ?>> Ya
+                            </label>
+                            <label class="radio-inline" for="pil_tidak_tampil">
+                                <input type="radio" id="pil_tidak_tampil" name="tampilkan_info" value="2" <?php echo ($res->tampilkan==2)? "checked" : "" ?>> Tidak
+                            </label>
                     </div>
                 </div>
                 <hr>
@@ -94,23 +112,28 @@
                         <label class="col-md-5 control-label">Upload Gambar ?</label>
                         <div class="col-md-7">
                             <label class="radio-inline" for="pil_ya">
-                                <input type="radio" id="pil_ya" name="upload_gambar" value="1" checked> Ya
+                                <input type="radio" id="pil_ya" name="upload_gambar" value="1" <?php echo ($res->ada_file==1)? "checked" : "" ?>> Ya
                             </label>
                             <label class="radio-inline" for="pil_tidak">
-                                <input type="radio" id="pil_tidak" name="upload_gambar" value="2"> Tidak
+                                <input type="radio" id="pil_tidak" name="upload_gambar" value="2" <?php echo ($res->ada_file==2)? "checked" : "" ?>> Tidak
                             </label>
                         </div>
                     </div>
                     <hr>
-                    <div id="area_upload">
+                    <div id="area_upload" style="<?php echo($res->ada_file==1)? "" : "display:none" ?> ">
                         <div class="form-group row">
                             <div class="col-sm-12">
-                                <input type="file" name="inp_gambar" id="inp_gambar" class="form-control" onchange="loadFile_file(this)" required>
+                                <input type="file" name="inp_gambar" id="inp_gambar" class="form-control" onchange="loadFile_file(this)">
                             </div>
                         </div>
                         <div class="form-group row">
                             <div class="col-sm-12" style="text-align: center;">
-                                <img id="preview_file" style="width: 100%; height: auto;" src="">
+                                <img id="preview_file" style="width: 100%; height: auto;" 
+                                <?php if($res->ada_file==1) {?> 
+                                    src="<?php echo base_url();?>assets/upload/kegiatan/<?php echo $res->file_gambar;?>"
+                                <?php } else {?> 
+                                    src=""
+                                <?php } ?>>
                             </div>
                         </div>
                     </div>
@@ -130,9 +153,7 @@
         var isi = $("input[name=upload_gambar]:checked").val();
         if(isi==1) {
             $("#area_upload").show(1000);
-            $("#inp_gambar").attr("required", true);
         } else {
-            $("#inp_gambar").attr("required", false);
             $("#area_upload").hide(1000);
         }
     });
