@@ -21,7 +21,6 @@
             <ul class="dropdown-menu dropdown-custom dropdown-menu-right">
                 <li class="dropdown-header text-center">Account</li>
                 <li>
-                    <a href="<?php echo base_url();?>panel_caree/profil"><i class="fa fa-user fa-fw pull-right"></i> Profile</a>
                     <a href="<?php echo base_url();?>panel_caree/setting"><i class="fa fa-cog fa-fw pull-right"></i> Settings</a>
                 </li>
                 <li class="divider"></li>
