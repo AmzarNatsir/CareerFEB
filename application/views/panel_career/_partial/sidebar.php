@@ -14,10 +14,7 @@
                     <a href="<?php echo base_url();?>panel_career/home" class=" active"><i class="gi gi-home sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">HOME</span></a>
                 </li>
                 <li>
-                    <a href="<?php echo base_url();?>panel_career/manaj_kegiatan"><i class="fa fa-cog sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide"> KEGIATAN</span></a>
-                </li>
-                <li>
-                    <a href="<?php echo base_url();?>panel_career/manaj_informasi" class=" active"><i class="fa fa-cog sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide"> INFORMASI/BERITA</span></a>
+                    <a href="<?php echo base_url();?>panel_career/manaj_kegiatan"><i class="fa fa-cog sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide"> KEGIATAN/EVENTS</span></a>
                 </li>
                 <li>
                     <a href="<?php echo base_url();?>panel_career/manaj_loker"><i class="fa fa-cog sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide"> LOWONGAN KERJA</span></a>
