@@ -49,7 +49,9 @@ class Panel_career extends CI_Controller {
     {
         $this->model_security->get_security_panel_cc();
         $this->_init();
-        $this->load->view("panel_career/index");
+        $id_user = $this->session->userdata("idalumni");
+        $data['res'] = $this->model_panel->get_profil_user($id_user);
+        $this->load->view("panel_career/index", $data);
     }
     //manajemen kegiatan
     public function manaj_kegiatan()

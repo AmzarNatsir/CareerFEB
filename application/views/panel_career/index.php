@@ -18,7 +18,11 @@
                 <!-- Account Stats Content -->
                 <div class="row block-section text-center">
                     <div class="col-xs-12">
+                        <?php if(empty($res->foto)){?>
                             <img src="<?php echo base_url();?>assets/img/placeholders/avatars/avatar_2.jpg" alt="Photo" class="img-responsive">
+                        <?php } else {?>
+                            <img src="<?php echo base_url();?>assets/img/placeholders/avatars/avatar_2.jpg" alt="Photo" class="img-responsive">
+                        <?php } ?>
                     </div>
                 </div>
             </div>
@@ -35,27 +39,107 @@
                 <table class="table table-borderless table-striped">
                     <tbody>
                         <tr>
-                            <td style="width: 20%;"><strong>Program Studi</strong></td>
-                            <td></td>
+                            <td style="width: 30%;"><strong>Program Studi</strong></td>
+                            <td><a href="javascript:void(0)"><?php 
+                            if($res->id_prodi==1) {
+                                echo "Ekonomi Pembangunan";
+                            } elseif($res->id_prodi==2) {
+                                echo "Manajemen";
+                            } elseif($res->id_prodi==3) {
+                                echo "Akuntansi";
+                            } elseif($res->id_prodi==4) {
+                                echo "Ekonomi Islam";
+                            } else {
+                                echo "D3 Perpajakan";
+                            } ?></a></td>
                         </tr>
                         <tr>
                             <td><strong>Tahun Lulus</strong></td>
-                            <td><a href="javascript:void(0)"></a></td>
+                            <td><a href="javascript:void(0)"><?php echo $res->tahun_lulus;?></a></td>
                         </tr>
                         <tr>
                             <td><strong>Tempat/Tanggal Lahir</strong></td>
-                            <td><a href="javascript:void(0)"></a></td>
+                            <td><a href="javascript:void(0)"><?php echo $res->tempat_lahir;?>, <?php echo date_format(date_create($res->tgl_lahir), "d-m-Y");?></a></td>
                         </tr>
                         <tr>
                             <td><strong>Alamat Sekarang</strong></td>
-                            <td><a href="javascript:void(0)"></a></td>
+                            <td><a href="javascript:void(0)"><?php echo $res->domisili.", ".$res->nama_kelurahan.", ".$res->nama_kecamatan.", ".$res->nama_kabupaten.", ".$res->nama_provinsi;?></a></td>
                         </tr>
                         <tr>
                             <td><strong>No.Telepon</strong></td>
-                            <td><a href="javascript:void(0)"></a></td>
+                            <td><a href="javascript:void(0)"><?php echo $res->no_telepon;?></a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Email</strong></td>
+                            <td><a href="javascript:void(0)"><?php echo $res->email;?></a></td>
                         </tr>
                     </tbody>
                 </table>
+                <div class="block-title">
+                    <h2>Pendidikan Terakhir Anda</h2>
+                </div>
+                <table class="table table-borderless table-striped">
+                    <tbody>
+                        <tr>
+                            <td style="width: 30%;"><strong>Nama Perguruan Tinggi</strong></td>
+                            <td style="width: 70%;"><a href="javascript:void(0)"><?php echo (empty($res->nama_pt_akhir)) ? "Tanpa Keterangan" : $res->nama_pt_akhir;?></a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Jenjang Pendidikan</strong></td>
+                            <td><a href="javascript:void(0)"><?php 
+                            if($res->id_pendidikan_akhir==1) {
+                                echo "Sarjana";
+                            } elseif($res->id_pendidikan_akhir==2) {
+                                echo "Magister";
+                            } elseif($res->id_pendidikan_akhir==3) {
+                                echo "Doktor";
+                            } else {
+                                echo "Tanpa Keterangan";
+                            } ?></a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Jurusan</strong></td>
+                            <td><a href="javascript:void(0)"><?php echo (empty($res->nama_pt_akhir)) ? "Tanpa Keterangan" : $res->jurusan_prodi_akhir;?></a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Status Pendidikan Akhir</strong></td>
+                            <td><a href="javascript:void(0)"><?php 
+                            if($res->status_pend_akhir==1) {
+                                echo "Belum Selesai";
+                            } elseif($res->id_pendidikan_akhir==2) {
+                                echo "Selesai";
+                            } else {
+                                echo "Tanpa Keterangan";
+                            }?></a></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="block-title">
+                    <h2>Pekerjaan Anda Saat ini</h2>
+                </div>
+                <table class="table table-borderless table-striped">
+                    <tbody>
+                        <tr>
+                            <td style="width: 30%;"><strong>Pekerjaan</strong></td>
+                            <td style="width: 70%;"><a href="javascript:void(0)"><?php echo (empty($res->bekerja)) ? "Belum Bekerja" : "Bekerja";?></a></td>
+                        </tr>
+                        <?php if($res->bekerja==1) {?>
+                        <tr>
+                            <td><strong>Profesi</strong></td>
+                            <td><a href="javascript:void(0)"><?php echo $res->profesi;?></a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Nama Instansi</strong></td>
+                            <td><a href="javascript:void(0)"><?php echo $res->nama_instansi;?></a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Alamat Instansi</strong></td>
+                            <td><a href="javascript:void(0)"><?php echo $res->alamat_instansi.", ".$res->kelurahan_instansi.", ".$res->kecamatan_instansi.", ".$res->kabupaten_instansi.", ".$res->provinsi_instansi;?></a></td>
+                        </tr>
+                        <?php } ?>
+                    </tbody>
+                </table>
+
             </div>
         </div>
     </div>

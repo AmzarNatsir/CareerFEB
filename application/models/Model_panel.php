@@ -18,6 +18,26 @@ class Model_panel extends CI_Model {
     {
         return $this->db->get("cc_mst_kategori_job")->result_array();
     }
+    //profil user
+    function get_profil_user($id)
+    {
+        $this->db->select("a.*, b.nama_provinsi, c.nama_kabupaten, d.nama_kecamatan, e.nama_kelurahan, 
+        (select mst_provinsi.nama_provinsi from mst_provinsi where a.id_prov_instansi=mst_provinsi.id) as provinsi_instansi, 
+        (select mst_kabupaten.nama_kabupaten from mst_kabupaten where a.id_kab_instansi=mst_kabupaten.id) as kabupaten_instansi, 
+        (select mst_kecamatan.nama_kecamatan from mst_kecamatan where a.id_kec_instansi=mst_kecamatan.id) as kecamatan_instansi,
+        (select mst_kelurahan.nama_kelurahan from mst_kelurahan where a.id_kel_instansi=mst_kelurahan.id) as kelurahan_instansi
+        ")
+                ->from("cc_alumni a")
+                ->from("mst_provinsi b")
+                ->from("mst_kabupaten c")
+                ->from("mst_kecamatan d")
+                ->from("mst_kelurahan e")
+                ->where("a.id_prov_domisili=b.id")
+                ->where("a.id_kab_domisi=c.id")
+                ->where("a.id_kec_domisili=d.id")
+                ->where("a.id_kel_domisili=e.id");
+        return $this->db->where("a.id", $id)->get("cc_alumni")->row();
+    }
     //kegiatan
     function insert_data_kegiatan($data)
     {

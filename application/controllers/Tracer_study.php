@@ -135,6 +135,7 @@ class Tracer_study extends CI_Controller {
 		$profil['id_kel_domisili'] = $this->input->post("pil_kelurahan");
 		$profil['no_telepon'] = $this->input->post("inp_kontak");
 		$profil['tahun_lulus'] = $this->input->post("pil_tahun_lulus");
+		$profil['bekerja'] = $this->input->post("pil_kerja");
 		$profil['tracer'] = 1; //update tabel tracer = telah mengisi quisioner ts
 		$this->model_tracer->update_data_alumni($id_alumni, $profil);
 		//simpan quisioner
@@ -252,6 +253,7 @@ class Tracer_study extends CI_Controller {
 	}
 	public function terima_kasih()
 	{
+		$this->model_security->get_security_tracer_cc();
 		$this->load->view('tracer_study/quisioner/terima_kasih');
 	}
 	public function keluar_log()
