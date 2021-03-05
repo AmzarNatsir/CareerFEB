@@ -23,11 +23,11 @@ class Model_tracer extends CI_Model {
         return $this->db->where("id_kecamatan", $id_kacamatan)->get("mst_kelurahan")->result_array();
     }
     //
-    //function insert_otp($data)
-    //{
-    //    $this->db->insert("cc_alumni", $data);
-        //return $this->db->insert_id();
-    //}
+    function insert_otp($data)
+    {
+        $this->db->insert("cc_alumni", $data);
+        return $this->db->insert_id();
+    }
     function cek_akun($id)
     {
         return $this->db->where("nim", $id)->get("cc_alumni")->row();
