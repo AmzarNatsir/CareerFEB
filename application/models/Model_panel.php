@@ -38,6 +38,22 @@ class Model_panel extends CI_Model {
                 ->where("a.id_kel_domisili=e.id");
         return $this->db->where("a.id", $id)->get("cc_alumni")->row();
     }
+    public function update_data_profil($id, $data)
+    {
+        $this->db->where("id", $id)->update("cc_alumni", $data);
+    }
+    function remove_photo_profil($id)
+    {
+        $this->db->select("foto");
+        $this->db->from("cc_alumni");
+        $this->db->where('id', $id);
+        $res = $this->db->get();
+        $img = $res->row();
+        if(!empty($img->foto))
+        {
+            unlink(FCPATH.'assets/upload/profil/'.$img->foto);
+        }
+    }
     //kegiatan
     function insert_data_kegiatan($data)
     {

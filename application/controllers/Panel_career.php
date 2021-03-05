@@ -53,6 +53,70 @@ class Panel_career extends CI_Controller {
         $data['res'] = $this->model_panel->get_profil_user($id_user);
         $this->load->view("panel_career/index", $data);
     }
+    //manajemen profil
+    public function edit_profil()
+    {
+        $this->model_security->get_security_panel_cc();
+        $this->_init();
+        $id_user = $this->session->userdata("idalumni");
+        $result = $this->model_panel->get_profil_user($id_user);
+        $data['res'] = $this->model_panel->get_profil_user($id_user);
+        $data['provinsi'] = $this->model_tracer->get_provinsi();
+        $data['kabupaten'] = $this->model_tracer->get_kabupaten($result->id_prov_domisili);
+        $data['kecamatan'] = $this->model_tracer->get_kecamatan($result->id_kab_domisi);
+        $data['kelurahan'] = $this->model_tracer->get_kelurahan($result->id_kec_domisili);
+        //alamat instansi
+        $data['kabupaten_ins'] = $this->model_tracer->get_kabupaten($result->id_prov_instansi);
+        $data['kecamatan_ins'] = $this->model_tracer->get_kecamatan($result->id_kab_instansi);
+        $data['kelurahan_ins'] = $this->model_tracer->get_kelurahan($result->id_kec_instansi);
+        $this->load->view("panel_career/edit_profil", $data);
+    }
+    public function simpan_data_profil()
+    {
+        $this->model_security->get_security_panel_cc();
+        $id_user = $this->session->userdata("idalumni");
+        $ada_file = $this->input->post("upload_gambar");
+        $profil['tahun_lulus'] = $this->input->post("inp_tahun_lulus");
+        $profil['tempat_lahir'] = $this->input->post("inp_tempat_lahir");
+		$profil['tgl_lahir'] = $this->input->post("inp_tanggal_lahir");
+		$profil['jenkel'] = $this->input->post("pil_jenkel");
+		$profil['domisili'] = $this->input->post("inp_alamat");
+		$profil['id_prov_domisili'] = $this->input->post("pil_provinsi");
+		$profil['id_kab_domisi'] = $this->input->post("pil_kabupaten");
+		$profil['id_kec_domisili'] = $this->input->post("pil_kecamatan");
+		$profil['id_kel_domisili'] = $this->input->post("pil_kelurahan");
+		$profil['no_telepon'] = $this->input->post("inp_no_telepon");
+        $profil['email'] = $this->input->post("inp_email");
+        //pendidikan terakhir
+        $profil['nama_pt_akhir'] = $this->input->post("inp_nama_pt_akhir");
+        $profil['id_pendidikan_akhir'] = $this->input->post("pil_pend_akhir");
+        $profil['jurusan_prodi_akhir'] = $this->input->post("inp_jurusan");
+        $profil['status_pend_akhir'] = $this->input->post("pil_status_pend_akhir");
+        //pekerjaan
+        $profil['bekerja'] = $this->input->post("pil_kerja");
+        $profil['nama_instansi'] = $this->input->post("inp_nama_instansi");
+        $profil['alamat_instansi'] = $this->input->post("inp_alamat_instansi");
+        $profil['id_prov_instansi'] = $this->input->post("pil_provinsi_ins");
+        $profil['id_kab_instansi'] = $this->input->post("pil_kabupaten_ins");
+        $profil['id_kec_instansi'] = $this->input->post("pil_kecamatan_ins");
+        $profil['id_kel_instansi'] = $this->input->post("pil_kelurahan_ins");
+        if($ada_file==1){
+            if(!empty($_FILES["inp_gambar"]["name"]))
+            {
+                $nm_fl = $this->session->userdata("nimalumni"); 
+                $fl = $this->upload_gambar($nm_fl, "inp_gambar", "profil");
+                if ($fl != false) 
+                {
+                    $smp_file = $fl;
+                    $profil['foto'] = $smp_file;
+                }
+            }
+        }
+        $this->model_panel->remove_photo_profil($id_user);
+        $this->model_panel->update_data_profil($id_user, $profil);
+        $this->session->set_flashdata("konfirm", "Data Profil Anda berhasil disimpan");
+        redirect("panel_career/edit_profil");
+    }
     //manajemen kegiatan
     public function manaj_kegiatan()
     {

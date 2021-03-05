@@ -19,9 +19,9 @@
                 <div class="row block-section text-center">
                     <div class="col-xs-12">
                         <?php if(empty($res->foto)){?>
-                            <img src="<?php echo base_url();?>assets/img/placeholders/avatars/avatar_2.jpg" alt="Photo" class="img-responsive">
+                            <img src="<?php echo base_url();?>assets/img/placeholders/avatars/avatar_2.jpg" alt="Photo" class="img-responsive" id="preview_file">
                         <?php } else {?>
-                            <img src="<?php echo base_url();?>assets/img/placeholders/avatars/avatar_2.jpg" alt="Photo" class="img-responsive">
+                            <img src="<?php echo base_url();?>assets/upload/profil/<?php echo $res->foto;?>" alt="Photo" class="img-responsive" id="preview_file">
                         <?php } ?>
                     </div>
                 </div>
@@ -32,7 +32,7 @@
                 <!-- Your Account Title -->
                 <div class="block-title">
                     <div class="block-options pull-right">
-                        <a href="javascript:void(0)" class="btn btn-alt btn-sm btn-default" data-toggle="tooltip" title="Edit Profil"><i class="fa fa-pencil"></i></a>
+                        <a href="<?php echo base_url();?>panel_career/edit_profil" class="btn btn-alt btn-sm btn-default" data-toggle="tooltip" title="Edit Profil"><i class="fa fa-pencil"></i></a>
                     </div>
                     <h2>Tentang <strong><?php echo $this->session->userdata("nmalumni");?></strong></h2>
                 </div>
@@ -99,14 +99,14 @@
                         </tr>
                         <tr>
                             <td><strong>Jurusan</strong></td>
-                            <td><a href="javascript:void(0)"><?php echo (empty($res->nama_pt_akhir)) ? "Tanpa Keterangan" : $res->jurusan_prodi_akhir;?></a></td>
+                            <td><a href="javascript:void(0)"><?php echo (empty($res->jurusan_prodi_akhir)) ? "Tanpa Keterangan" : $res->jurusan_prodi_akhir;?></a></td>
                         </tr>
                         <tr>
                             <td><strong>Status Pendidikan Akhir</strong></td>
                             <td><a href="javascript:void(0)"><?php 
                             if($res->status_pend_akhir==1) {
                                 echo "Belum Selesai";
-                            } elseif($res->id_pendidikan_akhir==2) {
+                            } elseif($res->status_pend_akhir==2) {
                                 echo "Selesai";
                             } else {
                                 echo "Tanpa Keterangan";
@@ -124,10 +124,6 @@
                             <td style="width: 70%;"><a href="javascript:void(0)"><?php echo (empty($res->bekerja)) ? "Belum Bekerja" : "Bekerja";?></a></td>
                         </tr>
                         <?php if($res->bekerja==1) {?>
-                        <tr>
-                            <td><strong>Profesi</strong></td>
-                            <td><a href="javascript:void(0)"><?php echo $res->profesi;?></a></td>
-                        </tr>
                         <tr>
                             <td><strong>Nama Instansi</strong></td>
                             <td><a href="javascript:void(0)"><?php echo $res->nama_instansi;?></a></td>
