@@ -18,6 +18,7 @@ class Home extends CI_Controller {
 	{
         $this->_init();
 		$data['all_kegiatan'] =$this->model_panel->get_kegiatan_home();
+		$data['all_loker'] = $this->model_panel->get_loker_home();
 		$this->load->view('home/index', $data);
 	}
 }

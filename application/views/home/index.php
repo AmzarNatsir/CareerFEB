@@ -56,7 +56,35 @@
                     </h3>
                 </div>
                 <div class="widget-extra">
-                
+                    <div class="timeline">
+                        <ul class="timeline-list">
+                            <?php 
+                            foreach($all_loker as $dt1) {?>
+                            <li class="active">
+                                <div class="timeline-icon"><i class="fa fa-check"></i></div>
+                                <div class="timeline-time"><small><?php echo date_format(date_create($dt1['tgl_posting']), "d/m/y");?></small></div>
+                                <div class="timeline-content">
+                                    <p class="push-bit"><a href="#"><strong><?php echo $dt1['nama_perusahaan'];?></strong></a></p>
+                                    <p class="push-bit"><?php echo strtoupper($dt1['alamat'].", ".$dt1['nama_kabupaten'].", ".$dt1['nama_provinsi']);?></p>
+                                    <p class="push-bit"><a href="#"><strong>Waktu Proses Lamaran : <?php echo date_format(date_create($dt1['tgl_mulai']), "d-m-Y");?> s/d <?php echo date_format(date_create($dt1['tgl_akhir']), "d-m-Y");?></strong></a></p>
+
+                                    <p class="push-bit"><a href="#" class="btn btn-xs btn-warning"><i class="fa fa-info"></i> Kategori : <?php echo $dt1['nama_kategori'];?></a> | <a href="#" class="btn btn-xs btn-danger"><i class="fa fa-eye"></i> <?php echo $dt1['pengunjung'];?></a>
+                                    </p>
+                                    <?php if($dt1['ada_file']==1) {?>
+                                    <div class="row push">
+                                        <div class="col-sm-6 col-md-6">
+                                            <a href="<?php echo base_url();?>assets/upload/loker/<?php echo $dt1['file_lampiran'];?>" data-toggle="lightbox-image">
+                                                <img src="<?php echo base_url();?>assets/upload/loker/<?php echo $dt1['file_lampiran'];?>" alt="Gambar">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <?php } ?>
+                                </div>
+                            </li>
+                            <?php } ?>
+                        </ul>
+                    </div>
+
                 </div>
             </div>
         </div>

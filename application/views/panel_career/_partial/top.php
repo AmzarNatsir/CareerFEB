@@ -25,7 +25,7 @@
             <ul class="dropdown-menu dropdown-custom dropdown-menu-right">
                 <li class="dropdown-header text-center">Account</li>
                 <li>
-                    <a href="<?php echo base_url();?>panel_caree/setting"><i class="fa fa-cog fa-fw pull-right"></i> Settings</a>
+                    <a href="<?php echo base_url();?>panel_career/edit_password"><i class="fa fa-cog fa-fw pull-right"></i> Rubah Password</a>
                 </li>
                 <li class="divider"></li>
                 <li><a href="<?php echo base_url();?>panel_career/logout"><i class="fa fa-ban fa-fw pull-right"></i> Logout</a></li>

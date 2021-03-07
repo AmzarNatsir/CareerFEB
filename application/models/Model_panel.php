@@ -132,6 +132,20 @@ class Model_panel extends CI_Model {
                 ->order_by("a.tgl_posting", "desc")->get()->result_array();
         
     }
+    function get_loker_home()
+    {
+        return $this->db->select("a.*, b.nama_kategori, c.nama_provinsi, d.nama_kabupaten")
+                ->from("cc_loker a")
+                ->from("cc_mst_kategori_job b")
+                ->from("mst_provinsi c")
+                ->from("mst_kabupaten d")
+                ->where("a.id_kategori=b.id")
+                ->where("a.id_provinsi=c.id")
+                ->where("a.id_kabupaten=d.id")
+                ->where("a.tampilkan", 1)
+                ->order_by("a.tgl_posting", "desc")->get()->result_array();
+        
+    }
     function get_profil_loker($id)
     {
         return $this->db->where("id", $id)->get("cc_loker")->row();

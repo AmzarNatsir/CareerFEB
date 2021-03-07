@@ -117,6 +117,28 @@ class Panel_career extends CI_Controller {
         $this->session->set_flashdata("konfirm", "Data Profil Anda berhasil disimpan");
         redirect("panel_career/edit_profil");
     }
+    public function edit_password()
+    {
+        $this->model_security->get_security_panel_cc();
+        $this->_init();
+        $id_user = $this->session->userdata("idalumni");
+        $data['res'] = $this->model_panel->get_profil_user($id_user);
+        $this->load->view("panel_career/setting/rubah_password", $data);
+    }
+    function get_md5()
+	{
+		$pswd = md5($this->input->post("ps_lm"));
+		echo $pswd;
+	}
+    public function rubah_password()
+    {
+        $this->model_security->get_security_panel_cc();
+        $id_user = $this->session->userdata("idalumni");
+        $data['passwd'] = md5(trim($this->input->post("inp_pass_br_1")));
+        $this->model_panel->update_data_profil($id_user, $data);
+        $this->session->sess_destroy();
+		redirect("panel_career");
+    }
     //manajemen kegiatan
     public function manaj_kegiatan()
     {
