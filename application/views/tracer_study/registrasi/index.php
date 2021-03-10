@@ -37,37 +37,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-6">
-                    <div id="login-alt-container">
-                        <!-- Title -->
-                        <h1 class="push-top-bottom">
-                            <strong><a href="https://career.feb.unismuh.ac.id">Tracer Study FEB Unismuh Makassar</a></strong><br>
-                            <small>SELAMAT DATANG</small><br>
-                            <small>Bagi Alumni Universitas Muhammadiyah Makassar <br>
-                            Fakultas Ekonomi dan Bisnis siapkan diri anda untuk <br>
-                            mengisi kuisioner tracer study</small>
-                        </h1>
-                        <!-- END Title -->
-
-                        <!-- Key Features -->
-                        <ul class="fa-ul text-muted">
-                            <li><i class="fa fa-check fa-li text-success"></i> 10571xxxxxxx -> Ekonomi Pembanguan </li>
-                            <li><i class="fa fa-check fa-li text-success"></i> 10572xxxxxxx -> Menejamen</li>
-                            <li><i class="fa fa-check fa-li text-success"></i> 10573xxxxxxx -> Akuntansi</li>
-                            <li><i class="fa fa-check fa-li text-success"></i> 10574xxxxxxx -> Ekonomi Islam</li>
-                            <li><i class="fa fa-check fa-li text-success"></i> 10575xxxxxxx -> D3 Perpajakan</li>
-                        </ul>
-                        <!-- END Key Features -->
-
-                        <!-- Footer -->
-                        <footer class="text-muted push-top-bottom">
-                            <small><?php echo date("Y");?></span> &copy; <a href="https://career.feb.unismuh.ac.id" >CareerCenterFEB</a></small>
-                        </footer>
-                        <!-- END Footer -->
-                    </div>
-                </div>
-                <div class="col-sm-6">
                     <!-- Login Container -->
-                    <div id="login-container" style="top : 100px">
+                    <div id="login-container" style="top : 80px; position:relative">
                         <!-- Login Title -->
                         <div class="login-title text-center">
                             <a href="<?php echo base_url();?>"><img src="<?php echo base_url();?>assets/img/logo-mini.ico" style="width: 50px;"><a>
@@ -155,7 +126,14 @@
                     </div>
                     <!-- END Login Container -->
                 </div>
+                <div class="col-sm-6">
+                    <div style="top : 80px; position: relative;" class="text-center">
+                        <img src="<?php echo base_url();?>assets/img/alur_proses_tracer_study.jpg" class="img-responsive">
+                        <!-- END Footer -->
+                    </div>
+                </div>
             </div>
+            
         </div>
         <!-- END Login Alternative Row -->
 
