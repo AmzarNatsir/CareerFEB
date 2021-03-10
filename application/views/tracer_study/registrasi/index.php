@@ -70,6 +70,7 @@
                     <div id="login-container" style="top : 100px">
                         <!-- Login Title -->
                         <div class="login-title text-center">
+                            <a href="<?php echo base_url();?>"><img src="<?php echo base_url();?>assets/img/logo-mini.ico" style="width: 50px;"><a>
                             <h1><strong>Form Registrasi</strong></h1>
                         </div>
                         <!-- END Login Title -->

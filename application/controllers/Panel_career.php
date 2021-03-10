@@ -134,13 +134,10 @@ class Panel_career extends CI_Controller {
     public function rubah_password()
     {
         $psbr = MD5(trim($this->input->post("inp_pass_br_1")));
-        //echo "<pre>";
-        //print_r($psbr);
-        //echo "</pre>";
-        
         $this->model_security->get_security_panel_cc();
         $id_user = $this->session->userdata("idalumni");
         $data['passwd'] = $psbr;
+        $data['rubah_passwd_tgl'] = date("Y-m-d");
         $this->model_panel->update_data_profil($id_user, $data);
         $this->session->sess_destroy();
 		redirect("panel_career");

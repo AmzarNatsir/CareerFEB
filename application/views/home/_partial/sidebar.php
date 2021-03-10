@@ -6,6 +6,7 @@
         <div class="sidebar-content">
             <!-- Brand -->
             <a href="<?php echo base_url();?>" class="sidebar-brand">
+                <img src="<?php echo base_url();?>assets/img/logo-mini.ico" style="width: 25px;">
                 <span class="sidebar-nav-mini-hide"><strong>CAREER</strong>-FEB</span>
             </a>
             <!-- Sidebar Navigation -->

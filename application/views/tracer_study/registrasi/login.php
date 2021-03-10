@@ -41,6 +41,7 @@
                     <div id="login-container">
                         <!-- Login Title -->
                         <div class="login-title text-center">
+                            <a href="<?php echo base_url();?>"><img src="<?php echo base_url();?>assets/img/logo-mini.ico" style="width: 50px;"><a>
                             <h1><strong>Login Tracer Study</strong></h1>
                         </div>
                         <!-- END Login Title -->
