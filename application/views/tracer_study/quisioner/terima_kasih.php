@@ -35,30 +35,9 @@
                 
                 <!-- Main Container -->
                 <div id="main-container">
-                    <header class="navbar navbar-default">
-                        <!-- Right Header Navigation -->
-                        <ul class="nav navbar-nav-custom pull-right">
-                            <!-- User Dropdown -->
-                            <li class="dropdown">
-                                <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">
-                                    <img src="<?php echo base_url();?>assets/img/placeholders/avatars/avatar.jpg" alt="avatar"> <i class="fa fa-angle-down"></i>
-                                </a>
-                                <ul class="dropdown-menu dropdown-custom dropdown-menu-right">
-                                    <li class="dropdown-header text-center"><?php echo $this->session->userdata("nmalumnicc"); ?></li>
-                                    <li>
-                                        <a href="<?php echo base_url();?>tracer_study/keluar_log"><i class="fa fa-ban fa-fw pull-right"></i> Logout</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <!-- END User Dropdown -->
-                        </ul>
-                        <!-- END Right Header Navigation -->
-                    </header>
-                    <!-- END Header -->
-
                     <div id="page-content">
                     <div class="text-center">
-                        <h2 class="h3">Terimah kasih telah meluangkan waktu anda untuk menjawab kuesioner. Selamat beraktifitas kembali dan sukses selalu untuk anda.</h2>
+                        <h2 class="h3">Terimah kasih telah meluangkan waktu anda untuk menjawab kuesioner.<br>Selamat beraktifitas kembali dan sukses selalu untuk anda.</h2>
                     </div>
                     </div>
                     <!-- END Page Content -->
