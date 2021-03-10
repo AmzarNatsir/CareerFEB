@@ -18,11 +18,54 @@
                 </div>
                 <div class="row block-section text-left">
                     <div class="col-xs-12">
-                        <div class="widget-main">
-                            <div class="row text-center">
-                                <div class="col-xs-12">
-                                    <h3 class="animation-hatch"><strong>0</strong><br><small>Jumlah Responden</small></h3>
-                                </div>
+                    <div class="row text-center">
+                            <div class="col-sm-6 col-lg-2">
+                                <a href="javascript:void(0)" class="widget widget-hover-effect2">
+                                    <div class="widget-extra themed-background">
+                                        <h4 class="widget-content-light"><strong>Total</strong><br> Responden</h4>
+                                    </div>
+                                    <div class="widget-extra-full"><span class="h2 animation-expandOpen">0</span></div>
+                                </a>
+                            </div>
+                            <div class="col-sm-6 col-lg-2">
+                                <a href="javascript:void(0)" class="widget widget-hover-effect2">
+                                    <div class="widget-extra themed-background-dark">
+                                        <h4 class="widget-content-light"><strong>Prodi Ekonomi Pembangunan</strong></h4>
+                                    </div>
+                                    <div class="widget-extra-full"><span class="h2 themed-color-dark animation-expandOpen">0</span></div>
+                                </a>
+                            </div>
+                            <div class="col-sm-6 col-lg-2">
+                                <a href="javascript:void(0)" class="widget widget-hover-effect2">
+                                    <div class="widget-extra themed-background-dark">
+                                        <h4 class="widget-content-light"><strong>Prodi Manajemen</strong></h4>
+                                    </div>
+                                    <div class="widget-extra-full"><span class="h2 themed-color-dark animation-expandOpen">0</span></div>
+                                </a>
+                            </div>
+                            <div class="col-sm-6 col-lg-2">
+                                <a href="javascript:void(0)" class="widget widget-hover-effect2">
+                                    <div class="widget-extra themed-background-dark">
+                                        <h4 class="widget-content-light"><strong>Prodi <br>Akuntansi</strong></h4>
+                                    </div>
+                                    <div class="widget-extra-full"><span class="h2 themed-color-dark animation-expandOpen">0</span></div>
+                                </a>
+                            </div>
+                            <div class="col-sm-6 col-lg-2">
+                                <a href="javascript:void(0)" class="widget widget-hover-effect2">
+                                    <div class="widget-extra themed-background-dark">
+                                        <h4 class="widget-content-light"><strong>Prodi Ekonomi Islam</strong></h4>
+                                    </div>
+                                    <div class="widget-extra-full"><span class="h2 themed-color-dark animation-expandOpen">0</span></div>
+                                </a>
+                            </div>
+                            <div class="col-sm-6 col-lg-2">
+                                <a href="javascript:void(0)" class="widget widget-hover-effect2">
+                                    <div class="widget-extra themed-background-dark">
+                                        <h4 class="widget-content-light"><strong>Prodi  D3 Perpajakan</strong></h4>
+                                    </div>
+                                    <div class="widget-extra-full"><span class="h2 themed-color-dark animation-expandOpen">0</span></div>
+                                </a>
                             </div>
                         </div>
                         <div id="faq1" class="panel-group">
