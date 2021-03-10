@@ -39,8 +39,12 @@ class Tracer_study extends CI_Controller {
 	}
 	public function simpan_registrasi()
 	{
+
 		$insert['nama_lengkap'] = $this->input->post("inp_nama");
-		$insert['nim'] = $this->input->post("inp_nim");
+		if(empty($this->input->post("lupa_nim"))) 
+		{
+			$insert['nim'] = $this->input->post("inp_nim");
+		}
 		$insert['id_prodi'] = $this->input->post("id_prodi");
 		$insert['email'] = $this->input->post("alumniemail");
 		$insert['passwd'] = MD5(trim($this->input->post("inppassword")));

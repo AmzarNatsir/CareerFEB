@@ -58,19 +58,42 @@
                             <!-- Login Form -->
                             <form action="<?php echo base_url();?>tracer_study/simpan_registrasi" method="post" id="form-register" class="form-horizontal">
                                 <div class="form-group">
+                                    <div class="col-xs-12 checkbox text-right">
+                                        <label for="lupa_nim">
+                                            <input type="checkbox" id="lupa_nim" name="lupa_nim" value="1" onclick="goLupaNim(this)"> Klik Jika Lupa NIM
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group" id="inp_lp_nim" style="display: none;">
                                     <div class="col-xs-12">
                                         <div class="input-group">
                                             <span class="input-group-addon"><i class="gi gi-edit"></i></span>
-                                            <input type="text" id="inp_nim" name="inp_nim" class="form-control input-lg" placeholder="Nomor Induk Mahasiswa" maxlength="12" minlength="12" required oninput="getProdi(this)">
+                                            <select class="form-control" name="id_prodi" id="id_prodi">
+                                            <option value="1">Ekonomi Pembangunan</option>
+                                            <option value="2">Manajemen</option>
+                                            <option value="3">Akuntansi</option>
+                                            <option value="4">Ekonomi Islam</option>
+                                            <option value="5">D3 Perpajakan</option>
+                                            </select>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <div class="col-xs-12">
-                                        <div class="input-group">
-                                            <span class="input-group-addon"><i class="gi gi-edit"></i></span>
-                                            <input type="text" id="inp_prodi" name="inp_prodi" class="form-control input-lg" placeholder="Program Studi" required readonly>
-                                            <input type="hidden" name="id_prodi" id="id_prodi">
+                                <div id="inp_ingat_nim">
+                                    <div class="form-group">
+                                        <div class="col-xs-12">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="gi gi-edit"></i></span>
+                                                <input type="text" id="inp_nim" name="inp_nim" class="form-control input-lg" placeholder="Nomor Induk Mahasiswa" maxlength="12" minlength="12" required oninput="getProdi(this)">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-xs-12">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="gi gi-edit"></i></span>
+                                                <input type="text" id="inp_prodi" name="inp_prodi" class="form-control input-lg" placeholder="Program Studi" required readonly>
+                                                <input type="hidden" name="id_prodi" id="id_prodi">
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -149,6 +172,23 @@
     {
         window.setTimeout(function () { $("#success-alert").alert('close'); }, 2000);
     });
+    var goLupaNim = function(el)
+    {
+        var stscheck = $(el).prop("checked");
+        if(stscheck==true) {
+            $("#inp_lp_nim").show(1000);
+            $("#inp_ingat_nim").hide(1000);
+            $("#tbl_reg").attr("disabled", false);
+            $("#inp_nim").attr("required", false);
+            $("#inp_prodi").attr("required", false);
+        } else {
+            $("#inp_lp_nim").hide(1000);
+            $("#inp_ingat_nim").show(1000);
+            $("#tbl_reg").attr("disabled", true);
+            $("#inp_nim").attr("required", true);
+            $("#inp_prodi").attr("required", true);
+        }
+    }
     var getProdi = function(el)
     {
         var kode = $(el).val();
