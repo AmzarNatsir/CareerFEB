@@ -68,7 +68,7 @@
                                     <div class="col-xs-12">
                                         <div class="input-group">
                                             <span class="input-group-addon"><i class="gi gi-asterisk"></i></span>
-                                            <input type="password" id="inppassword" name="inppassword" class="form-control input-lg" placeholder="Password" maxlength="20" minlength="5" required>
+                                            <input type="password" id="inppassword" name="inppassword" class="form-control input-lg" placeholder="Password" maxlength="50" required>
                                         </div>
                                     </div>
                                 </div>

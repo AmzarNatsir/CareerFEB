@@ -22,7 +22,8 @@ class Panel_career extends CI_Controller {
     public function proses_login()
 	{
 		$usr = $this->input->post("alumniemail");
-		$psw = MD5(trim($this->input->post("inppassword")));
+		$psw = md5($this->input->post("alumnipassword"));
+
 		$this->db->where("email", $usr);
 		$this->db->where("passwd", $psw);
 		$this->db->where("status_akun", 1);
@@ -127,17 +128,23 @@ class Panel_career extends CI_Controller {
     }
     function get_md5()
 	{
-		$pswd = md5($this->input->post("ps_lm"));
+		$pswd = MD5($this->input->post("ps_lm"));
 		echo $pswd;
 	}
     public function rubah_password()
     {
+        $psbr = MD5(trim($this->input->post("inp_pass_br_1")));
+        //echo "<pre>";
+        //print_r($psbr);
+        //echo "</pre>";
+        
         $this->model_security->get_security_panel_cc();
         $id_user = $this->session->userdata("idalumni");
-        $data['passwd'] = md5(trim($this->input->post("inp_pass_br_1")));
+        $data['passwd'] = $psbr;
         $this->model_panel->update_data_profil($id_user, $data);
         $this->session->sess_destroy();
 		redirect("panel_career");
+    
     }
     //manajemen kegiatan
     public function manaj_kegiatan()

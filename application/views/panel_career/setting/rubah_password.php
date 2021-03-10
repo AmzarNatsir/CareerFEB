@@ -108,9 +108,9 @@
                         {
                             if(ps_br_1==ps_br_2)
                             {
-                                $("#inp_pass_lm").attr("disabled", true);
-                                $("#inp_pass_br_1").attr("disabled", true);
-                                $("#inp_pass_br_2").attr("disabled", true);
+                                $("#inp_pass_lm").attr("readonly", true);
+                                $("#inp_pass_br_1").attr("readonly", true);
+                                $("#inp_pass_br_2").attr("readonly", true);
                                 $("#simpan_profil").attr("disabled", false);
                                 $("#tbl_verifikasi").attr("disabled", true);
                             } else {

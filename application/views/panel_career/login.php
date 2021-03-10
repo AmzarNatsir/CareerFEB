@@ -68,7 +68,7 @@
                                     <div class="col-xs-12">
                                         <div class="input-group">
                                             <span class="input-group-addon"><i class="gi gi-asterisk"></i></span>
-                                            <input type="password" id="inppassword" name="inppassword" class="form-control input-lg" placeholder="Password" required>
+                                            <input type="password" id="alumnipassword" name="alumnipassword" class="form-control input-lg" placeholder="Password" required>
                                         </div>
                                     </div>
                                 </div>
@@ -98,6 +98,6 @@
 <script type="text/javascript">
     $(document).ready(function()
     {
-        window.setTimeout(function () { $("#success-alert").alert('close'); }, 3000);
+        window.setTimeout(function () { $("#success-alert").alert('close'); }, 5000);
     });
 </script>
