@@ -270,11 +270,6 @@ class Tracer_study extends CI_Controller {
 		$this->session->sess_destroy();
 		redirect("");
 	}
-	public function hasil()
-	{
-		$this->_init();
-		$this->load->view('home/hasil_tracer/index');
-	}
 	/*
 	public function kirim_kode_aktivasi()
 	{

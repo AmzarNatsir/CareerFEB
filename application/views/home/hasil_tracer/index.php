@@ -24,7 +24,7 @@
                                     <div class="widget-extra themed-background">
                                         <h4 class="widget-content-light"><strong>Total</strong><br> Responden</h4>
                                     </div>
-                                    <div class="widget-extra-full"><span class="h2 animation-expandOpen">0</span></div>
+                                    <div class="widget-extra-full"><span class="h2 animation-expandOpen"><?php echo count($resp_1) + count($resp_2) + count($resp_3) + count($resp_4) + count($resp_5);?></span></div>
                                 </a>
                             </div>
                             <div class="col-sm-6 col-lg-2">
@@ -32,7 +32,7 @@
                                     <div class="widget-extra themed-background-dark">
                                         <h4 class="widget-content-light"><strong>Prodi Ekonomi Pembangunan</strong></h4>
                                     </div>
-                                    <div class="widget-extra-full"><span class="h2 themed-color-dark animation-expandOpen">0</span></div>
+                                    <div class="widget-extra-full"><span class="h2 themed-color-dark animation-expandOpen"><?php echo count($resp_1);?></span></div>
                                 </a>
                             </div>
                             <div class="col-sm-6 col-lg-2">
@@ -40,7 +40,7 @@
                                     <div class="widget-extra themed-background-dark">
                                         <h4 class="widget-content-light"><strong>Prodi Manajemen</strong></h4>
                                     </div>
-                                    <div class="widget-extra-full"><span class="h2 themed-color-dark animation-expandOpen">0</span></div>
+                                    <div class="widget-extra-full"><span class="h2 themed-color-dark animation-expandOpen"><?php echo count($resp_2);?></span></div>
                                 </a>
                             </div>
                             <div class="col-sm-6 col-lg-2">
@@ -48,7 +48,7 @@
                                     <div class="widget-extra themed-background-dark">
                                         <h4 class="widget-content-light"><strong>Prodi <br>Akuntansi</strong></h4>
                                     </div>
-                                    <div class="widget-extra-full"><span class="h2 themed-color-dark animation-expandOpen">0</span></div>
+                                    <div class="widget-extra-full"><span class="h2 themed-color-dark animation-expandOpen"><?php echo count($resp_3);?></span></div>
                                 </a>
                             </div>
                             <div class="col-sm-6 col-lg-2">
@@ -56,7 +56,7 @@
                                     <div class="widget-extra themed-background-dark">
                                         <h4 class="widget-content-light"><strong>Prodi Ekonomi Islam</strong></h4>
                                     </div>
-                                    <div class="widget-extra-full"><span class="h2 themed-color-dark animation-expandOpen">0</span></div>
+                                    <div class="widget-extra-full"><span class="h2 themed-color-dark animation-expandOpen"><?php echo count($resp_4);?></span></div>
                                 </a>
                             </div>
                             <div class="col-sm-6 col-lg-2">
@@ -64,7 +64,7 @@
                                     <div class="widget-extra themed-background-dark">
                                         <h4 class="widget-content-light"><strong>Prodi  D3 Perpajakan</strong></h4>
                                     </div>
-                                    <div class="widget-extra-full"><span class="h2 themed-color-dark animation-expandOpen">0</span></div>
+                                    <div class="widget-extra-full"><span class="h2 themed-color-dark animation-expandOpen"><?php echo count($resp_5);?></span></div>
                                 </a>
                             </div>
                         </div>

@@ -30,7 +30,7 @@
                             <a href="<?php echo base_url();?>tracer_study/registrasi">REGISTRASI</a>
                         </li>
                         <li>
-                            <a href="<?php echo base_url();?>tracer_study/hasil">HASIL TRACER STUDY</a>
+                            <a href="<?php echo base_url();?>home/hasil_tracer_study">HASIL TRACER STUDY</a>
                         </li>
                     </ul>
                 </li>
