@@ -25,6 +25,10 @@
         <link rel="stylesheet" href="<?php echo base_url();?>assets/css/themes.css">
         <!-- END Stylesheets -->
         <!-- Modernizr (browser feature detection library) -->
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+        <!--<script src="https://code.highcharts.com/modules/export-data.js"></script>-->
+        <script src="https://code.highcharts.com/modules/accessibility.js"></script>
         <script src="<?php echo base_url();?>assets/js/vendor/modernizr.min.js"></script>
     </head>
     <body>

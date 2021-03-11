@@ -251,6 +251,7 @@ class Tracer_study extends CI_Controller {
 			$pilihan_4=implode(",", $this->input->post("pil_4[]"));
 		}
 		$quis['q_no_4'] = $pilihan_4;
+		$quis['tanggal_post'] = date("Y-m-d");
 		$this->model_tracer->insert_tracer_study($quis);
 
 		redirect("tracer_study/terima_kasih");

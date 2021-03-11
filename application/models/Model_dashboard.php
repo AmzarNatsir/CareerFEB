@@ -35,4 +35,8 @@ class Model_dashboard extends CI_Model {
     {
         return $this->db->where("id_prodi", $id_prodi)->where("tracer", 1)->get("cc_alumni")->result_array();
     }
+    function get_status_pekerjaan_alumni($status, $tahun)
+    {
+        return $this->db->where("q_no_1", $status)->where("YEAR(tanggal_post)", $tahun)->get("cc_tracer_study")->result_array();
+    }
 }

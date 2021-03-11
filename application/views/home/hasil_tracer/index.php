@@ -74,16 +74,14 @@
                                     <div class="block">
                                         <!-- Your Account Title -->
                                         <div class="block-title">
-                                            <h2><strong>A. BEKERJA</strong></h2>
+                                            <h2><strong>A. PEKERJAAN</strong></h2>
                                         </div>
                                         <div class="panel panel-default">
                                             <div class="panel-heading">
-                                                <h4 class="panel-title"><i class="fa fa-angle-right"></i> <a class="accordion-toggle" data-toggle="collapse" data-parent="#faq1" href="#faq1_q0">Pekerjaan Alumni</a></h4>
+                                                <h4 class="panel-title"><i class="fa fa-angle-right"></i> <a class="accordion-toggle" data-toggle="collapse" data-parent="#faq1" href="#faq1_q0">Status Pekerjaan Alumni</a></h4>
                                             </div>
                                             <div id="faq1_q0" class="panel-collapse collapse">
-                                                <div class="panel-body">
-
-                                                </div>
+                                                <?php include "a_1.php";?>
                                             </div>
                                         </div>
                                         <br>
