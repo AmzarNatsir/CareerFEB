@@ -31,7 +31,7 @@
         }
     },
     series: [{
-        name: 'Brands',
+        name: 'Kategori',
         colorByPoint: true,
         data: [{
             name: 'Bekerja',

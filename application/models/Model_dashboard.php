@@ -39,4 +39,67 @@ class Model_dashboard extends CI_Model {
     {
         return $this->db->where("q_no_1", $status)->where("YEAR(tanggal_post)", $tahun)->get("cc_tracer_study")->result_array();
     }
+    //quis 1.1
+    function get_a_1_1($tahun)
+    {
+        $t_1=0;
+        $t_2=0;
+        $t_3=0;
+        $t_4=0;
+        $t_5=0;
+        $t_6=0;
+        $t_7=0;
+        $t_8=0;
+        $t_9=0;
+        $t_10=0;
+        $t_11=0;
+        $t_12=0;
+        $res = $this->db->where("YEAR(tanggal_post)", $tahun)->get("cc_tracer_study")->result_array();
+        foreach($res as $val) {
+            $arr = explode(",", $val['q_no_1_1']);
+            if(count($arr)>0)
+            {
+                for($i=0; $i < count($arr); $i++)
+                {
+                    if($arr[$i]==1) {
+                        $t_1+=1;
+                    }
+                    if($arr[$i]==2) {
+                        $t_2+=1;
+                    }
+                    if($arr[$i]==3) {
+                        $t_3+=1;
+                    }
+                    if($arr[$i]==4) {
+                        $t_4+=1;
+                    }
+                    if($arr[$i]==5) {
+                        $t_5+=1;
+                    }
+                    if($arr[$i]==6) {
+                        $t_6+=1;
+                    }
+                    if($arr[$i]==7) {
+                        $t_7+=1;
+                    }
+                    if($arr[$i]==8) {
+                        $t_8+=1;
+                    }
+                    if($arr[$i]==9) {
+                        $t_9+=1;
+                    }
+                    if($arr[$i]==10) {
+                        $t_10+=1;
+                    }
+                    if($arr[$i]==11) {
+                        $t_11+=1;
+                    }
+                    if($arr[$i]==12) {
+                        $t_12+=1;
+                    }
+                }
+            }
+        }
+        return $t_1.", ".$t_2.", ".$t_3.", ".$t_4.", ".$t_5.", ".$t_6.", ".$t_7.", ".$t_8.", ".$t_9.", ".$t_10.", ".$t_11.", ".$t_12;
+    }
 }

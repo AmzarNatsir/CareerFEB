@@ -97,17 +97,17 @@
                                         </div>
                                         <div class="panel panel-default">
                                             <div class="panel-heading">
-                                                <h4 class="panel-title"><i class="fa fa-angle-right"></i> <a class="accordion-toggle" data-toggle="collapse" data-parent="#faq1" href="#faq1_q1">Informasi pekerjaan berasal dari</a></h4>
+                                                <h4 class="panel-title"><i class="fa fa-angle-right"></i> <a class="accordion-toggle" data-toggle="collapse" data-parent="#faq1" href="#faq1_q1">Informasi asal pekerjaan</a></h4>
                                             </div>
                                             <div id="faq1_q1" class="panel-collapse collapse">
                                                 <div class="panel-body">
-
+                                                <?php include "a_1_1_1.php";?>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="panel panel-default">
                                             <div class="panel-heading">
-                                                <h4 class="panel-title"><i class="fa fa-angle-right"></i> <a class="accordion-toggle" data-toggle="collapse" data-parent="#faq1" href="#faq1_q2">Waktu tunggu sampai mendapatkan pekerjaan pertama ?</a></h4>
+                                                <h4 class="panel-title"><i class="fa fa-angle-right"></i> <a class="accordion-toggle" data-toggle="collapse" data-parent="#faq1" href="#faq1_q2">Waktu tunggu sampai mendapatkan pekerjaan pertama</a></h4>
                                             </div>
                                             <div id="faq1_q2" class="panel-collapse collapse">
                                                 <div class="panel-body">
