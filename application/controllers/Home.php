@@ -33,6 +33,15 @@ class Home extends CI_Controller {
 		$data['kerja_tidak'] = count($this->model_dashboard->get_status_pekerjaan_alumni(2, date("Y")));
 		$data['a_1_1'] = $this->model_dashboard->get_a_1_1(date("Y"));
 		$data['a_1_2'] = $this->model_dashboard->get_a_1_2(date("Y"));
+		$data['a_1_3'] = $this->model_dashboard->get_a_1_3(date("Y"));
+		$data['a_1_4'] = $this->model_dashboard->get_a_1_4(date("Y"));
+		$data['a_1_5'] = $this->model_dashboard->get_a_1_5(date("Y"));
+		$data['a_1_6'] = $this->model_dashboard->get_a_1_6(date("Y"));
+		$data['a_1_7'] = $this->model_dashboard->get_a_1_7(date("Y"));
+		$data['a_1_8'] = $this->model_dashboard->get_a_1_8(date("Y"));
+		$data['a_1_9'] = $this->model_dashboard->get_a_1_9(date("Y"));
+		$data['a_1_10'] = $this->model_dashboard->get_a_1_10(date("Y"));
+		$data['a_1_11'] = $this->model_dashboard->get_a_1_11(date("Y"));
 		$this->load->view('home/hasil_tracer/index', $data);
 	}
 }

@@ -1,19 +1,17 @@
 <figure class="highcharts-figure">
-<div id="container_1_2"></div>
+<div id="container_1_3"></div>
 </figure>
 <?php 
-$arr = explode(",", $a_1_2);
+$arr = explode(",", $a_1_3);
 $val_1 = $arr[0];
 $val_2 = $arr[1];
 $val_3 = $arr[2];
 $val_4 = $arr[3];
 $val_5 = $arr[4];
 $val_6 = $arr[5];
-$val_7 = $arr[6];
-$val_8 = $arr[7];
 ?>
 <script>
-    Highcharts.chart('container_1_2', {
+    Highcharts.chart('container_1_3', {
     chart: {
         plotBackgroundColor: null,
         plotBorderWidth: null,
@@ -21,7 +19,7 @@ $val_8 = $arr[7];
         type: 'pie'
     },
     title: {
-        text: 'Waktu Tunggu Sampai Mendapat Pekerjaan'
+        text: 'Jenis Pekerjaan Pertama'
     },
     tooltip: {
         pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
@@ -45,31 +43,25 @@ $val_8 = $arr[7];
         name: 'Kategori',
         colorByPoint: true,
         data: [{
-            name: 'Bekerja sebelum lulus',
+            name: 'Staff',
             y: <?php echo $val_1;?>,
             sliced: true,
             selected: true
         }, {
-            name: 'Antara 3 sampai 6 bulan',
+            name: 'Supervisor',
             y: <?php echo $val_2;?>
         }, {
-            name: '10 sampai 12 bulan',
+            name: 'Wirausaha',
             y: <?php echo $val_3;?>
         }, {
-            name: '19 sampai 24 bulan',
+            name: 'Management trainee',
             y: <?php echo $val_4;?>
         }, {
-            name: 'Kurang 3 bulan',
+            name: 'Manajerial',
             y: <?php echo $val_5;?>
         }, {
-            name: 'Antara 7 sampai 9 bulan',
+            name: 'Lain-lain',
             y: <?php echo $val_6;?>
-        }, {
-            name: '13 sampai 18 bulan',
-            y: <?php echo $val_7;?>
-        }, {
-            name: 'Lebih dari 24 bulan',
-            y: <?php echo $val_8;?>
         }]
     }]
 });
