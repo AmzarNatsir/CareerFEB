@@ -102,4 +102,43 @@ class Model_dashboard extends CI_Model {
         }
         return $t_1.", ".$t_2.", ".$t_3.", ".$t_4.", ".$t_5.", ".$t_6.", ".$t_7.", ".$t_8.", ".$t_9.", ".$t_10.", ".$t_11.", ".$t_12;
     }
+    function get_a_1_2($tahun)
+    {
+        $t_1=0;
+        $t_2=0;
+        $t_3=0;
+        $t_4=0;
+        $t_5=0;
+        $t_6=0;
+        $t_7=0;
+        $t_8=0;
+        $res = $this->db->where("YEAR(tanggal_post)", $tahun)->get("cc_tracer_study")->result_array();
+        foreach($res as $val) {
+            if($val['q_no_1_2']==1){
+                $t_1+=1;
+            }
+            if($val['q_no_1_2']==2){
+                $t_2+=1;
+            }
+            if($val['q_no_1_2']==3){
+                $t_3+=1;
+            }
+            if($val['q_no_1_2']==4){
+                $t_4+=1;
+            }
+            if($val['q_no_1_2']==5){
+                $t_5+=1;
+            }
+            if($val['q_no_1_2']==6){
+                $t_6+=1;
+            }
+            if($val['q_no_1_2']==7){
+                $t_7+=1;
+            }
+            if($val['q_no_1_2']==8){
+                $t_8+=1;
+            }
+        }
+        return $t_1.", ".$t_2.", ".$t_3.", ".$t_4.", ".$t_5.", ".$t_6.", ".$t_7.", ".$t_8;
+    }
 }

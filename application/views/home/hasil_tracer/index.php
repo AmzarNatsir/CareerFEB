@@ -111,7 +111,7 @@
                                             </div>
                                             <div id="faq1_q2" class="panel-collapse collapse">
                                                 <div class="panel-body">
-
+                                                <?php include "a_1_1_2.php";?>
                                                 </div>
                                             </div>
                                         </div>

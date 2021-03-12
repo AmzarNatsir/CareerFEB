@@ -68,7 +68,7 @@
                                     <div class="col-xs-12">
                                         <div class="input-group">
                                             <span class="input-group-addon"><i class="gi gi-edit"></i></span>
-                                            <select class="form-control" name="id_prodi" id="id_prodi">
+                                            <select class="form-control" name="pilihan_prodi" id="pilihan_prodi">
                                             <option value="1">Ekonomi Pembangunan</option>
                                             <option value="2">Manajemen</option>
                                             <option value="3">Akuntansi</option>

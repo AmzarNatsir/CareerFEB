@@ -44,8 +44,10 @@ class Tracer_study extends CI_Controller {
 		if(empty($this->input->post("lupa_nim"))) 
 		{
 			$insert['nim'] = $this->input->post("inp_nim");
+			$insert['id_prodi'] = $this->input->post("id_prodi");
+		} else {
+			$insert['id_prodi'] = $this->input->post("pilihan_prodi");
 		}
-		$insert['id_prodi'] = $this->input->post("id_prodi");
 		$insert['email'] = $this->input->post("alumniemail");
 		$insert['passwd'] = MD5(trim($this->input->post("inppassword")));
 		$insert['tgl_registrasi'] = date("Y-m-d");
