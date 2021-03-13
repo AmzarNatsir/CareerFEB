@@ -42,6 +42,7 @@ class Home extends CI_Controller {
 		$data['a_1_9'] = $this->model_dashboard->get_a_1_9(date("Y"));
 		$data['a_1_10'] = $this->model_dashboard->get_a_1_10(date("Y"));
 		$data['a_1_11'] = $this->model_dashboard->get_a_1_11(date("Y"));
+		$data['a_1_12'] = $this->model_dashboard->get_a_1_12(date("Y"));
 		$this->load->view('home/hasil_tracer/index', $data);
 	}
 }
