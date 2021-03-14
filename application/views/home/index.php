@@ -10,9 +10,35 @@
     </div>
     <!-- END Page Header -->
     <div class="row">
+        <div class="col-sm-12 col-lg-12">
+            <!-- Account Stats Block -->
+            <div class="block">
+                <!-- Account Status Title -->
+                <div class="block-title themed-background-dark" style="color:white">
+                    <h2><strong>Dekan</strong></h2>
+                </div>
+                <div class="row block-section text-center">
+                    <div class="col-xs-4">
+                            <img src="<?php echo base_url();?>assets/img/dekan_feb.jpg" alt="logo" class="img-responsive">
+                    </div>
+                    <div class="col-xs-8">
+                        <table class="table table-borderless table-striped table-vcenter">
+                            <tbody>
+                                <tr>
+                                    <td class="text-left"><blockquote>Sistem Career Center & Tracer Study diharapkan mampu menjadi pusat pelatihan serta media penghubung antara perguruan tinggi dengan alumninya. Tentu dengan adanya sistem ini, berbagai informasi dari alumni seperti informasi domisili alumni, dan lain sebagainya bisa di share dengan mudah kepada Instansi maupun alumni lainnya. Selain itu, fungsi penting dari adanya sistem tracer study adalah adanya feedback yang diberikan oleh alumni untuk keperluan evaluasi capaian manajemen terhadap proses pembelajaran yang dilakukan.</blockquote>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
         <div class="col-md-6">
-            <div class="widget">
-                <div class="widget-extra themed-background-dark">
+            <div class="block">
+                <div class="block-title themed-background-dark" style="color:white">
                     <h3 class="widget-content-light">
                     INFORMASI KEGIATAN / <strong>EVENT</strong>
                     </h3>
@@ -49,8 +75,8 @@
             </div>
         </div>
         <div class="col-md-6">
-            <div class="widget">
-                <div class="widget-extra themed-background-dark">
+            <div class="block">
+                <div class="block-title themed-background-dark" style="color:white">
                     <h3 class="widget-content-light">
                     INFORMASI LOWONGAN KERJA / <strong>JOB VACANCY</strong>
                     </h3>
