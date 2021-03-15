@@ -246,21 +246,21 @@
                                         </div>
                                         <div class="panel panel-default">
                                             <div class="panel-heading">
-                                                <h4 class="panel-title"><i class="fa fa-angle-right"></i> <a class="accordion-toggle" data-toggle="collapse" data-parent="#faq2" href="#faq2_q1">Kegiatan Anda Saat ini (bisa lebih dari 1 pilihan)</a></h4>
+                                                <h4 class="panel-title"><i class="fa fa-angle-right"></i> <a class="accordion-toggle" data-toggle="collapse" data-parent="#faq2" href="#faq2_q1">Kegiatan Saat ini</a></h4>
                                             </div>
                                             <div id="faq2_q1" class="panel-collapse collapse">
                                                 <div class="panel-body">
-
+                                                <?php include "a_1_2_1.php";?>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="panel panel-default">
                                             <div class="panel-heading">
-                                                <h4 class="panel-title"><i class="fa fa-angle-right"></i> <a class="accordion-toggle" data-toggle="collapse" data-parent="#faq2" href="#faq2_q2">Bagi yang sedang mencari pekerjaan, informasi pekerjaan berasal dari (bisa lebih dari 1 pilihan)</a></h4>
+                                                <h4 class="panel-title"><i class="fa fa-angle-right"></i> <a class="accordion-toggle" data-toggle="collapse" data-parent="#faq2" href="#faq2_q2">Bagi yang sedang mencari pekerjaan, informasi pekerjaan berasal dari</a></h4>
                                             </div>
                                             <div id="faq2_q2" class="panel-collapse collapse">
                                                 <div class="panel-body">
-
+                                                <?php include "a_1_2_2.php";?>
                                                 </div>
                                             </div>
                                         </div>
@@ -270,7 +270,7 @@
                                             </div>
                                             <div id="faq2_q3" class="panel-collapse collapse">
                                                 <div class="panel-body">
-
+                                                <?php include "a_1_2_3.php";?>
                                                 </div>
                                             </div>
                                         </div>
@@ -280,7 +280,7 @@
                                             </div>
                                             <div id="faq2_q4" class="panel-collapse collapse">
                                                 <div class="panel-body">
-
+                                                <?php include "a_1_2_4.php";?>
                                                 </div>
                                             </div>
                                         </div>
@@ -290,17 +290,17 @@
                                             </div>
                                             <div id="faq2_q5" class="panel-collapse collapse">
                                                 <div class="panel-body">
-
+                                                <?php include "a_1_2_5.php";?>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="panel panel-default">
                                             <div class="panel-heading">
-                                                <h4 class="panel-title"><i class="fa fa-angle-right"></i> <a class="accordion-toggle" data-toggle="collapse" data-parent="#faq2" href="#faq2_q6">Berikan opini Anda perlunya kegiatan berikut untuk membantu mendapatkan pekerjaan. Isi sebanyak yang anda lakukan</a></h4>
+                                                <h4 class="panel-title"><i class="fa fa-angle-right"></i> <a class="accordion-toggle" data-toggle="collapse" data-parent="#faq2" href="#faq2_q6">Opini tentang perlunya kegiatan berikut untuk membantu mendapatkan pekerjaan.</a></h4>
                                             </div>
                                             <div id="faq2_q6" class="panel-collapse collapse">
                                                 <div class="panel-body">
-
+                                                <?php include "a_1_2_6.php";?>
                                                 </div>
                                             </div>
                                         </div>
@@ -323,21 +323,21 @@
                                         </div>
                                         <div class="panel panel-default">
                                             <div class="panel-heading">
-                                                <h4 class="panel-title"><i class="fa fa-angle-right"></i> <a class="accordion-toggle" data-toggle="collapse" data-parent="#faq3" href="#faq3_q1">Apakah anda merupakan anggota aktif dari Ikatan Alumni FEB ?</a></h4>
+                                                <h4 class="panel-title"><i class="fa fa-angle-right"></i> <a class="accordion-toggle" data-toggle="collapse" data-parent="#faq3" href="#faq3_q1">Alumni yang merupakan anggota aktif dari Ikatan Alumni FEB.</a></h4>
                                             </div>
                                             <div id="faq3_q1" class="panel-collapse collapse">
                                                 <div class="panel-body">
-
+                                                <?php include "b_1.php";?>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="panel panel-default">
                                             <div class="panel-heading">
-                                                <h4 class="panel-title"><i class="fa fa-angle-right"></i> <a class="accordion-toggle" data-toggle="collapse" data-parent="#faq3" href="#faq3_q2">Kontribusi yang pernah diberikan melalui himpunan alumni ?</a></h4>
+                                                <h4 class="panel-title"><i class="fa fa-angle-right"></i> <a class="accordion-toggle" data-toggle="collapse" data-parent="#faq3" href="#faq3_q2">Kontribusi yang pernah diberikan melalui himpunan alumni</a></h4>
                                             </div>
                                             <div id="faq3_q2" class="panel-collapse collapse">
                                                 <div class="panel-body">
-
+                                                <?php include "b_2.php";?>
                                                 </div>
                                             </div>
                                         </div>

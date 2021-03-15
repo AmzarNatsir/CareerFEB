@@ -26,8 +26,10 @@ $p = $arr[3].", ".$arr[8].", ".$arr[13].", ".$arr[18].", ".$arr[23].", ".$arr[28
 $sp = $arr[4].", ".$arr[9].", ".$arr[14].", ".$arr[19].", ".$arr[24].", ".$arr[29].", ".$arr[34].", ".$arr[39].", ".$arr[44].", ".$arr[49].", ".$arr[54].", ".$arr[9].", ".$arr[64].", ".$arr[69]
 */
 ?>
-<table class="table table-responsive" style="width: 100%;" >
-<option>SK: Sangat Kurang, K: Kurang, C: Cukup, LC: Lebih dari cukup, SM: Sangat Memadai</option>
+<table class="table table-responsive" style="width: 100%;">
+<tr>
+<td colspan="7">SK: Sangat Kurang, K: Kurang, C: Cukup, LC: Lebih dari cukup, SM: Sangat Memadai</td>
+</tr>
 <tr>
     <th style="width: 5%;" rowspan="2">No.</th>
     <th style="width: 45%;" rowspan="2">Kategori</th>

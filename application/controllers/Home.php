@@ -45,6 +45,16 @@ class Home extends CI_Controller {
 		$data['a_1_12'] = $this->model_dashboard->get_a_1_12(date("Y"));
 		$data['a_1_13'] = $this->model_dashboard->get_a_1_13(date("Y"));
 		$data['a_1_14'] = $this->model_dashboard->get_a_1_14(date("Y"));
+		//belum bekerja
+		$data['a_2_1'] = $this->model_dashboard->get_a_2_1(date("Y"));
+		$data['a_2_2'] = $this->model_dashboard->get_a_2_2(date("Y"));
+		$data['a_2_3'] = $this->model_dashboard->get_a_2_3(date("Y"));
+		$data['a_2_4'] = $this->model_dashboard->get_a_2_4(date("Y"));
+		$data['a_2_5'] = $this->model_dashboard->get_a_2_5(date("Y"));
+		$data['a_2_6'] = $this->model_dashboard->get_a_2_6(date("Y"));
+		//hmpunan alumni
+		$data['b_1'] = $this->model_dashboard->get_b_1(date("Y"));
+		$data['b_2'] = $this->model_dashboard->get_b_2(date("Y"));
 		$this->load->view('home/hasil_tracer/index', $data);
 	}
 }

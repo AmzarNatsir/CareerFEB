@@ -606,4 +606,296 @@ class Model_dashboard extends CI_Model {
         return $var;
         //return $t_12_1_tp.",".$t_12_1_tk.",".$t_12_1_b.",".$t_12_1_p.",".$t_12_1_sp.",".$t_12_2_tp.",".$t_12_2_tk.",".$t_12_2_b.",".$t_12_2_p.",".$t_12_2_sp;
     }
+    //Belum Bekerja
+    function get_a_2_1($tahun)
+    {
+        $t_1=0;
+        $t_2=0;
+        $t_3=0;
+        $t_4=0;
+        $res = $this->db->where("YEAR(tanggal_post)", $tahun)->get("cc_tracer_study")->result_array();
+        foreach($res as $val) {
+            $arr = explode(",", $val['q_no_2_1']);
+            if(count($arr)>0)
+            {
+                for($i=0; $i < count($arr); $i++)
+                {
+                    if($arr[$i]==1) {
+                        $t_1+=1;
+                    }
+                    if($arr[$i]==2) {
+                        $t_2+=1;
+                    }
+                    if($arr[$i]==3) {
+                        $t_3+=1;
+                    }
+                    if($arr[$i]==4) {
+                        $t_4+=1;
+                    }
+                }
+
+            }
+        }
+        return $t_1.",".$t_2.",".$t_3.",".$t_4;
+    }
+    function get_a_2_2($tahun)
+    {
+        $t_1=0;
+        $t_2=0;
+        $t_3=0;
+        $t_4=0;
+        $t_5=0;
+        $t_6=0;
+        $t_7=0;
+        $t_8=0;
+        $t_9=0;
+        $t_10=0;
+        $t_11=0;
+        $t_12=0;
+        $res = $this->db->where("YEAR(tanggal_post)", $tahun)->get("cc_tracer_study")->result_array();
+        foreach($res as $val) {
+            $arr = explode(",", $val['q_no_2_2']);
+            if(count($arr)>0)
+            {
+                for($i=0; $i < count($arr); $i++)
+                {
+                    if($arr[$i]==1) {
+                        $t_1+=1;
+                    }
+                    if($arr[$i]==2) {
+                        $t_2+=1;
+                    }
+                    if($arr[$i]==3) {
+                        $t_3+=1;
+                    }
+                    if($arr[$i]==4) {
+                        $t_4+=1;
+                    }
+                    if($arr[$i]==5) {
+                        $t_5+=1;
+                    }
+                    if($arr[$i]==6) {
+                        $t_6+=1;
+                    }
+                    if($arr[$i]==7) {
+                        $t_7+=1;
+                    }
+                    if($arr[$i]==8) {
+                        $t_8+=1;
+                    }
+                    if($arr[$i]==9) {
+                        $t_9+=1;
+                    }
+                    if($arr[$i]==10) {
+                        $t_10+=1;
+                    }
+                    if($arr[$i]==11) {
+                        $t_11+=1;
+                    }
+                    if($arr[$i]==12) {
+                        $t_12+=1;
+                    }
+                }
+            }
+        }
+        return $t_1.", ".$t_2.", ".$t_3.", ".$t_4.", ".$t_5.", ".$t_6.", ".$t_7.", ".$t_8.", ".$t_9.", ".$t_10.", ".$t_11.", ".$t_12;
+    }
+    function get_a_2_3($tahun)
+    {
+        $t_1=0;
+        $t_2=0;
+        $t_3=0;
+        $t_4=0;
+        $t_5=0;
+        $t_6=0;
+        $res = $this->db->where("YEAR(tanggal_post)", $tahun)->get("cc_tracer_study")->result_array();
+        foreach($res as $val) {
+            if($val['q_no_2_3']==1){
+                $t_1+=1;
+            }
+            if($val['q_no_2_3']==2){
+                $t_2+=1;
+            }
+            if($val['q_no_2_3']==3){
+                $t_3+=1;
+            }
+            if($val['q_no_2_3']==4){
+                $t_4+=1;
+            }
+            if($val['q_no_2_3']==5){
+                $t_5+=1;
+            }
+            if($val['q_no_2_3']==6){
+                $t_6+=1;
+            }
+        }
+        return $t_1.",".$t_2.",".$t_3.",".$t_4.",".$t_5.",".$t_6;
+    }
+    function get_a_2_4($tahun)
+    {
+        $t_1=0;
+        $t_2=0;
+        $t_3=0;
+        $t_4=0;
+        $t_5=0;
+        $t_6=0;
+        $res = $this->db->where("YEAR(tanggal_post)", $tahun)->get("cc_tracer_study")->result_array();
+        foreach($res as $val) {
+            if($val['q_no_2_4']==1){
+                $t_1+=1;
+            }
+            if($val['q_no_2_4']==2){
+                $t_2+=1;
+            }
+            if($val['q_no_2_4']==3){
+                $t_3+=1;
+            }
+            if($val['q_no_2_4']==4){
+                $t_4+=1;
+            }
+            if($val['q_no_2_4']==5){
+                $t_5+=1;
+            }
+            if($val['q_no_2_4']==6){
+                $t_6+=1;
+            }
+        }
+        return $t_1.",".$t_2.",".$t_3.",".$t_4.",".$t_5.",".$t_6;
+    }
+    function get_a_2_5($tahun)
+    {
+        $t_1=0;
+        $t_2=0;
+        $t_3=0;
+        $t_4=0;
+        $res = $this->db->where("YEAR(tanggal_post)", $tahun)->get("cc_tracer_study")->result_array();
+        foreach($res as $val) {
+            $arr = explode(",", $val['q_no_2_5']);
+            if(count($arr)>0)
+            {
+                for($i=0; $i < count($arr); $i++)
+                {
+                    if($arr[$i]==1) {
+                        $t_1+=1;
+                    }
+                    if($arr[$i]==2) {
+                        $t_2+=1;
+                    }
+                    if($arr[$i]==3) {
+                        $t_3+=1;
+                    }
+                    if($arr[$i]==4) {
+                        $t_4+=1;
+                    }
+                }
+            }
+        }
+        return $t_1.", ".$t_2.", ".$t_3.", ".$t_4;
+    }
+    function get_a_2_6($tahun)
+    {
+        $t_15_1_tp=0; $t_15_1_tk=0; $t_15_1_b=0; $t_15_1_p=0; $t_15_1_sp=0;
+        $t_15_2_tp=0; $t_15_2_tk=0; $t_15_2_b=0; $t_15_2_p=0; $t_15_2_sp=0;
+        $t_15_3_tp=0; $t_15_3_tk=0; $t_15_3_b=0; $t_15_3_p=0; $t_15_3_sp=0;
+        $t_15_4_tp=0; $t_15_4_tk=0; $t_15_4_b=0; $t_15_4_p=0; $t_15_4_sp=0;
+        $t_15_5_tp=0; $t_15_5_tk=0; $t_15_5_b=0; $t_15_5_p=0; $t_15_5_sp=0;
+        $t_15_6_tp=0; $t_15_6_tk=0; $t_15_6_b=0; $t_15_6_p=0; $t_15_6_sp=0;
+        $t_15_7_tp=0; $t_15_7_tk=0; $t_15_7_b=0; $t_15_7_p=0; $t_15_7_sp=0;
+        $t_15_8_tp=0; $t_15_8_tk=0; $t_15_8_b=0; $t_15_8_p=0; $t_15_8_sp=0;
+
+        $res = $this->db->where("YEAR(tanggal_post)", $tahun)->get("cc_tracer_study")->result_array();
+        foreach($res as $val) {
+
+            for($i=1; $i<=8;$i++) 
+            {
+                if($val['q_no_2_6_'.$i]==1){
+                    ${"t_15_".$i."_tp"}+=1;
+                }
+                if($val['q_no_2_6_'.$i]==2){
+                    ${"t_15_".$i."_tk"}+=1;
+                }
+                if($val['q_no_2_6_'.$i]==3){
+                    ${"t_15_".$i."_b"}+=1;
+                }
+                if($val['q_no_2_6_'.$i]==4){
+                    ${"t_15_".$i."_p"}+=1;
+                }
+                if($val['q_no_2_6_'.$i]==5){
+                    ${"t_15_".$i."_sp"}+=1;
+                }
+            }
+
+        }
+        for($i=1; $i<=8;$i++) 
+        {
+            if($i==1){
+                $var = ${"t_15_".$i."_tp"};
+            } else {
+                $var .=",".${"t_15_".$i."_tp"};
+            }
+            $var .=",".${"t_15_".$i."_tk"};
+            $var .=",".${"t_15_".$i."_b"};
+            $var .=",".${"t_15_".$i."_p"};
+            $var .=",".${"t_15_".$i."_sp"};
+        }
+        return $var;    
+    }
+    //himpunan alumni
+    function get_b_1($tahun)
+    {
+        $t_1=0;
+        $t_2=0;
+        $res = $this->db->where("YEAR(tanggal_post)", $tahun)->get("cc_tracer_study")->result_array();
+        foreach($res as $val) {
+            if($val['q_no_3_1']==1){
+                $t_1+=1;
+            }
+            if($val['q_no_3_1']==2){
+                $t_2+=1;
+            }
+        }
+        return $t_1.",".$t_2;
+    }
+    function get_b_2($tahun)
+    {
+        $t_1_y=0; $t_1_n=0;
+        $t_2_y=0; $t_2_n=0;
+        $t_3_y=0; $t_3_n=0;
+        $t_4_y=0; $t_4_n=0;
+        $t_5_y=0; $t_5_n=0;
+        $res = $this->db->where("YEAR(tanggal_post)", $tahun)->get("cc_tracer_study")->result_array();
+        foreach($res as $val) {
+            if($val['q_no_3_2_1']==1){
+                $t_1_y+=1;
+            } 
+            if($val['q_no_3_2_1']==2) {
+                $t_1_n+=1;
+            }
+            if($val['q_no_3_2_2']==1){
+                $t_2_y+=1;
+            } 
+            if($val['q_no_3_2_2']==2) {
+                $t_2_n+=1;
+            }
+            if($val['q_no_3_2_3']==1){
+                $t_3_y+=1;
+            } 
+            if($val['q_no_3_2_3']==2) {
+                $t_3_n+=1;
+            }
+            if($val['q_no_3_2_4']==1){
+                $t_4_y+=1;
+            } 
+            if($val['q_no_3_2_4']==2) {
+                $t_4_n+=1;
+            }
+            if($val['q_no_3_2_5']==1){
+                $t_5_y+=1;
+            } 
+            if($val['q_no_3_2_5']==2) {
+                $t_5_n+=1;
+            }
+        }
+        return $t_1_y.",".$t_1_n.",".$t_2_y.",".$t_2_n.",".$t_3_y.",".$t_3_n.",".$t_4_y.",".$t_4_n.",".$t_5_y.",".$t_5_n;
+    }
 }

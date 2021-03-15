@@ -27,7 +27,9 @@ $sp = $arr[4].", ".$arr[9].", ".$arr[14].", ".$arr[19].", ".$arr[24].", ".$arr[2
 */
 ?>
 <table class="table table-responsive" style="width: 100%;" >
-<option>TP: tidak penting, KP: kurang penting, B:biasa, P: penting, SP: sangat penting</option>
+<tr>
+<td colspan="7">TP: Tidak Penting, KP: Kurang Penting, B: Biasa, P: Penting, SP: Sangat Penting</td>
+</tr>
 <tr>
     <th style="width: 5%;" rowspan="2">No.</th>
     <th style="width: 45%;" rowspan="2">Kategori</th>
