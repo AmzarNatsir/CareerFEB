@@ -14,7 +14,7 @@ $val_11_tp = $arr[50]; $val_11_kp = $arr[51];$val_11_b = $arr[52];$val_11_p = $a
 $val_12_tp = $arr[55]; $val_12_kp = $arr[56];$val_12_b = $arr[57];$val_12_p = $arr[58];$val_12_sp = $arr[59];
 $val_13_tp = $arr[60]; $val_13_kp = $arr[61];$val_13_b = $arr[62];$val_13_p = $arr[63];$val_13_sp = $arr[64];
 $val_14_tp = $arr[65]; $val_14_kp = $arr[66];$val_14_b = $arr[67];$val_14_p = $arr[68];$val_14_sp = $arr[69];
-
+/*
 $tp = $arr[0].", ".$arr[5].", ".$arr[10].", ".$arr[15].", ".$arr[20].", ".$arr[25].", ".$arr[30].", ".$arr[35].", ".$arr[40].", ".$arr[45].", ".$arr[50].", ".$arr[55].", ".$arr[60].", ".$arr[65];
 
 $kp = $arr[1].", ".$arr[6].", ".$arr[11].", ".$arr[16].", ".$arr[21].", ".$arr[26].", ".$arr[31].", ".$arr[36].", ".$arr[41].", ".$arr[46].", ".$arr[51].", ".$arr[56].", ".$arr[61].", ".$arr[66];
@@ -24,13 +24,9 @@ $b = $arr[2].", ".$arr[7].", ".$arr[12].", ".$arr[17].", ".$arr[22].", ".$arr[27
 $p = $arr[3].", ".$arr[8].", ".$arr[13].", ".$arr[18].", ".$arr[23].", ".$arr[28].", ".$arr[33].", ".$arr[38].", ".$arr[43].", ".$arr[48].", ".$arr[53].", ".$arr[58].", ".$arr[63].", ".$arr[68];
 
 $sp = $arr[4].", ".$arr[9].", ".$arr[14].", ".$arr[19].", ".$arr[24].", ".$arr[29].", ".$arr[34].", ".$arr[39].", ".$arr[44].", ".$arr[49].", ".$arr[54].", ".$arr[9].", ".$arr[64].", ".$arr[69]
-
+*/
 ?>
-<figure class="highcharts-figure">
-<div id="container_1_12"></div>
-</figure>
-
-<table class="table" style="width: 100%;" >
+<table class="table table-responsive" style="width: 100%;" >
 <option>TP: tidak penting, KP: kurang penting, B:biasa, P: penting, SP: sangat penting</option>
 <tr>
     <th style="width: 5%;" rowspan="2">No.</th>
@@ -171,6 +167,10 @@ $sp = $arr[4].", ".$arr[9].", ".$arr[14].", ".$arr[19].", ".$arr[24].", ".$arr[2
     <td style="text-align: center;"><?php echo $val_14_sp;?></td>
 </tr>
 </table>
+<!--
+<figure class="highcharts-figure">
+<div id="container_1_12"></div>
+</figure>
 <script>
     Highcharts.chart('container_1_12', {
     chart: {
@@ -234,3 +234,4 @@ $sp = $arr[4].", ".$arr[9].", ".$arr[14].", ".$arr[19].", ".$arr[24].", ".$arr[2
     ]
 });
 </script>
+-->

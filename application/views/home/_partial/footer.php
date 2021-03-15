@@ -1,7 +1,7 @@
 <!-- Footer -->
                     <footer class="clearfix">
                         <div class="pull-left">&copy; <?php echo date("Y");?> FEB Universitas Muhammadiyah Makassar</div>
-                        <div class="pull-right"><a href="https://kreasiempatpilar.com" target="_new">Kreasi Emapt Pilar</a></div>
+                        <div class="pull-right"><a href="https://kreasiempatpilar.com" target="_new">Kreasi Empat Pilar</a></div>
                     </footer>
                     <!-- END Footer -->
                 </div>

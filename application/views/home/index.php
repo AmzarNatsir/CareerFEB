@@ -25,7 +25,7 @@
                         <table class="table table-borderless table-striped table-vcenter">
                             <tbody>
                                 <tr>
-                                    <td class="text-left"><blockquote>Sistem Career Center & Tracer Study diharapkan mampu menjadi pusat pelatihan serta media penghubung antara perguruan tinggi dengan alumninya. Tentu dengan adanya sistem ini, berbagai informasi dari alumni seperti informasi domisili alumni, dan lain sebagainya bisa di share dengan mudah kepada Instansi maupun alumni lainnya. Selain itu, fungsi penting dari adanya sistem tracer study adalah adanya feedback yang diberikan oleh alumni untuk keperluan evaluasi capaian manajemen terhadap proses pembelajaran yang dilakukan.</blockquote>
+                                    <td class="text-left"><blockquote>Career center system & Tracer Study diharapkan mampu menjadi pusat pelatihan serta media penghubung antara perguruan tinggi dengan alumninya. Tentu dengan adanya sistem ini, berbagai informasi dari alumni seperti informasi domisili alumni, dan lain sebagainya bisa di share dengan mudah kepada Instansi maupun alumni lainnya. Selain itu, fungsi penting dari adanya sistem tracer study adalah adanya feedback yang diberikan oleh alumni untuk keperluan evaluasi capaian manajemen terhadap proses pembelajaran yang dilakukan.</blockquote>
                                     </td>
                                 </tr>
                             </tbody>

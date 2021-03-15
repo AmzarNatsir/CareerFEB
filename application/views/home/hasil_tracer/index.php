@@ -221,7 +221,7 @@
                                             </div>
                                             <div id="faq1_q13" class="panel-collapse collapse">
                                                 <div class="panel-body">
-
+                                                <?php include "a_1_1_13.php";?>
                                                 </div>
                                             </div>
                                         </div>
@@ -231,7 +231,7 @@
                                             </div>
                                             <div id="faq1_q14" class="panel-collapse collapse">
                                                 <div class="panel-body">
-
+                                                <?php include "a_1_1_14.php";?>
                                                 </div>
                                             </div>
                                         </div>
