@@ -38,7 +38,7 @@
             <div class="row">
                 <div class="col-sm-12">
                     <!-- Login Container -->
-                    <div id="login-container">
+                    <div id="login-container" style="top : 50px;">
                         <!-- Login Title -->
                         <div class="login-title text-center">
                         <a href="<?php echo base_url();?>"><img src="<?php echo base_url();?>assets/img/logo-mini.ico" style="width: 50px;"><a>
@@ -84,6 +84,12 @@
                         <!-- END Login Block -->
                     </div>
                     <!-- END Login Container -->
+                </div>
+                <div class="col-sm-12">
+                    <div style="top : 450px; position: relative;" class="text-center">
+                        <img src="<?php echo base_url();?>assets/img/alur_panel_alumni.jpg" class="img-responsive">
+                        <!-- END Footer -->
+                    </div>
                 </div>
             </div>
         </div>

@@ -36,13 +36,13 @@
         <!-- Login Alternative Row -->
         <div class="container">
             <div class="row">
-                <div class="col-sm-6">
+                <div class="col-sm-12">
                     <!-- Login Container -->
-                    <div id="login-container" style="top : 80px; position:relative">
+                    <div style="top : 10px; position:relative; padding-top: 20px; padding-right: 0px; padding-bottom: 0px; padding-left:0px; background: #171a27;">
                         <!-- Login Title -->
                         <div class="login-title text-center">
-                            <a href="<?php echo base_url();?>"><img src="<?php echo base_url();?>assets/img/logo-mini.ico" style="width: 50px;"><a>
-                            <h1><strong>Form Registrasi</strong></h1>
+                        <a href="<?php echo base_url();?>"><img src="<?php echo base_url();?>assets/img/logo-mini.ico" style="width: 50px;"><a>
+                            <h1 style="color: white;"><strong>Form Registrasi</strong></h1>
                         </div>
                         <!-- END Login Title -->
 
@@ -57,33 +57,45 @@
                           <?php endif; ?>
                             <!-- Login Form -->
                             <form action="<?php echo base_url();?>tracer_study/simpan_registrasi" method="post" id="form-register" class="form-horizontal">
-                                <div class="form-group">
-                                    <div class="col-xs-12 checkbox text-right">
-                                        <label for="lupa_nim">
-                                            <input type="checkbox" id="lupa_nim" name="lupa_nim" value="1" onclick="goLupaNim(this)"> Klik Jika Lupa NIM
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="form-group" id="inp_lp_nim" style="display: none;">
-                                    <div class="col-xs-12">
-                                        <div class="input-group">
-                                            <span class="input-group-addon"><i class="gi gi-edit"></i></span>
-                                            <select class="form-control" name="pilihan_prodi" id="pilihan_prodi">
-                                            <option value="1">Ekonomi Pembangunan</option>
-                                            <option value="2">Manajemen</option>
-                                            <option value="3">Akuntansi</option>
-                                            <option value="4">Ekonomi Islam</option>
-                                            <option value="5">D3 Perpajakan</option>
-                                            </select>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <div class="col-xs-12 checkbox text-right">
+                                            <label for="lupa_nim">
+                                                <input type="checkbox" id="lupa_nim" name="lupa_nim" value="1" onclick="goLupaNim(this)"> Klik Jika Lupa NIM
+                                            </label>
                                         </div>
                                     </div>
-                                </div>
-                                <div id="inp_ingat_nim">
-                                    <div class="form-group">
+                                    <div class="form-group" id="inp_lp_nim" style="display: none;">
                                         <div class="col-xs-12">
                                             <div class="input-group">
                                                 <span class="input-group-addon"><i class="gi gi-edit"></i></span>
-                                                <input type="text" id="inp_nim" name="inp_nim" class="form-control input-lg" placeholder="Nomor Induk Mahasiswa" maxlength="12" minlength="12" required oninput="getProdi(this)">
+                                                <select class="form-control" name="pilihan_prodi" id="pilihan_prodi">
+                                                <option value="1">Ekonomi Pembangunan</option>
+                                                <option value="2">Manajemen</option>
+                                                <option value="3">Akuntansi</option>
+                                                <option value="4">Ekonomi Islam</option>
+                                                <option value="5">D3 Perpajakan</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="inp_ingat_nim">
+                                        <div class="form-group">
+                                            <div class="col-xs-12">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon"><i class="gi gi-edit"></i></span>
+                                                    <input type="text" id="inp_nim" name="inp_nim" class="form-control input-lg" placeholder="Nomor Induk Mahasiswa" maxlength="12" minlength="12" required oninput="getProdi(this)">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-xs-12">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon"><i class="gi gi-edit"></i></span>
+                                                    <input type="text" id="inp_prodi" name="inp_prodi" class="form-control input-lg" placeholder="Program Studi" required readonly>
+                                                    <input type="hidden" name="id_prodi" id="id_prodi">
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -91,57 +103,56 @@
                                         <div class="col-xs-12">
                                             <div class="input-group">
                                                 <span class="input-group-addon"><i class="gi gi-edit"></i></span>
-                                                <input type="text" id="inp_prodi" name="inp_prodi" class="form-control input-lg" placeholder="Program Studi" required readonly>
-                                                <input type="hidden" name="id_prodi" id="id_prodi">
+                                                <input type="text" id="inp_nama" name="inp_nama" class="form-control input-lg" placeholder="Nama Lengkap Anda" maxlength="100" required>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <div class="col-xs-12">
-                                        <div class="input-group">
-                                            <span class="input-group-addon"><i class="gi gi-edit"></i></span>
-                                            <input type="text" id="inp_nama" name="inp_nama" class="form-control input-lg" placeholder="Nama Lengkap Anda" maxlength="100" required>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <div class="col-xs-12 checkbox text-right">
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-xs-12">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="gi gi-envelope"></i></span>
+                                                <input type="email" id="alumniemail" name="alumniemail" class="form-control input-lg" placeholder="Email" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-xs-12">
+                                            <div class="input-group" id="frm_passwd">
+                                                <span class="input-group-addon"><i class="gi gi-asterisk"></i></span>
+                                                <input type="password" id="inppassword" name="inppassword" class="form-control input-lg" placeholder="Password" maxlength="50" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-xs-12">
+                                            <div class="input-group" id="frm_passwdverify">
+                                                <span class="input-group-addon"><i class="gi gi-asterisk"></i></span>
+                                                <input type="password" id="inppassword_verify" name="inppassword_verify" class="form-control input-lg" placeholder="Verify Password" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group form-actions">
+                                        <div class="col-xs-12 text-right">
+                                            <button type="submit" class="btn btn-sm btn-success" id="tbl_reg" disabled><i class="fa fa-plus"></i> Register</button>
+                                            <button type="button" class="btn btn-sm btn-danger" id="tbl_login" style="display: none;" onclick="gotoTracer()"><i class="fa fa-question"></i> Form Tracer Study</button>
+                                        </div>
+                                        <div class="col-xs-12" id="pesan_1" style="display: none;">
+                                            <div class="alert alert-info alert-dismissible" id="success-alert">
+                                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                                <h4><i class="icon fa fa-info"></i> Konfirmasi !</h4>
+                                                Akun anda sudah aktif dan telah mengisi kuisioner tracer study.
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <div class="col-xs-12">
-                                        <div class="input-group">
-                                            <span class="input-group-addon"><i class="gi gi-envelope"></i></span>
-                                            <input type="email" id="alumniemail" name="alumniemail" class="form-control input-lg" placeholder="Email" required>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="col-xs-12">
-                                        <div class="input-group" id="frm_passwd">
-                                            <span class="input-group-addon"><i class="gi gi-asterisk"></i></span>
-                                            <input type="password" id="inppassword" name="inppassword" class="form-control input-lg" placeholder="Password" maxlength="50" required>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="col-xs-12">
-                                        <div class="input-group" id="frm_passwdverify">
-                                            <span class="input-group-addon"><i class="gi gi-asterisk"></i></span>
-                                            <input type="password" id="inppassword_verify" name="inppassword_verify" class="form-control input-lg" placeholder="Verify Password" required>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group form-actions">
-                                    <div class="col-xs-12 text-right">
-                                        <button type="submit" class="btn btn-sm btn-success" id="tbl_reg" disabled><i class="fa fa-plus"></i> Register</button>
-                                        <button type="button" class="btn btn-sm btn-danger" id="tbl_login" style="display: none;" onclick="gotoTracer()"><i class="fa fa-question"></i> Form Tracer Study</button>
-                                    </div>
-                                    <div class="col-xs-12" id="pesan_1" style="display: none;">
-                                        <div class="alert alert-info alert-dismissible" id="success-alert">
-                                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                                            <h4><i class="icon fa fa-info"></i> Konfirmasi !</h4>
-                                            Akun anda sudah aktif dan telah mengisi kuisioner tracer study.
-                                        </div>
-                                    </div>
-                                </div>
+                            </div>
                             </form>
                             <!-- END Register Form -->
                         </div>
@@ -149,9 +160,9 @@
                     </div>
                     <!-- END Login Container -->
                 </div>
-                <div class="col-sm-6">
-                    <div style="top : 80px; position: relative;" class="text-center">
-                        <img src="<?php echo base_url();?>assets/img/alur_proses_tracer_study.jpg" class="img-responsive">
+                <div class="col-sm-12">
+                    <div style="top : 10px; position: relative;" class="text-center">
+                        <img src="<?php echo base_url();?>assets/img/alur_tracer_study.jpg" class="img-responsive">
                         <!-- END Footer -->
                     </div>
                 </div>
