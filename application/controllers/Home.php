@@ -55,6 +55,8 @@ class Home extends CI_Controller {
 		//hmpunan alumni
 		$data['b_1'] = $this->model_dashboard->get_b_1(date("Y"));
 		$data['b_2'] = $this->model_dashboard->get_b_2(date("Y"));
+		//saran
+		$data['c_1'] = $this->model_dashboard->get_c_1(date("Y"));
 		$this->load->view('home/hasil_tracer/index', $data);
 	}
 }

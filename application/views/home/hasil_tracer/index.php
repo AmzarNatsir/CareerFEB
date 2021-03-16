@@ -321,26 +321,33 @@
                                         <div class="block-title">
                                             <h2><strong>B. HIMPUNAN ALUMNI</strong></h2>
                                         </div>
-                                        <div class="panel panel-default">
-                                            <div class="panel-heading">
-                                                <h4 class="panel-title"><i class="fa fa-angle-right"></i> <a class="accordion-toggle" data-toggle="collapse" data-parent="#faq3" href="#faq3_q1">Alumni yang merupakan anggota aktif dari Ikatan Alumni FEB.</a></h4>
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">
+                                                        <h4 class="panel-title"><i class="fa fa-angle-right"></i> <a class="accordion-toggle" data-toggle="collapse" data-parent="#faq3" href="#faq3_q1">Alumni yang merupakan anggota aktif dari Ikatan Alumni FEB.</a></h4>
+                                                    </div>
+                                                    <div id="faq3_q1" class="panel-collapse collapse">
+                                                        <div class="panel-body">
+                                                        <?php include "b_1.php";?>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div id="faq3_q1" class="panel-collapse collapse">
-                                                <div class="panel-body">
-                                                <?php include "b_1.php";?>
+                                            <div class="col-sm-6">
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">
+                                                        <h4 class="panel-title"><i class="fa fa-angle-right"></i> <a class="accordion-toggle" data-toggle="collapse" data-parent="#faq3" href="#faq3_q2">Kontribusi yang pernah diberikan melalui himpunan alumni</a></h4>
+                                                    </div>
+                                                    <div id="faq3_q2" class="panel-collapse collapse">
+                                                        <div class="panel-body">
+                                                        <?php include "b_2.php";?>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="panel panel-default">
-                                            <div class="panel-heading">
-                                                <h4 class="panel-title"><i class="fa fa-angle-right"></i> <a class="accordion-toggle" data-toggle="collapse" data-parent="#faq3" href="#faq3_q2">Kontribusi yang pernah diberikan melalui himpunan alumni</a></h4>
-                                            </div>
-                                            <div id="faq3_q2" class="panel-collapse collapse">
-                                                <div class="panel-body">
-                                                <?php include "b_2.php";?>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        <br>
                                     </div>
                                 </div>
                             </div>
@@ -358,7 +365,7 @@
                                             </div>
                                             <div id="faq4_q1" class="panel-collapse collapse">
                                                 <div class="panel-body">
-
+                                                <?php include "c_1.php";?>
                                                 </div>
                                             </div>
                                         </div>
